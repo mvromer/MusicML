@@ -58,9 +58,9 @@ values = value_trans( M )
 # then permute the dimensions. For the keys (since we need the transpose), we only need to tranpose
 # the linear layer output and view it as a 3D tensor.
 #
-keyTransView = keys.t().view( H, K, S )
-queriesView = queries.t().view( H, K, T ).permute( 0, 2, 1 )
-valuesView = values.t().view( H, V, S ).permute( 0, 2, 1 )
+keyTransView = keys.t().view( H, K, -1 )
+queriesView = queries.t().view( H, K, -1 ).permute( 0, 2, 1 )
+valuesView = values.t().view( H, V, -1 ).permute( 0, 2, 1 )
 
 # Start computing attention in parallel across all heads. First Z = QK^T.
 z = torch.bmm( queriesView, keyTransView )
