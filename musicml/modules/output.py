@@ -1,5 +1,7 @@
 import torch.nn as nn
 
+from .hyperp import Defaults
+
 class Output( nn.Module ):
     """Output layer used to convert the results of the model into the target output space.
 
@@ -8,7 +10,7 @@ class Output( nn.Module ):
     next output token produced by the model.
     """
 
-    def __init__( self, embedding_size, vocab_size ):
+    def __init__( self, vocab_size, embedding_size=Defaults.EmbeddingSize ):
         """Creates a new output layer.
 
         Args:

@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 
+from .hyperp import Defaults
+
 class MultiheadAttention( nn.Module ):
     """Multihead attention mechanism based on the one described in Attention Is All You Need from Vaswani et al.
 
@@ -10,17 +12,18 @@ class MultiheadAttention( nn.Module ):
         sequence, and queries are projected from the target sequence.
 
         This layer will use scaled dot-product attention across multiple heads. The results are
-        projected back to an output tensor with dimensions T x E.
+        projected back to an output tensor with dimensions T x d(E).
     """
-    def __init__( self, number_heads, embedding_size, kv_length,
+    def __init__( self, kv_length,
+        embedding_size=Defaults.EmbeddingSize, number_heads=Defaults.NumberAttentionHeads,
         query_length=None, key_size=None, value_size=None ):
         """Creates a new multihead attention layer.
 
         Args:
-            number_heads: Number of heads attending. Denoted as H.
+            kv_length: Number of key-value pairs projected by each head. Denoted as S.
             embedding_size: Dimensionality of the source/target sequence's embedding vectors.
                 Denoted as d(E).
-            kv_length: Number of key-value pairs projected by each head. Denoted as S.
+            number_heads: Number of heads attending. Denoted as H.
             query_length: Number of queries projected by each head. Denoted as T. If not given,
                 defaults to kv_length.
             key_size: Dimensionality of each key projected. Denoted as d(K). If not given, defaults
@@ -29,9 +32,9 @@ class MultiheadAttention( nn.Module ):
                 defaults to embedding_size.
         """
         super().__init__()
-        self.number_heads = number_heads
-        self.embedding_size = embedding_size
         self.kv_length = kv_length
+        self.embedding_size = embedding_size
+        self.number_heads = number_heads
         self.query_length = query_length or kv_length
         self.key_size = key_size or embedding_size
         self.value_size = value_size or embedding_size

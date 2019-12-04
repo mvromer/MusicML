@@ -1,10 +1,14 @@
 import torch.nn as nn
 
+from .hyperp import Defaults
+
 class FeedForward( nn.Module ):
     """Feed-forward network applied after the multihead attention sublayers within each layer of the
     decoder and encoder."""
 
-    def __init__( self, embedding_size, hidden_size=2048 ):
+    def __init__( self,
+        embedding_size=Defaults.EmbeddingSize,
+        hidden_size=Defaults.FeedForwardHiddenSize ):
         """Creates a new feed-forward network to use in either the encoder or decoder.
 
         Args:
