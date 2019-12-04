@@ -1,5 +1,4 @@
 import torch.nn as nn
-import torch.functional as F
 
 from .attention import MultiheadAttention
 from .hyperp import Defaults
@@ -32,7 +31,7 @@ class EncoderLayer( nn.Module ):
         # ordering of the sublayer with respect to the residual connection and layer normalization
         # and what is actually implemented in the authors' reference implementation. This uses the
         # order prescribed in the paper, which is sublayer computation, residual connection, and
-        # then layer normalization.
+        # then layer normalization. This also applies to the decoder layer.
         x = self.self_attention( source, source )
         x = self.self_attention_residual( x )
         x = self.feed_forward( x )
