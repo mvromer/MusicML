@@ -18,6 +18,7 @@ class ResidualNorm( nn.Module ):
             embedding_size: Dimensionality of the embedding vector space.
             dropout: Dropout rate to use when applied to sublayer output during the forward pass.
         """
+        super().__init__()
         self.dropout = nn.Dropout( dropout )
         self.norm = nn.LayerNorm( embedding_size )
 

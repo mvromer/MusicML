@@ -10,6 +10,7 @@ class MusicTransformer( nn.Module ):
     Transformer: Generating Music with Long-Term Structure"."""
 
     def __init__( self, hyper ):
+        super().__init__()
         self.input_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
         self.output_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
         self.encoder = EncoderStack( hyper.number_encoder_layers, hyper.embedding_size )
