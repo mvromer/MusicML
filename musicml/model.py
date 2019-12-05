@@ -5,7 +5,7 @@ from .modules.embedding import Embedding
 from .modules.encoder import EncoderStack
 from .modules.output import Output
 
-class MusicTranformer( nn.Module ):
+class MusicTransformer( nn.Module ):
     """Module implementing a Music Transformer from the paper by Huang et al. entitled "Music
     Transformer: Generating Music with Long-Term Structure"."""
 
