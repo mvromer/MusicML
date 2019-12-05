@@ -46,7 +46,7 @@ class MultiheadAttention( nn.Module ):
         # embedding vector space. Expressed as linear layer with no bias.
         self.z_trans = nn.Linear( self.value_size * self.number_heads, embedding_size, bias=False )
 
-    def forward( self, source, target ):
+    def forward( self, source, target, attention_mask=None ):
         """Computes multihead attention for the given source and target sequences.
 
         Each head will project its keys and values from the given source sequence and its queries
@@ -55,6 +55,9 @@ class MultiheadAttention( nn.Module ):
         Args:
             source: Source sequence with dimensions S x d(E).
             target: Target sequence with dimensions T x d(E).
+            attention_mask: T x S additive mask applied to attention calculation prior to applying
+                softmax. If given, entries corresponding to masked values must be set to -inf and
+                unmasked values must be set to zero.
         """
         # Project keys, values, and queries from inputs.
         keys = self.key_trans( source )
@@ -88,6 +91,12 @@ class MultiheadAttention( nn.Module ):
 
         # Scale by root inverse of K.
         z = self.scale_factor * z
+
+        # If given, add the attention mask prior to computing softmax. At this point Z has
+        # dimensions H x T x S. Adding the attention mask, which must be T x S, to Z will cause it
+        # to be broadcast across all heads, which is what we want.
+        if attention_mask:
+            z = z + attention_mask
 
         # Softmax along innermost dimension of Z.
         z = self.z_softmax( z )
