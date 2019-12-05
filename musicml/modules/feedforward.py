@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from .hyperp import Defaults
+from ..hyperp import Defaults
 
 class FeedForward( nn.Module ):
     """Feed-forward network applied after the multihead attention sublayers within each layer of the

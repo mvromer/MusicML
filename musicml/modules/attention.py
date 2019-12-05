@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from .hyperp import Defaults
+from ..hyperp import Defaults
 
 class MultiheadAttention( nn.Module ):
     """Multihead attention mechanism based on the one described in Attention Is All You Need from

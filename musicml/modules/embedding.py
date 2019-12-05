@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from .hyperp import Defaults
+from ..hyperp import Defaults
 
 class Embedding( nn.Module ):
     """Learnable embedding layer for converting sequences of input/output tokens into a dense vector space."""

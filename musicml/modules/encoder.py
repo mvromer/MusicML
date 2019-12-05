@@ -1,7 +1,7 @@
 import torch.nn as nn
 
 from .attention import MultiheadAttention
-from .hyperp import Defaults
+from ..hyperp import Defaults
 from .feedforward import FeedForward
 from .residual import ResidualNorm
 

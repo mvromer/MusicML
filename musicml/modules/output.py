@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from .hyperp import Defaults
+from ..hyperp import Defaults
 
 class Output( nn.Module ):
     """Output layer used to convert the results of the model into the target output space.

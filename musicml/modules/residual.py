@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from .hyperp import Defaults
+from ..hyperp import Defaults
 
 class ResidualNorm( nn.Module ):
     """Residual connection and normalization applied after each sublayer in the encoder and decoder.

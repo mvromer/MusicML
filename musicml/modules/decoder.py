@@ -2,7 +2,7 @@ import torch.nn as nn
 
 from .attention import MultiheadAttention
 from .feedforward import FeedForward
-from .hyperp import Defaults
+from ..hyperp import Defaults
 from .residual import ResidualNorm
 
 class DecoderLayer( nn.Module ):
