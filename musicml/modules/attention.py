@@ -108,5 +108,4 @@ class MultiheadAttention( nn.Module ):
         z = torch.cat( torch.unbind( z, dim=0 ), dim=1 )
 
         # Project the final multihead attention value back into our original embedding vector space.
-        z = z_trans( z )
-        return z
+        return self.z_trans( z )
