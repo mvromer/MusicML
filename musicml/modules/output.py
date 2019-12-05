@@ -24,7 +24,7 @@ class Output( nn.Module ):
         # probabilities.
         self.output = nn.Sequential(
             nn.Linear( embedding_size, vocab_size, bias=False ),
-            nn.Softmax()
+            nn.Softmax( dim=-1 )
         )
 
     def forward( self, x ):
