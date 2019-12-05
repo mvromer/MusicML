@@ -95,7 +95,7 @@ class MultiheadAttention( nn.Module ):
         # If given, add the attention mask prior to computing softmax. At this point Z has
         # dimensions H x T x S. Adding the attention mask, which must be T x S, to Z will cause it
         # to be broadcast across all heads, which is what we want.
-        if attention_mask:
+        if attention_mask is not None:
             z = z + attention_mask
 
         # Softmax along innermost dimension of Z.

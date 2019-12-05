@@ -1,3 +1,5 @@
+import numpy as np
+import torch
 import torch.nn as nn
 
 from .modules.decoder import DecoderStack
@@ -41,3 +43,21 @@ class MusicTransformer( nn.Module ):
 
         # Build the final list of probabilities for each possible output token.
         return self.output( decoder_output )
+
+def create_attention_mask( output_length, input_length ):
+    """Create an attention mask that is output_length x input_length.
+
+    The returned matrix will consist of zeros on and below the main diagonal and -inf everywhere
+    else.
+
+    Args:
+        output_length: Number of tokens in the output sequence.
+        input_length: Number of tokens in the input sequence.
+    """
+    # Adapted from: https://gist.github.com/kolloldas/a7fd453152c5335019f45c96351e2497#file-main-py
+    return torch.from_numpy(
+        np.triu(
+            np.full( (output_length, input_length), np.NINF ),
+            k=1
+        )
+    ).type( torch.FloatTensor )
