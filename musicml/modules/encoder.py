@@ -32,10 +32,11 @@ class EncoderLayer( nn.Module ):
         # and what is actually implemented in the authors' reference implementation. This uses the
         # order prescribed in the paper, which is sublayer computation, residual connection, and
         # then layer normalization. This also applies to the decoder layer.
-        x = self.self_attention( source, source )
-        x = self.self_attention_residual( x )
-        x = self.feed_forward( x )
-        return self.feed_forward_residual( x )
+        self_attention_output = self.self_attention( source, source )
+        self_attention_output = self.self_attention_residual( source, self_attention_output )
+
+        feed_forward_output = self.feed_forward( self_attention_output )
+        return self.feed_forward_residual( self_attention_output, feed_forward_output )
 
 class EncoderStack( nn.Module ):
     """Stack of encoder layers executed in series."""

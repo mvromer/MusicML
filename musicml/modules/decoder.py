@@ -34,12 +34,14 @@ class DecoderLayer( nn.Module ):
         self.feed_forward_residual = ResidualNorm( embedding_size )
 
     def forward( self, target, encoder_output, attention_mask ):
-        x = self.self_attention( target, target, attention_mask )
-        x = self.self_attention_residual( x )
-        x = self.enc_dec_attention( encoder_output, target )
-        x = self.enc_dec_attention_residual( x )
-        x = self.feed_forward( x )
-        return self.feed_forward_residual( x )
+        self_attention_output = self.self_attention( target, target, attention_mask )
+        self_attention_output = self.self_attention_residual( target, self_attention_output )
+
+        enc_dec_attention_output = self.enc_dec_attention( encoder_output, self_attention_output )
+        enc_dec_attention_output = self.enc_dec_attention_residual( self_attention_output, enc_dec_attention_output )
+
+        feed_forward_output = self.feed_forward( enc_dec_attention_output )
+        return self.feed_forward_residual( enc_dec_attention_output, feed_forward_output )
 
 class DecoderStack( nn.Module ):
     """Stack of decoder layers executed in series."""
