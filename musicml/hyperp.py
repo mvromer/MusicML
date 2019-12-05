@@ -7,3 +7,21 @@ class Defaults:
     NumberAttentionHeads = 8
     NumberDecoderLayers = 6
     NumberEncoderLayers = 6
+
+class Hyperparameters:
+    def __init__( self,
+        vocab_size,
+        dropout=Defaults.Dropout,
+        embedding_size=Defaults.EmbeddingSize,
+        feed_forward_hidden_size=Defaults.FeedForwardHiddenSize,
+        number_attention_heads=Defaults.NumberAttentionHeads,
+        number_decoder_layers=Defaults.NumberDecoderLayers,
+        number_encoder_layers=Defaults.NumberEncoderLayers ):
+        """Creates a new package of hyperparameters for the Music Transformer model."""
+        self.vocab_size = vocab_size
+        self.dropout = dropout
+        self.embedding_size = embedding_size
+        self.feed_forward_hidden_size = feed_forward_hidden_size
+        self.number_attention_heads = number_attention_heads
+        self.number_decoder_layers = number_decoder_layers
+        self.number_encoder_layers = number_encoder_layers
