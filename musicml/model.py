@@ -18,6 +18,17 @@ class MusicTransformer( nn.Module ):
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
 
     def forward( self, input_sequence, output_sequence, attention_mask ):
+        """Runs one pass of the Music Transformer across the given input and output sequences.
+
+        Args:
+            input_sequence: Sequence of input tokens to pass through the Music Transformer's
+                encoder. Must be a 1D tensor. Length is denoted by S.
+            output_sequence: Sequence of output tokens currently generated to pass through the
+                Music Transformer's decoder. Must be a 1D tensor. Length is denoted by T.
+            attention_mask: A T x S tensor containing the attention mask to apply during the
+                decoder's self attention phase. Entries corresponding to values that should be
+                masked must be set to -inf, and all other entries must be set to zero.
+        """
         # Embed the input and output token sequences into the embedded vector space.
         source = self.input_embedding( input_sequence )
         target = self.output_embedding( output_sequence )
