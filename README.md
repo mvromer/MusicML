@@ -46,3 +46,7 @@ conda install pytorch===1.3.1 torchvision===0.4.2 -c pytorch
 ## Scripts
 The mha.py script demonstrates the multihead attention mechanism described in Vaswani et al. paper
 _Attention Is All You Need_.
+
+
+## Dataset
+The project levages [The MAESTRO Dataset](https://magenta.tensorflow.org/datasets/maestro) for trainning purpose.
