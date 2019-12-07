@@ -37,16 +37,15 @@ for year in dataDirDict:
                 if (msg.is_meta and msg.type == "set_tempo"):
                     tempo = msg.tempo
                 
-                if msg.type == "note_on":
+                if (msg.type == "note_on" and msg.velocity != 0):
                     f.write(f"note_on {msg.note}\n")
                     f.write(f"velocity {msg.velocity}\n")
                     time = tick2second(msg.time, ticksPerBeat, tempo)
                     timeInMs = int(time * 1000)
                     f.write(f"time {timeInMs}\n")
                 
-                if msg.type == "note_off":
-                    f.write(f"note_on {msg.note}\n")
-                    f.write(f"velocity {msg.velocity}\n")
+                if ( msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0)):
+                    f.write(f"note_off {msg.note}\n")
                     time = tick2second(msg.time, ticksPerBeat, tempo)
                     timeInMs = int(time * 1000)
                     f.write(f"time {timeInMs}\n")
