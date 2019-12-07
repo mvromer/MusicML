@@ -14,13 +14,20 @@ for item in os.listdir(path):
                 dataDirDict[item].append(file)
 
 
-# create a single parsed file for each year
+# create a directory for each year
 for year in dataDirDict: 
-    f = open(f"{outPath}{year}.txt","w+")
+    currentOutPath = os.path.join(outPath, year)
+    os.mkdir(currentOutPath)
 
-    # loop through each file in the directory
+    # create a parsed file for each file
     for item in dataDirDict[year]:
+
+        filename = item.replace('.midi', '.out')
+        filepath = os.path.join(currentOutPath, filename)
+        f = open(filepath,"w+")
+
         mid = MidiFile(os.path.join(path, year, item))
+
         ticksPerBeat = mid.ticks_per_beat
         tempo = ''
 
@@ -44,4 +51,4 @@ for year in dataDirDict:
                     timeInMs = int(time * 1000)
                     f.write(f"time {timeInMs}\n")
 
-    f.close()
+        f.close()
