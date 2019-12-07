@@ -10,7 +10,7 @@ class DecoderLayer( nn.Module ):
 
     A decoder layer has the following stages or sublayers:
 
-        * Self-attention against the target sequence.
+        * Self-attention against the target sequence with relative positional embeddings.
         * Residual connections followed by layer normalization.
         * Encoder-decoder attention using the target sequence and encoder output.
         * Residual connections followed by layer normalization.
@@ -21,7 +21,7 @@ class DecoderLayer( nn.Module ):
     def __init__( self, embedding_size=Defaults.EmbeddingSize ):
         super().__init__()
         # First sublayer is masked self attention against the target sequence.
-        self.self_attention = MultiheadAttention( embedding_size )
+        self.self_attention = MultiheadAttention( embedding_size, embed_relative_positions=True )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is encoder-decoder attention against the encodder output and target

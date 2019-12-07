@@ -7,6 +7,7 @@ class Defaults:
     NumberAttentionHeads = 8
     NumberDecoderLayers = 6
     NumberEncoderLayers = 6
+    MaxRelativeAttentionDistance = 10
 
 class Hyperparameters:
     def __init__( self,

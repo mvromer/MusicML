@@ -1,15 +1,23 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
+import torch.nn.init
 
 from ..hyperp import Defaults
 
 class MultiheadAttention( nn.Module ):
-    """Multihead attention mechanism based on the one described in Attention Is All You Need from
-    Vaswani et al."""
+    """Multihead attention mechanism with optional relative positional embedding.
+
+    Based on the mechanism described in Attention Is All You Need from Vaswani et al. Also
+    incorporates a variation of relative positional self-attention described in Huang et al.'s paper
+    Music Transformer: Generating Music with Long-term Structure.
+    """
 
     def __init__( self, embedding_size=Defaults.EmbeddingSize,
         number_heads=Defaults.NumberAttentionHeads,
-        key_size=None, value_size=None ):
+        key_size=None, value_size=None,
+        embed_relative_positions=False,
+        max_relative_distance=Defaults.MaxRelativeAttentionDistance ):
         """Creates a new multihead attention layer.
 
         Args:
@@ -20,6 +28,10 @@ class MultiheadAttention( nn.Module ):
                 to embedding_size.
             value_size: Dimensionality of each value projected. Denoted as d(V). If not given,
                 defaults to embedding_size.
+            embed_relative_positions: If True, relative position embeddings will be learned and
+                incorporated into the attention weights computed on a per-head basis.
+            max_relative_distance: If embed_relative_positions is True, then this is the maximum
+                relative distance learned. Denoted as C.
         """
         super().__init__()
         self.number_heads = number_heads
@@ -38,6 +50,35 @@ class MultiheadAttention( nn.Module ):
         # Scaling factor applied after computing QK^T.
         self.scale_factor = self.key_size ** -0.5
 
+        # Relative position embeddings learned if they are to be used during the attention
+        # computation. They are divided into two sets. rpe_neg contains the embeddings for each
+        # relative position with a nonpositive distance ordered from -C to 0. rpe_pos contains the
+        # embeddings for each relative position with a positive distance ordered from 1 to C. Each
+        # embedding has dimensionality d(K) and is learned on a per-head basis.
+        #
+        # NOTE: Conceptually rpe_neg and rpe_pos could be stored as (C + 1) x d(K) and C x d(K),
+        # respectively. However, for certain padding operations used during the forward pass, and
+        # given the fact that the tensors resulting from cropping/padding these embedding parameters
+        # need to be transposed prior to multiplying them with Q, we store the relative position
+        # embeddings transposed as H x d(K) x (C + 1) and H x d(k) x C respectively for rpe_neg and
+        # rpe_pos.
+        #
+        self.embed_relative_positions = embed_relative_positions
+        self.max_relative_distance = max_relative_distance
+
+        if self.embed_relative_positions:
+            if max_relative_distance <= 0:
+                raise ValueError( "Relative position embedding is enabled. Max relative distance must be positive." )
+
+            self.rpe_neg = nn.Parameter( torch.empty( self.number_heads, self.key_size, self.max_relative_distance + 1 ) )
+            self.rpe_pos = nn.Parameter( torch.empty( self.number_heads, self.key_size, self.max_relative_distance ) )
+
+            torch.nn.init.xavier_uniform_( self.rpe_neg )
+            torch.nn.init.xavier_uniform_( self.rpe_pos )
+        else:
+            self.rpe_neg = None
+            self.rpe_pos = None
+
         # Softmax layer applied to innermost dimension of Z = (QK^T) / sqrt(d(K)) during attention
         # calculation.
         self.z_softmax = nn.Softmax( dim=-1 )
@@ -54,7 +95,9 @@ class MultiheadAttention( nn.Module ):
 
         Args:
             source: Source sequence with dimensions S x d(E).
-            target: Target sequence with dimensions T x d(E).
+            target: Target sequence with dimensions T x d(E). If this attention mechanism is
+                configured to also embed relative positions during the attention weight computation,
+                then S must equal T.
             attention_mask: T x S additive mask applied to attention calculation prior to applying
                 softmax. If given, entries corresponding to masked values must be set to -inf and
                 unmasked values must be set to zero.
@@ -89,6 +132,12 @@ class MultiheadAttention( nn.Module ):
         # Start computing attention in parallel across all heads. First Z = QK^T.
         z = torch.bmm( queriesView, keyTransView )
 
+        # If we are embedding relative positions, then compute the relative position logits that
+        # will modulate are attention logits in Z.
+        if self.embed_relative_positions:
+            relative_logits = self.compute_relative_logits( queriesView )
+            z = z + relative_logits
+
         # Scale by root inverse of K.
         z = self.scale_factor * z
 
@@ -109,3 +158,126 @@ class MultiheadAttention( nn.Module ):
 
         # Project the final multihead attention value back into our original embedding vector space.
         return self.z_trans( z )
+
+    def compute_relative_logits( self, queries ):
+        """Computes the relative positional logits to embed with the attention logits."""
+        # Let L = L_l + L_u be the relative logits we want to compute for a given head, where L_l is
+        # the lower triangular portion of L including the main diagonal, and L_u is the upper
+        # triangular portion above the main diagonal.
+        #
+        # We define L_l = skew_lower( Q(R_l)^T ) and L_u = skew_upper( Q(R_u)^T ). Huang et al.
+        # gives an efficient algorithm for computing L_l. The skew_lower function matches the skew
+        # procedure given in Huang et al. with the added step of zeroing out the upper triangular
+        # portion of the result.
+        #
+        # The matrix R_l is the T x d(K) matrix defined in Huang et al. containing the relative
+        # position embeddings that are applied with the query matrix Q, which also has dimensions of
+        # T x d(K). The rows 0 to (T-1) of R_l correspond to relative distances (T-1) to 0. These
+        # relative distances then map to the corresponding relative position embedding.
+        #
+        # As per Shaw et al., relative distances exceeding the max relative distance C configured
+        # for the relative attention mechanism are clipped to -C and C. Thus, the relative attention
+        # mechanism only learns 2C + 1 relative position embeddings per head as part of its model
+        # parameters.
+        #
+        # If T = C+1, then constructing R_l is trivial because it uses precisely all of the relative
+        # position embeddings corresponding to negative relative distances. If T < C+1, then we only
+        # need to populate R_l with the position embeddings corresponding to relative distances T-1
+        # to 0. If T > C+1, then we populate the last T rows with relative position embeddings for
+        # distances -C to 0 and replicate the position embedding for distance -C across the first
+        # T-C-1 rows of R_l.
+        #
+        # In practice, we construct (R_l)^T directly rather than R_l since that is the matrix we
+        # ultimately need for computing L_l. Thus, within the code, all cropping and padding occurs
+        # across columns rather than across rows.
+        #
+        # The result of Q(R_l)^T is passed through the skew_lower function, which returns L_l.
+        #
+        # A similar procedure is done to construct R_u. Then, the result of Q(R_u)^T is passed
+        # through skew_upper, which works in principle similar to skew_lower. The only difference is
+        # that the padding column is added to the right instead of the left as is done in Huang et
+        # al. for the skew_lower function. Also, skew_upper zeros out the lower triangular portion
+        # AND the main diagonal of the final result. This final value is L_u.
+        #
+        L_l = self.compute_relative_logits_lower( queries )
+        L_u = self.compute_relative_logits_upper( queries )
+        return L_l + L_u
+
+    def compute_relative_logits_lower( self, queries ):
+        """Computes the lower triangular portion of the relative positional logits."""
+        T = queries.size( dim=-2 )
+
+        if T <= (self.max_relative_distance + 1):
+            # Crop out the negative relative position embeddings we need to build (R_l)^T.
+            R_l_trans = self.rpe_neg[:, :, -T:]
+        else:
+            # Need to pad out the negative relative position embeddings, replicating the embedding
+            # for distance -C across the first T-C-1 columns of (R_l)^T.
+            pad_amount = T - self.max_relative_distance - 1
+            R_l_trans = F.pad( self.rpe_neg, (pad_amount, 0), mode="replicate" )
+
+        return self.skew_lower( torch.bmm( queries, R_l_trans ) )
+
+    def skew_lower( self, logits ):
+        """Applies the skew function from Huang et al. and a mask to derive the lower triangular
+        portion of the relative positional logits.
+
+        This is pulled directly from the paper Music Transformer: Generating Music with Long-Term
+        Structure by Huang et al.
+        """
+        T = logits.size( dim=-2 )
+
+        # Pad a column to the left.
+        logits = F.pad( logits, (1, 0), mode="constant", value=0 )
+
+        # Reshape to (T+1) x T.
+        logits = logits.reshape( -1, T + 1, T )
+
+        # Slice off top row and return the lower triangular portion.
+        return logits[:, 1:, :].tril()
+
+    def compute_relative_logits_upper( self, queries ):
+        """Computes the lower triangular portion of the relative positional logits."""
+        T = queries.size( dim=-2 )
+
+        # NOTE: Recall that rpe_pos does NOT contain an embedding for relative distance of zero
+        # because that is already stored and learned in rpe_neg. However, (R_u)^T must have a column
+        # representing that embedding (namely the first column).
+        #
+        # Since any value derived from the first column of (R_u)^T is ultimately masked out anyway,
+        # it doesn't matter what we place there. For simplicity, the result of executing either
+        # branch of this conditional is R_u_trans will be initialized to a tensor containing the
+        # last T-1 columns of (R_u)^T. After the conditional, we pad R_u_trans on the left with one
+        # column of zeros to finish building the complete (R_u)^T.
+        #
+        if T <= (self.max_relative_distance + 1):
+            # Crop out the positive relative position embeddings we need to build the last T-1
+            # columns of (R_u)^T.
+            R_u_trans = self.rpe_pos[:, :, :(T - 1)]
+        else:
+            # Need to pad out the positive relative position embeddings, replicating the embedding
+            # for distance C across the last T-C-1 columns of (R_u)^T.
+            pad_amount = T - self.max_relative_distance - 1
+            R_u_trans = F.pad( self.rpe_pos, (0, pad_amount), mode="replicate" )
+
+        # Add in a dummy column for relative distance of zero.
+        R_u_trans = F.pad( R_u_trans, (1, 0), mode="constant", value=0 )
+        return self.skew_upper( torch.bmm( queries, R_u_trans ) )
+
+    def skew_upper( self, logits ):
+        """Applies the skew function based on the one from Huang et al. and a mask to derive the
+        upper triangular portion of the relative positional logits above the main diagonal.
+
+        This is inspired by the skew function described in the paper Music Transformer: Generating
+        Music with Long-Term Structure by Huang et al.
+        """
+        T = logits.size( dim=-2 )
+
+        # Pad a column to the right.
+        logits = F.pad( logits, (0, 1), mode="constant", value=0 )
+
+        # Reshape to (T+1) x T.
+        logits = logits.reshape( -1, T + 1, T )
+
+        # Slice off the bottom row and return the upper triangular portion above the main diagonal.
+        return logits[:, :-1, :].triu( diagonal=1 )

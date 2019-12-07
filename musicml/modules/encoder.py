@@ -10,7 +10,7 @@ class EncoderLayer( nn.Module ):
 
     An encoder layer has the following stages or sublayers:
 
-        * Self-attention against the source sequence.
+        * Self-attention against the source sequence with relative positional embeddings.
         * Residual connections followed by layer normalization.
         * Feed-forward network.
         * Another set of residual connections followed by layer normalization.
@@ -19,7 +19,7 @@ class EncoderLayer( nn.Module ):
     def __init__( self, embedding_size=Defaults.EmbeddingSize ):
         super().__init__()
         # First sublayer is self attention with the source sequence as input.
-        self.self_attention = MultiheadAttention( embedding_size )
+        self.self_attention = MultiheadAttention( embedding_size, embed_relative_positions=True )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is the feed-forward network.
