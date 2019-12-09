@@ -17,11 +17,15 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
     # We'll randomize the order of the training data.
     training_indices = list( range( len( data_sets["train"] ) ) )
     random.shuffle( training_indices )
+
+    # Enter training mode to enable certain layers like dropouts.
+    model.train()
     total_steps = 0
 
     for epoch_idx in range( number_epochs ):
         start_time = time.monotonic()
-        total_loss = 0.0
+        epoch_loss = 0.0
+        epoch_steps = 0
 
         for training_idx in training_indices:
             training_data = data_sets["train"][training_idx]
@@ -42,7 +46,6 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
             # Run the decoder over all tokens in the target sequence up to but not including the
             # stop token, which should be the last token in the sequence.
             for target_idx in range( target_sequence.size( -1 ) - 1 ):
-                print( f"Step #{total_steps + 1}" )
                 next_token_idx = target_idx + 1
                 current_target_sequence = target_sequence[:next_token_idx]
                 current_target_length = current_target_sequence.size( 0 )
@@ -70,22 +73,23 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 loss.backward()
                 optimizer.step()
                 optimizer.zero_grad()
-                total_loss += loss.item()
+                epoch_loss += loss.item()
+                epoch_steps += 1
                 total_steps += 1
 
                 # Checkpoint and report current status if we've hit our checkpoint interval.
                 current_time = time.monotonic()
                 elapsed_time = current_time - start_time
                 if elapsed_time >= checkpoint_interval_sec:
-                    print( (f"Checkpointing after {total_steps} steps on epoch {epoch_idx + 1}. "
-                        f"Current total loss for epoch: {total_loss:.4}. "
-                        f"Current average loss: {(total_loss / total_steps):.4}. "
-                        f"Most recent loss: {loss.item():.4}.") )
+                    print( (f"Checkpointing after {epoch_steps} steps on epoch {epoch_idx + 1}. "
+                        f"Current epoch loss for epoch: {epoch_loss:.5}. "
+                        f"Current average epoch loss: {(epoch_loss / epoch_steps):.5}. "
+                        f"Most recent loss: {loss.item():.5}.") )
                     torch.save( model.state_dict(), checkpoint_path )
                     start_time = current_time
 
-        print( (f"Completed epoch {epoch_idx + 1} with total loss of {total_loss:.4} "
-            f"and average loss of {(total_loss / total_steps):.4}. Checkpointing.") )
+        print( (f"Completed epoch {epoch_idx + 1} with total epoch loss of {epoch_loss:.5} "
+            f"and average epoch loss of {(epoch_loss / epoch_steps):.4}. Checkpointing.") )
         torch.save( model.state_dict(), checkpoint_path )
 
     print( f"Training complete after {total_steps} steps." )
