@@ -5,9 +5,11 @@ from ..hyperp import Defaults
 class Output( nn.Module ):
     """Output layer used to convert the results of the model into the target output space.
 
-    The result of this layer is a vector whose dimensionality is the size of the output vocabulary
-    space. Each element of the resulting vector is the probability the corresponding token is the
-    next output token produced by the model.
+    The result of this layer is a 2D tensor shaped T x V where T is the length of the target
+    sequence and V is the size of the output vocabulary. Each row in the resulting tensor contains a
+    set of raw scores computed across all possible tokens in the output vocabulary. In particular,
+    the each score in the final row of the resulting tensor relates to the probability that the
+    corresponding token is next output token produced by the model.
     """
 
     def __init__( self, vocab_size, embedding_size=Defaults.EmbeddingSize ):
@@ -19,13 +21,9 @@ class Output( nn.Module ):
         """
         super().__init__()
 
-        # The output layer consists of two sublayers: a linear transformation from the embedding
-        # vector space to the output vocabulary space and a softmax to convert the outputs to
-        # probabilities.
-        self.output = nn.Sequential(
-            nn.Linear( embedding_size, vocab_size, bias=False ),
-            nn.Softmax( dim=-1 )
-        )
+        # The output layer is simply a linear transformation from the embedding vector space to the
+        # output vocabulary space.
+        self.output = nn.Linear( embedding_size, vocab_size, bias=False )
 
     def forward( self, x ):
         return self.output( x )
