@@ -18,7 +18,7 @@ def checkpoint_model( model, checkpoint_path ):
     torch.save( model.state_dict(), str( checkpoint_path ) )
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
-    number_epochs=2, checkpoint_interval_sec=30 ):
+    number_epochs=5, checkpoint_interval_sec=30 ):
     with open( data_path, "rb" ) as data_file:
         data_sets = pickle.load( data_file )
 
