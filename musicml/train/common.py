@@ -10,7 +10,7 @@ from ..model import MusicTransformer, create_attention_mask
 from .optimizer import StandardOptimizer
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
-    number_epochs=2, checkpoint_interval_sec=120 ):
+    number_epochs=2, checkpoint_interval_sec=30 ):
     with open( data_path, "rb" ) as data_file:
         data_sets = pickle.load( data_file )
 
@@ -40,9 +40,6 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 target_sequence = target_sequence.cuda()
                 target_output = target_output.cuda()
 
-            # Encode the source sequence.
-            #model( input_sequence=source_sequence )
-
             # Run the decoder over all tokens in the target sequence up to but not including the
             # stop token, which should be the last token in the sequence.
             for target_idx in range( target_sequence.size( -1 ) - 1 ):
@@ -56,7 +53,15 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 if torch.cuda.is_available():
                     attention_mask = attention_mask.cuda()
 
+                # Encode the source sequence.
+                #
+                # NOTE: Normally we wouldn't rerun the encoder multiple times like this, but in
+                # order for Pytorch to have gradient information on the encoder portion of our
+                # model, we need to make sure the encoder is computed again after we do our backward
+                # propagation during loss calculation.
+                #
                 model( input_sequence=source_sequence )
+
                 # Run one step of the decoder.
                 model_output = model( output_sequence=current_target_sequence, attention_mask=attention_mask )
 
