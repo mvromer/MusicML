@@ -18,8 +18,9 @@ class MusicTransformer( nn.Module ):
         self.encoder = EncoderStack( hyper.number_encoder_layers, hyper.embedding_size )
         self.decoder = DecoderStack( hyper.number_decoder_layers, hyper.embedding_size )
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
+        self.encoder_output = None
 
-    def forward( self, input_sequence, output_sequence, attention_mask ):
+    def forward( self, input_sequence=None, output_sequence=None, attention_mask=None ):
         """Runs one pass of the Music Transformer across the given input and output sequences.
 
         Args:
@@ -31,18 +32,21 @@ class MusicTransformer( nn.Module ):
                 decoder's self attention phase. Entries corresponding to values that should be
                 masked must be set to -inf, and all other entries must be set to zero.
         """
-        # Embed the input and output token sequences into the embedded vector space.
-        source = self.input_embedding( input_sequence )
-        target = self.output_embedding( output_sequence )
+        # Encode the input source sequence if given. Otherwise use the previously generated results.
+        if input_sequence:
+            # Embed the input token sequences into the embedded vector space.
+            source = self.input_embedding( input_sequence )
+            self.encoder_output = self.encoder( source )
 
-        # Encode the source.
-        encoder_output = self.encoder( source )
+        if output_sequence:
+            # Embed the output token sequences into the embedded vector space.
+            target = self.output_embedding( output_sequence )
 
-        # Decode the next output in the target.
-        decoder_output = self.decoder( target, encoder_output, attention_mask )
+            # Decode the next output in the target.
+            decoder_output = self.decoder( target, self.encoder_output, attention_mask )
 
-        # Build the final list of probabilities for each possible output token.
-        return self.output( decoder_output )
+            # Build the final list of scores for each possible output token.
+            return self.output( decoder_output )
 
 def create_attention_mask( output_length, input_length ):
     """Create an attention mask that is output_length x input_length.

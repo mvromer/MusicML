@@ -477,7 +477,7 @@ def quantize_velocity( velocity, number_bins=32 ):
     bin_width = NumberVelocityValues / number_bins
     return int(velocity // bin_width)
 
-def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, max_files=None ):
+def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
     """Creates training and test data sets from the corpus of Piano-e-Competition data located in
     the given input path.
 
@@ -505,8 +505,6 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
         manifest_path: Path to the Maestro v2.0.0 manifest file designating which files belong to
             the training set versus test set.
         crop_size: Number of tokens to crop from a file when producing source and target sequences.
-        max_files: If given, specifies the maximum number of files processed. Otherwise, all
-            Piano-e-Competition files are used to produce the training and test data sets.
     """
     data_sets = {
         "train": [],
@@ -516,13 +514,9 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
     input_path = pathlib.Path( input_path )
 
     with open( manifest_path, newline="" ) as manifest_file:
-        number_data_sets_created = 0
         manifest_reader = csv.DictReader( manifest_file )
 
         for row in manifest_reader:
-            if number_data_sets_created == max_files:
-                break
-
             data_set_type = row["split"]
             if data_set_type == "validation":
                 continue
@@ -576,7 +570,6 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
                 }
 
                 data_sets[data_set_type].append( data_set )
-                number_data_sets_created += 1
 
     with open( output_path, "wb" ) as output_file:
         pickle.dump( data_sets, output_file )

@@ -40,3 +40,6 @@ class StandardOptimizer:
         for group in self.optimizer.param_groups:
             group["lr"] = self.current_learning_rate
         self.optimizer.step()
+
+    def zero_grad( self ):
+        self.optimizer.zero_grad()
