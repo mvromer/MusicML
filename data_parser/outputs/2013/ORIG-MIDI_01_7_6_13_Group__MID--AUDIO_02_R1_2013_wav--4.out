@@ -1,5500 +1,5344 @@
-note_on 53
-velocity 56
-time 18
-note_off 53
-time 171
-note_on 44
-velocity 32
-time 22
-note_off 44
-time 335
-note_on 37
-velocity 36
-time 95
-note_off 37
-time 332
-note_on 44
-velocity 37
-time 14
-note_off 44
-time 216
-note_on 37
-velocity 40
-time 106
-note_off 37
-time 238
-note_on 44
-velocity 38
-time 89
-note_off 44
-time 166
-note_on 53
-velocity 51
-time 156
-note_off 53
-time 244
-note_on 44
-velocity 34
-time 87
-note_off 44
-time 259
-note_on 37
-velocity 35
-time 96
-note_off 37
-time 291
-note_on 44
-velocity 36
-time 40
-note_off 44
-time 236
-note_on 37
-velocity 36
-time 13
-note_off 37
-time 48
-note_on 44
-velocity 35
-time 49
-note_off 44
-time 29
-note_on 53
-velocity 46
-time 70
-note_off 53
-time 192
-note_on 44
-velocity 30
-time 96
-note_off 44
-time 250
-note_on 37
-velocity 38
-time 37
-note_on 44
-velocity 33
-time 308
-note_off 37
-time 1
-note_on 56
-velocity 84
-time 118
-note_off 44
-time 253
-note_on 37
-velocity 41
-time 100
-note_off 37
-time 89
-note_on 44
-velocity 43
-time 136
-note_on 54
-velocity 54
-time 333
-note_off 44
-time 23
-note_on 61
-velocity 88
-time 118
-note_on 58
-velocity 66
-time 23
-note_off 54
-time 278
-note_on 44
-velocity 43
-time 27
-note_off 44
-time 227
-note_on 37
-velocity 40
-time 84
-note_off 58
-time 11
-note_off 56
-time 132
-note_off 37
-time 125
-note_on 44
-velocity 40
-time 44
-note_off 44
-time 256
-note_on 37
-velocity 38
-time 53
-note_on 65
-velocity 81
-time 161
-note_on 60
-velocity 62
-time 26
-note_off 61
-time 26
-note_off 37
-time 48
-note_off 60
-time 130
-note_on 44
-velocity 38
-time 7
-note_off 65
-time 28
-note_off 44
-time 111
-note_on 53
-velocity 43
-time 194
-note_on 65
-velocity 77
-time 122
-note_on 61
-velocity 50
-time 22
-note_on 56
-velocity 54
-time 15
-note_off 53
-time 95
-note_on 44
-velocity 32
-time 1
-note_off 44
-time 154
-note_on 37
-velocity 31
-time 91
-note_off 37
-time 165
-note_on 44
-velocity 31
-time 109
-note_off 44
-time 226
-note_on 37
-velocity 28
-time 69
-note_off 37
-time 102
-note_on 44
-velocity 39
-time 170
-note_off 44
-time 251
-note_on 53
-velocity 49
-time 89
-note_off 53
-time 190
-note_on 44
-velocity 28
-time 113
-note_off 44
-time 229
-note_on 37
-velocity 26
-time 72
-note_off 37
-time 205
-note_on 44
-velocity 30
-time 70
-note_off 44
-time 221
-note_on 37
-velocity 28
-time 88
-note_off 37
-time 96
-note_on 44
-velocity 32
-time 154
-note_off 44
-time 194
-note_on 53
-velocity 47
-time 111
-note_off 53
-time 174
-note_off 56
-time 54
-note_on 44
-velocity 38
-time 35
-note_off 61
-time 41
-note_off 44
-time 180
-note_on 37
-velocity 42
-time 40
-note_on 44
-velocity 42
-time 255
-note_off 37
-time 48
-note_on 66
-velocity 84
-time 36
-note_on 63
-velocity 61
-time 42
-note_off 65
-time 20
-note_off 44
-time 175
-note_on 37
-velocity 44
-time 48
-note_off 63
-time 197
-note_off 37
-time 10
-note_on 44
-velocity 57
-time 33
-note_off 66
-time 15
-note_off 44
-time 283
-note_on 51
-velocity 54
-time 0
-note_on 70
-velocity 91
-time 114
-note_on 60
-velocity 79
-time 20
-note_on 66
-velocity 70
-time 6
-note_on 44
-velocity 41
-time 5
-note_off 51
-time 40
-note_off 44
-time 148
-note_on 37
-velocity 37
-time 57
-note_off 66
-time 182
-note_off 37
-time 85
-note_on 44
-velocity 38
-time 18
-note_off 44
-time 256
-note_on 37
-velocity 32
-time 75
-note_on 68
-velocity 77
-time 171
-note_on 65
-velocity 54
-time 13
-note_off 60
-time 28
-note_off 37
-time 28
-note_off 70
-time 44
-note_off 65
-time 87
-note_on 44
-velocity 44
-time 3
-note_off 68
-time 16
-note_off 44
-time 152
-note_on 53
-velocity 39
-time 173
-note_on 68
-velocity 73
-time 76
-note_on 61
-velocity 50
-time 18
-note_on 65
-velocity 54
-time 9
-note_off 53
-time 18
-note_on 44
-velocity 32
-time 5
-note_off 44
-time 203
-note_on 37
-velocity 29
-time 76
-note_off 37
-time 201
-note_on 44
-velocity 35
-time 66
-note_off 44
-time 201
-note_on 37
-velocity 32
-time 87
-note_off 37
-time 98
-note_on 44
-velocity 41
-time 156
-note_off 44
-time 162
-note_on 53
-velocity 47
-time 131
-note_off 53
-time 186
-note_on 44
-velocity 31
-time 115
-note_off 44
-time 186
-note_on 37
-velocity 36
-time 98
-note_off 37
-time 256
-note_on 44
-velocity 36
-time 23
-note_off 44
-time 192
-note_on 37
-velocity 35
-time 130
-note_off 37
-time 84
-note_on 44
-velocity 30
-time 171
-note_off 44
-time 192
-note_on 53
-velocity 47
-time 125
-note_off 53
-time 213
-note_off 61
-time 59
-note_off 65
-time 26
-note_on 44
-velocity 36
-time 1
-note_off 68
-time 5
-note_off 44
-time 191
-note_on 37
-velocity 41
-time 83
-note_off 37
-time 304
-note_on 44
-velocity 35
-time 20
-note_on 68
-velocity 80
-time 138
-note_on 65
-velocity 52
-time 49
-note_off 44
-time 154
-note_on 37
-velocity 34
-time 88
-note_off 37
-time 123
-note_on 44
-velocity 38
-time 136
-note_off 44
-time 229
-note_on 53
-velocity 39
-time 67
-note_off 65
-time 87
-note_off 53
-time 130
-note_on 44
-velocity 40
-time 39
-note_off 44
-time 239
-note_on 37
-velocity 42
-time 31
-note_on 66
-velocity 80
-time 216
-note_on 63
-velocity 57
-time 35
-note_off 37
-time 13
-note_on 44
-velocity 43
-time 9
-note_off 68
-time 136
-note_off 44
-time 46
-note_on 37
-velocity 42
-time 83
-note_off 37
-time 141
-note_on 44
-velocity 40
-time 105
-note_on 65
-velocity 83
-time 18
-note_on 61
-velocity 66
-time 13
-note_off 63
-time 11
-note_off 66
-time 23
-note_off 61
-time 19
-note_off 65
-time 44
-note_off 44
-time 177
-note_on 53
-velocity 41
-time 84
-note_on 65
-velocity 74
-time 61
-note_on 61
-velocity 59
-time 29
-note_off 53
-time 2
-note_on 44
-velocity 23
-time 13
-note_off 44
-time 171
-note_on 37
-velocity 25
-time 75
-note_on 44
-velocity 39
-time 32
-note_off 37
-time 29
-note_on 63
-velocity 66
-time 1
-note_on 59
-velocity 52
-time 14
-note_off 65
-time 13
-note_off 61
-time 45
-note_off 44
-time 13
-note_on 37
-velocity 18
-time 10
-note_off 37
-time 22
-note_on 44
-velocity 38
-time 130
-note_off 44
-time 240
-note_on 53
-velocity 41
-time 66
-note_off 53
-time 214
-note_on 44
-velocity 42
-time 40
-note_off 44
-time 238
-note_on 37
-velocity 34
-time 59
-note_on 44
-velocity 38
-time 31
-note_off 37
-time 5
-note_on 65
-velocity 65
-time 13
-note_on 61
-velocity 48
-time 36
-note_off 63
-time 7
-note_off 44
-time 61
-note_off 59
-time 23
-note_on 37
-velocity 34
-time 95
-note_off 37
-time 79
-note_off 61
-time 2
-note_on 44
-velocity 39
-time 62
-note_off 44
-time 37
-note_on 53
-velocity 29
-time 44
-note_on 61
-velocity 58
-time 93
-note_on 58
-velocity 49
-time 14
-note_off 65
-time 31
-note_off 53
-time 10
-note_on 46
-velocity 42
-time 33
-note_on 63
-velocity 64
-time 167
-note_on 60
-velocity 58
-time 14
-note_off 61
-time 67
-note_off 46
-time 5
-note_off 60
-time 13
-note_on 37
-velocity 36
-time 79
-note_on 46
-velocity 32
-time 308
-note_off 37
-time 26
-note_on 65
-velocity 54
-time 125
-note_on 61
-velocity 49
-time 28
-note_off 63
-time 26
-note_off 58
-time 28
-note_off 46
-time 53
-note_on 37
-velocity 9
-time 5
-note_off 37
-time 0
-note_on 46
-velocity 33
-time 158
-note_off 46
-time 187
-note_on 53
-velocity 42
-time 108
-note_off 53
-time 205
-note_on 46
-velocity 19
-time 122
-note_off 46
-time 162
-note_on 37
-velocity 32
-time 88
-note_off 37
-time 269
-note_on 46
-velocity 31
-time 40
-note_off 46
-time 207
-note_on 37
-velocity 31
-time 82
-note_off 37
-time 70
-note_on 46
-velocity 41
-time 190
-note_off 46
-time 302
-note_on 54
-velocity 53
-time 20
-note_off 61
-time 10
-note_off 54
-time 10
-note_on 46
-velocity 36
-time 3
-note_off 65
-time 53
-note_off 46
-time 84
-note_on 37
-velocity 29
-time 130
-note_on 61
-velocity 66
-time 290
-note_off 37
-time 3
-note_on 58
-velocity 51
-time 20
-note_on 46
-velocity 33
-time 9
-note_off 46
-time 84
-note_off 58
-time 204
-note_on 37
-velocity 40
-time 6
-note_off 37
-time 93
-note_on 54
-velocity 25
-time 520
-note_on 63
-velocity 62
-time 72
-note_on 59
-velocity 49
-time 48
-note_off 61
-time 5
-note_off 54
-time 16
-note_on 44
-velocity 15
-time 13
-note_off 44
-time 171
-note_on 37
-velocity 28
-time 67
-note_on 44
-velocity 29
-time 345
-note_on 60
-velocity 50
-time 71
-note_off 59
-time 6
-note_off 37
-time 11
-note_off 44
-time 11
-note_on 37
-velocity 27
-time 26
-note_off 37
-time 145
-note_on 44
-velocity 29
-time 154
-note_off 63
-time 84
-note_on 61
-velocity 53
-time 27
-note_off 60
-time 9
-note_off 61
-time 123
-note_off 44
-time 1
-note_on 53
-velocity 33
-time 252
-note_on 61
-velocity 51
-time 92
-note_off 53
-time 13
-note_on 44
-velocity 34
-time 6
-note_off 44
-time 178
-note_on 37
-velocity 37
-time 74
-note_on 60
-velocity 69
-time 282
-note_off 37
-time 31
-note_on 44
-velocity 36
-time 35
-note_off 61
-time 9
-note_off 44
-time 158
-note_on 37
-velocity 32
-time 100
-note_off 37
-time 98
-note_on 44
-velocity 46
-time 139
-note_off 44
-time 187
-note_on 52
-velocity 56
-time 66
-note_off 52
-time 231
-note_on 44
-velocity 47
-time 44
-note_off 44
-time 194
-note_on 37
-velocity 46
-time 70
-note_on 58
-velocity 80
-time 250
-note_off 37
-time 37
-note_on 44
-velocity 43
-time 16
-note_off 44
-time 250
-note_on 37
-velocity 44
-time 11
-note_off 37
-time 220
-note_on 44
-velocity 54
-time 19
-note_on 53
-velocity 69
-time 277
-note_off 44
-time 10
-note_off 53
-time 37
-note_on 44
-velocity 53
-time 23
-note_off 60
-time 37
-note_off 44
-time 177
-note_on 37
-velocity 55
-time 52
-note_on 44
-velocity 54
-time 268
-note_on 56
-velocity 88
-time 105
-note_off 58
-time 48
-note_off 37
-time 11
-note_off 44
-time 195
-note_on 37
-velocity 53
-time 40
-note_off 37
-time 151
-note_on 44
-velocity 60
-time 74
-note_on 54
-velocity 69
-time 292
-note_off 44
-time 119
-note_on 61
-velocity 91
-time 3
-note_on 58
-velocity 72
-time 13
-note_on 44
-velocity 53
-time 32
-note_off 54
-time 15
-note_off 44
-time 214
-note_on 37
-velocity 57
-time 24
-note_off 58
-time 102
-note_on 44
-velocity 65
-time 171
-note_off 37
-time 28
-note_on 37
-velocity 50
-time 239
-note_off 44
-time 20
-note_on 66
-velocity 87
-time 115
-note_on 60
-velocity 72
-time 15
-note_off 61
-time 20
-note_off 56
-time 36
-note_off 37
-time 80
-note_off 60
-time 22
-note_on 44
-velocity 58
-time 39
-note_off 44
-time 225
-note_on 53
-velocity 53
-time 92
-note_on 65
-velocity 78
-time 96
-note_on 56
-velocity 56
-time 28
-note_on 61
-velocity 56
-time 14
-note_off 66
-time 29
-note_off 53
-time 16
-note_on 44
-velocity 41
-time 14
-note_off 44
-time 178
-note_on 37
-velocity 46
-time 67
-note_off 37
-time 222
-note_on 44
-velocity 47
-time 44
-note_off 44
-time 208
-note_on 37
-velocity 47
-time 54
-note_off 37
-time 166
-note_on 44
-velocity 57
-time 80
-note_off 44
-time 230
-note_on 53
-velocity 71
-time 20
-note_off 53
-time 200
-note_off 61
-time 24
-note_on 44
-velocity 48
-time 35
-note_off 44
-time 183
-note_on 37
-velocity 54
-time 57
-note_on 63
-velocity 76
-time 253
-note_on 60
-velocity 70
-time 5
-note_on 44
-velocity 51
-time 14
-note_off 37
-time 20
-note_off 65
-time 7
-note_off 56
-time 196
-note_off 44
-time 19
-note_off 60
-time 6
-note_on 37
-velocity 61
-time 13
-note_off 37
-time 226
-note_on 44
-velocity 68
-time 0
-note_off 44
-time 268
-note_on 65
-velocity 85
-time 0
-note_on 53
-velocity 65
-time 10
-note_on 61
-velocity 70
-time 5
-note_on 56
-velocity 72
-time 3
-note_off 63
-time 39
-note_off 53
-time 18
-note_on 44
-velocity 60
-time 7
-note_off 61
-time 85
-note_off 44
-time 135
-note_on 37
-velocity 62
-time 15
-note_off 65
-time 144
-note_on 66
-velocity 95
-time 85
-note_on 63
-velocity 75
-time 20
-note_on 44
-velocity 64
-time 15
-note_off 37
-time 63
-note_off 56
-time 187
-note_off 44
-time 11
-note_on 37
-velocity 65
-time 11
-note_off 63
-time 53
-note_off 37
-time 115
-note_off 66
-time 7
-note_on 44
-velocity 69
-time 32
-note_on 54
-velocity 64
-time 286
-note_off 44
-time 70
-note_on 68
-velocity 92
-time 33
-note_on 60
-velocity 83
-time 10
-note_on 65
-velocity 77
-time 3
-note_off 54
-time 58
-note_off 65
-time 7
-note_on 44
-velocity 60
-time 10
-note_off 44
-time 209
-note_on 37
-velocity 59
-time 7
-note_on 70
-velocity 93
-time 170
-note_on 66
-velocity 76
-time 14
-note_off 68
-time 35
-note_off 37
-time 231
-note_on 44
-velocity 60
-time 7
-note_off 66
-time 187
-note_off 44
-time 13
-note_on 37
-velocity 52
-time 59
-note_off 37
-time 182
-note_on 44
-velocity 59
-time 57
-note_on 68
-velocity 85
-time 98
-note_on 65
-velocity 71
-time 7
-note_off 60
-time 29
-note_off 70
-time 42
-note_off 65
-time 28
-note_off 68
-time 61
-note_off 44
-time 62
-note_on 53
-velocity 52
-time 108
-note_on 68
-velocity 84
-time 113
-note_on 61
-velocity 58
-time 29
-note_on 65
-velocity 60
-time 7
-note_off 53
-time 15
-note_on 44
-velocity 43
-time 10
-note_off 44
-time 187
-note_on 37
-velocity 41
-time 78
-note_on 44
-velocity 52
-time 235
-note_off 37
-time 10
-note_off 44
-time 201
-note_on 37
-velocity 50
-time 45
-note_off 37
-time 143
-note_on 44
-velocity 56
-time 91
-note_off 44
-time 208
-note_on 53
-velocity 72
-time 37
-note_off 61
-time 141
-note_off 68
-time 33
-note_off 53
-time 10
-note_off 65
-time 28
-note_on 44
-velocity 52
-time 23
-note_off 44
-time 210
-note_on 37
-velocity 54
-time 40
-note_on 44
-velocity 60
-time 265
-note_off 37
-time 83
-note_on 65
-velocity 86
-time 7
-note_on 61
-velocity 74
-time 10
-note_off 44
-time 233
-note_on 37
-velocity 68
-time 13
-note_off 65
-time 104
-note_on 66
-velocity 88
-time 48
-note_on 63
-velocity 78
-time 7
-note_on 65
-velocity 27
-time 46
-note_off 61
-time 3
-note_off 65
-time 32
-note_off 63
-time 67
-note_off 37
-time 11
-note_on 44
-velocity 72
-time 9
-note_off 66
-time 11
-note_off 44
-time 242
-note_on 53
-velocity 67
-time 0
-note_on 68
-velocity 91
-time 102
-note_on 61
-velocity 81
-time 11
-note_on 65
-velocity 74
-time 7
-note_off 53
-time 39
-note_on 44
-velocity 64
-time 6
-note_off 65
-time 96
-note_off 44
-time 145
-note_on 37
-velocity 65
-time 9
-note_on 44
-velocity 61
-time 272
-note_on 70
-velocity 96
-time 130
-note_on 66
-velocity 80
-time 15
-note_off 37
-time 19
-note_off 68
-time 14
-note_off 44
-time 216
-note_on 37
-velocity 54
-time 37
-note_off 37
-time 113
-note_on 44
-velocity 50
-time 95
-note_off 66
-time 332
-note_on 56
-velocity 83
-time 5
-note_off 44
-time 54
-note_off 56
-time 242
-note_on 44
-velocity 61
-time 23
-note_on 68
-velocity 84
-time 91
-note_on 65
-velocity 73
-time 15
-note_off 61
-time 48
-note_off 70
-time 33
-note_off 44
-time 71
-note_on 37
-velocity 58
-time 26
-note_on 66
-velocity 88
-time 233
-note_on 63
-velocity 74
-time 14
-note_off 65
-time 26
-note_on 44
-velocity 57
-time 3
-note_off 37
-time 19
-note_off 68
-time 50
-note_off 63
-time 101
-note_off 44
-time 39
-note_on 37
-velocity 59
-time 27
-note_off 37
-time 196
-note_on 44
-velocity 58
-time 46
-note_on 65
-velocity 84
-time 16
-note_on 61
-velocity 67
-time 22
-note_off 66
-time 45
-note_off 65
-time 24
-note_off 61
-time 11
-note_off 44
-time 187
-note_on 53
-velocity 58
-time 59
-note_on 65
-velocity 78
-time 63
-note_on 61
-velocity 68
-time 16
-note_off 53
-time 11
-note_on 44
-velocity 48
-time 3
-note_off 44
-time 210
-note_on 37
-velocity 45
-time 72
-note_on 63
-velocity 75
-time 295
-note_on 59
-velocity 57
-time 26
-note_on 44
-velocity 42
-time 7
-note_off 65
-time 7
-note_off 37
-time 16
-note_off 61
-time 14
-note_off 44
-time 208
-note_on 37
-velocity 41
-time 7
-note_off 37
-time 210
-note_on 44
-velocity 39
-time 97
-note_off 44
-time 169
-note_on 53
-velocity 43
-time 106
-note_off 53
-time 173
-note_on 44
-velocity 45
-time 71
-note_on 65
-velocity 69
-time 118
-note_off 63
-time 13
-note_on 61
-velocity 63
-time 5
-note_off 59
-time 46
-note_off 44
-time 26
-note_on 37
-velocity 48
-time 63
-note_on 44
-velocity 44
-time 247
-note_on 63
-velocity 74
-time 118
-note_on 59
-velocity 63
-time 7
-note_off 37
-time 6
-note_off 61
-time 5
-note_off 65
-time 22
-note_off 44
-time 157
-note_on 37
-velocity 43
-time 49
-note_on 65
-velocity 80
-time 141
-note_on 61
-velocity 70
-time 16
-note_off 59
-time 27
-note_off 63
-time 10
-note_off 37
-time 20
-note_on 44
-velocity 49
-time 91
-note_off 61
-time 6
-note_off 44
-time 264
-note_on 53
-velocity 39
-time 39
-note_on 61
-velocity 66
-time 96
-note_on 58
-velocity 59
-time 9
-note_off 65
-time 1
-note_off 53
-time 15
-note_on 46
-velocity 42
-time 39
-note_on 63
-velocity 68
-time 106
-note_on 60
-velocity 63
-time 6
-note_off 58
-time 46
-note_off 61
-time 76
-note_off 46
-time 5
-note_off 60
-time 33
-note_on 37
-velocity 37
-time 40
-note_on 46
-velocity 33
-time 296
-note_off 37
-time 39
-note_on 65
-velocity 61
-time 35
-note_on 61
-velocity 51
-time 35
-note_off 63
-time 9
-note_off 46
-time 18
-note_on 37
-velocity 35
-time 18
-note_off 37
-time 71
-note_on 46
-velocity 40
-time 140
-note_off 46
-time 248
-note_on 53
-velocity 55
-time 13
-note_off 53
-time 171
-note_off 61
-time 11
-note_on 46
-velocity 33
-time 102
-note_off 46
-time 162
-note_on 37
-velocity 37
-time 89
-note_off 37
-time 281
-note_on 46
-velocity 34
-time 20
-note_on 63
-velocity 66
-time 6
-note_on 60
-velocity 51
-time 36
-note_off 65
-time 153
-note_off 46
-time 41
-note_on 37
-velocity 41
-time 67
-note_off 37
-time 72
-note_on 46
-velocity 36
-time 234
-note_on 61
-velocity 70
-time 98
-note_off 60
-time 11
-note_off 63
-time 9
-note_on 58
-velocity 50
-time 20
-note_off 58
-time 71
-note_off 61
-time 27
-note_off 46
-time 141
-note_on 54
-velocity 45
-time 75
-note_on 61
-velocity 58
-time 135
-note_on 58
-velocity 37
-time 7
-note_off 54
-time 5
-note_on 46
-velocity 38
-time 5
-note_off 58
-time 144
-note_off 46
-time 14
-note_on 37
-velocity 38
-time 75
-note_off 37
-time 281
-note_on 45
-velocity 37
-time 16
-note_on 63
-velocity 56
-time 121
-note_on 59
-velocity 43
-time 28
-note_off 61
-time 16
-note_off 45
-time 5
-note_on 37
-velocity 19
-time 13
-note_off 37
-time 55
-note_on 45
-velocity 32
-time 140
-note_off 45
-time 157
-note_on 60
-velocity 45
-time 196
-note_on 54
-velocity 37
-time 26
-note_off 59
-time 19
-note_off 54
-time 7
-note_on 44
-velocity 27
-time 58
-note_off 44
-time 244
-note_on 37
-velocity 26
-time 78
-note_off 63
-time 273
-note_on 65
-velocity 48
-time 22
-note_off 37
-time 5
-note_on 44
-velocity 29
-time 39
-note_off 44
-time 207
-note_on 37
-velocity 27
-time 88
-note_off 37
-time 135
-note_on 44
-velocity 33
-time 183
-note_off 65
-time 74
-note_on 61
-velocity 53
-time 41
-note_off 60
-time 2
-note_off 44
-time 70
-note_off 61
-time 63
-note_on 53
-velocity 29
-time 248
-note_on 61
-velocity 46
-time 132
-note_off 53
-time 13
-note_on 44
-velocity 25
-time 54
-note_off 44
-time 225
-note_on 37
-velocity 21
-time 118
-note_off 37
-time 257
-note_on 44
-velocity 28
-time 62
-note_off 44
-time 144
-note_on 37
-velocity 25
-time 131
-note_off 37
-time 118
-note_on 44
-velocity 30
-time 145
-note_off 44
-time 144
-note_on 53
-velocity 43
-time 200
-note_off 53
-time 253
-note_on 44
-velocity 31
-time 83
-note_off 44
-time 217
-note_on 37
-velocity 27
-time 82
-note_off 37
-time 221
-note_on 44
-velocity 35
-time 49
-note_off 44
-time 105
-note_on 37
-velocity 27
-time 205
-note_off 37
-time 93
-note_on 44
-velocity 29
-time 203
-note_off 44
-time 255
-note_off 61
-time 58
-note_on 53
-velocity 51
-time 15
-note_off 53
-time 238
-note_on 44
-velocity 53
-time 50
-note_on 61
-velocity 83
-time 169
-note_off 44
-time 104
-note_on 37
-velocity 51
-time 48
-note_off 37
-time 192
-note_on 44
-velocity 49
-time 24
-note_on 70
-velocity 85
-time 114
-note_on 66
-velocity 73
-time 10
-note_off 44
-time 158
-note_on 37
-velocity 52
-time 76
-note_off 70
-time 126
-note_on 65
-velocity 79
-time 50
-note_on 68
-velocity 85
-time 0
-note_off 37
-time 5
-note_off 66
-time 67
-note_on 44
-velocity 53
-time 3
-note_off 65
-time 35
-note_off 68
-time 41
-note_off 44
-time 174
-note_on 53
-velocity 50
-time 57
-note_on 68
-velocity 82
-time 87
-note_on 65
-velocity 70
-time 13
-note_off 53
-time 158
-note_off 68
-time 29
-note_on 44
-velocity 49
-time 32
-note_off 65
-time 26
-note_off 44
-time 145
-note_on 37
-velocity 56
-time 39
-note_off 61
-time 207
-note_on 66
-velocity 84
-time 26
-note_on 44
-velocity 56
-time 14
-note_on 63
-velocity 68
-time 15
-note_off 37
-time 22
-note_off 44
-time 177
-note_on 37
-velocity 64
-time 11
-note_off 66
-time 13
-note_off 37
-time 149
-note_on 44
-velocity 59
-time 27
-note_on 65
-velocity 86
-time 102
-note_on 61
-velocity 75
-time 13
-note_off 63
-time 26
-note_off 61
-time 69
-note_off 65
-time 19
-note_off 44
-time 97
-note_on 53
-velocity 58
-time 32
-note_on 65
-velocity 78
-time 54
-note_on 61
-velocity 70
-time 13
-note_off 53
-time 6
-note_on 45
-velocity 53
-time 72
-note_off 65
-time 0
-note_on 63
-velocity 85
-time 3
-note_on 60
-velocity 76
-time 15
-note_off 61
-time 20
-note_off 45
-time 166
-note_on 37
-velocity 51
-time 52
-note_on 65
-velocity 82
-time 28
-note_on 61
-velocity 75
-time 13
-note_off 63
-time 36
-note_off 60
-time 6
-note_on 45
-velocity 55
-time 9
-note_off 37
-time 5
-note_off 45
-time 145
-note_on 37
-velocity 49
-time 37
-note_off 37
-time 174
-note_on 45
-velocity 65
-time 32
-note_off 45
-time 102
-note_off 61
-time 15
-note_on 53
-velocity 76
-time 108
-note_off 65
-time 14
-note_off 53
-time 3
-note_on 44
-velocity 60
-time 26
-note_on 61
-velocity 85
-time 114
-note_off 44
-time 149
-note_on 37
-velocity 61
-time 31
-note_on 44
-velocity 60
-time 216
-note_off 37
-time 67
-note_on 68
-velocity 87
-time 42
-note_on 65
-velocity 77
-time 1
-note_off 44
-time 190
-note_on 37
-velocity 57
-time 14
-note_on 70
-velocity 89
-time 95
-note_on 66
-velocity 76
-time 1
-note_off 65
-time 7
-note_off 68
-time 3
-note_off 70
-time 105
-note_off 66
-time 18
-note_off 37
-time 19
-note_on 68
-velocity 89
-time 37
-note_on 44
-velocity 61
-time 5
-note_on 65
-velocity 78
-time 15
-note_off 65
-time 96
-note_off 68
-time 9
-note_off 44
-time 114
-note_on 68
-velocity 88
-time 36
-note_on 65
-velocity 72
-time 10
-note_on 53
-velocity 59
-time 11
-note_off 53
-time 29
-note_off 68
-time 44
-note_on 44
-velocity 54
-time 5
-note_off 65
-time 45
-note_off 61
-time 50
-note_off 44
-time 59
-note_on 37
-velocity 56
-time 39
-note_on 66
-velocity 85
-time 240
-note_on 63
-velocity 76
-time 13
-note_on 44
-velocity 60
-time 2
-note_off 37
-time 15
-note_off 66
-time 138
-note_off 44
-time 57
-note_on 65
-velocity 86
-time 1
-note_on 37
-velocity 62
-time 1
-note_on 61
-velocity 84
-time 5
-note_off 63
-time 22
-note_off 65
-time 160
-note_off 37
-time 22
-note_on 63
-velocity 88
-time 24
-note_on 44
-velocity 62
-time 9
-note_on 60
-velocity 86
-time 0
-note_off 61
-time 31
-note_on 53
-velocity 74
-time 289
-note_off 44
-time 15
-note_on 65
-velocity 88
-time 33
-note_on 61
-velocity 82
-time 9
-note_off 63
-time 19
-note_off 60
-time 7
-note_off 53
-time 13
-note_on 45
-velocity 70
-time 61
-note_off 45
-time 234
-note_on 37
-velocity 67
-time 5
-note_off 65
-time 62
-note_on 63
-velocity 88
-time 23
-note_on 60
-velocity 85
-time 1
-note_off 61
-time 32
-note_on 45
-velocity 63
-time 225
-note_on 65
-velocity 88
-time 31
-note_on 61
-velocity 87
-time 5
-note_off 60
-time 23
-note_off 63
-time 11
-note_off 37
-time 11
-note_off 45
-time 1
-note_on 37
-velocity 73
-time 9
-note_off 37
-time 170
-note_on 45
-velocity 74
-time 59
-note_off 45
-time 182
-note_on 53
-velocity 85
-time 92
-note_on 44
-velocity 65
-time 22
-note_off 53
-time 22
-note_on 56
-velocity 96
-time 109
-note_off 61
-time 36
-note_off 65
-time 131
-note_off 44
-time 6
-note_on 37
-velocity 72
-time 19
-note_off 56
-time 36
-note_on 58
-velocity 99
-time 246
-note_on 44
-velocity 67
-time 14
-note_on 61
-velocity 73
-time 10
-note_off 37
-time 41
-note_off 58
-time 173
-note_off 44
-time 22
-note_on 37
-velocity 74
-time 6
-note_on 60
-velocity 102
-time 138
-note_on 65
-velocity 85
-time 7
-note_off 61
-time 32
-note_off 60
-time 72
-note_off 37
-time 23
-note_off 65
-time 7
-note_on 44
-velocity 85
-time 31
-note_off 44
-time 234
-note_on 61
-velocity 98
-time 20
-note_on 65
-velocity 84
-time 7
-note_on 53
-velocity 85
-time 3
-note_off 53
-time 23
-note_on 44
-velocity 80
-time 28
-note_off 61
-time 46
-note_off 65
-time 15
-note_on 37
-velocity 83
-time 188
-note_off 44
-time 15
-note_on 60
-velocity 96
-time 243
-note_on 68
-velocity 92
-time 1
-note_on 65
-velocity 88
-time 1
-note_on 44
-velocity 88
-time 15
-note_off 37
-time 57
-note_off 60
-time 82
-note_off 65
-time 37
-note_off 68
-time 32
-note_off 44
-time 70
-note_on 37
-velocity 86
-time 5
-note_on 44
-velocity 86
-time 290
-note_off 37
-time 3
-note_on 73
-velocity 106
-time 10
-note_on 65
-velocity 100
-time 3
-note_off 44
-time 23
-note_off 65
-time 104
-note_off 73
-time 15
-note_on 73
-velocity 104
-time 239
-note_on 53
-velocity 94
-time 3
-note_on 59
-velocity 100
-time 0
-note_on 65
-velocity 100
-time 1
-note_off 59
-time 53
-note_off 53
-time 23
-note_on 44
-velocity 81
-time 201
-note_on 37
-velocity 82
-time 256
-note_off 44
-time 13
-note_on 45
-velocity 85
-time 255
-note_off 37
-time 55
-note_off 45
-time 179
-note_on 37
-velocity 78
-time 14
-note_off 37
-time 247
-note_on 45
-velocity 90
-time 9
-note_off 45
-time 140
-note_off 65
-time 58
-note_on 54
-velocity 101
-time 223
-note_on 46
-velocity 76
-time 61
-note_off 54
-time 36
-note_on 66
-velocity 92
-time 74
-note_off 73
-time 0
-note_on 61
-velocity 92
-time 1
-note_off 46
-time 201
-note_on 37
-velocity 74
-time 10
-note_off 66
-time 82
-note_on 46
-velocity 78
-time 156
-note_off 37
-time 89
-note_on 75
-velocity 96
-time 28
-note_on 71
-velocity 85
-time 13
-note_off 46
-time 177
-note_off 75
-time 14
-note_on 37
-velocity 71
-time 15
-note_off 71
-time 33
-note_on 73
-velocity 97
-time 118
-note_on 70
-velocity 88
-time 11
-note_off 37
-time 28
-note_on 46
-velocity 71
-time 78
-note_off 70
-time 49
-note_off 73
-time 39
-note_on 73
-velocity 103
-time 134
-note_on 54
-velocity 87
-time 2
-note_off 46
-time 3
-note_on 70
-velocity 84
-time 2
-note_on 46
-velocity 68
-time 225
-note_off 54
-time 7
-note_off 73
-time 5
-note_off 46
-time 203
-note_on 37
-velocity 74
-time 3
-note_off 70
-time 194
-note_on 71
-velocity 94
-time 55
-note_on 46
-velocity 70
-time 7
-note_on 68
-velocity 88
-time 0
-note_off 37
-time 41
-note_off 68
-time 169
-note_off 46
-time 10
-note_on 37
-velocity 72
-time 6
-note_on 46
-velocity 70
-time 234
-note_on 70
-velocity 87
-time 59
-note_on 66
-velocity 82
-time 7
-note_off 71
-time 22
-note_off 61
-time 27
-note_off 66
-time 41
-note_off 70
-time 18
-note_on 50
-velocity 67
-time 207
-note_off 46
-time 26
-note_on 70
-velocity 81
-time 23
-note_on 58
-velocity 73
-time 11
-note_on 66
-velocity 71
-time 6
-note_on 68
-velocity 81
-time 5
-note_on 65
-velocity 76
-time 14
-note_on 46
-velocity 60
-time 2
-note_off 70
-time 31
-note_off 37
-time 1
-note_off 66
-time 15
-note_on 70
-velocity 75
-time 192
-note_off 46
-time 7
-note_on 66
-velocity 71
-time 14
-note_on 37
-velocity 58
-time 2
-note_off 68
-time 37
-note_off 65
-time 22
-note_on 46
-velocity 67
-time 11
-note_off 37
-time 23
-note_on 37
-velocity 70
-time 192
-note_off 46
-time 1
-note_off 50
-time 1
-note_on 46
-velocity 74
-time 207
-note_off 66
-time 166
-note_off 58
-time 29
-note_on 49
-velocity 92
-time 35
-note_off 46
-time 11
-note_on 46
-velocity 73
-time 37
-note_off 70
-time 54
-note_off 37
-time 32
-note_on 66
-velocity 88
-time 7
-note_on 61
-velocity 85
-time 7
-note_off 46
-time 183
-note_on 37
-velocity 76
-time 2
-note_off 66
-time 5
-note_on 46
-velocity 70
-time 214
-note_on 73
-velocity 91
-time 104
-note_on 70
-velocity 82
-time 10
-note_off 37
-time 44
-note_off 49
-time 59
-note_on 37
-velocity 73
-time 106
-note_off 46
-time 33
-note_on 75
-velocity 90
-time 41
-note_on 71
-velocity 80
-time 6
-note_off 70
-time 28
-note_off 73
-time 55
-note_off 75
-time 19
-note_off 71
-time 7
-note_off 37
-time 33
-note_on 46
-velocity 70
-time 33
-note_on 73
-velocity 97
-time 24
-note_on 70
-velocity 82
-time 6
-note_off 70
-time 153
-note_off 73
-time 0
-note_off 46
-time 41
-note_on 54
-velocity 78
-time 13
-note_on 73
-velocity 92
-time 80
-note_on 70
-velocity 86
-time 2
-note_off 73
-time 141
-note_off 54
-time 10
-note_off 70
-time 0
-note_on 71
-velocity 87
-time 40
-note_on 46
-velocity 62
-time 2
-note_on 68
-velocity 86
-time 6
-note_on 70
-velocity 51
-time 5
-note_off 70
-time 29
-note_off 46
-time 132
-note_on 70
-velocity 71
-time 22
-note_on 73
-velocity 91
-time 2
-note_on 37
-velocity 66
-time 3
-note_off 68
-time 23
-note_off 71
-time 2
-note_off 70
-time 100
-note_off 73
-time 2
-note_on 71
-velocity 90
-time 49
-note_on 68
-velocity 89
-time 16
-note_on 46
-velocity 72
-time 6
-note_off 37
-time 3
-note_off 46
-time 9
-note_on 37
-velocity 74
-time 2
-note_off 68
-time 14
-note_on 46
-velocity 76
-time 194
-note_off 71
-time 15
-note_on 70
-velocity 86
-time 67
-note_on 66
-velocity 87
-time 7
-note_off 61
-time 37
-note_off 66
-time 65
-note_off 70
-time 49
-note_on 50
-velocity 73
-time 110
-note_off 46
-time 27
-note_on 70
-velocity 86
-time 3
-note_on 58
-velocity 79
-time 9
-note_on 66
-velocity 77
-time 5
-note_off 70
-time 53
-note_off 66
-time 7
-note_on 68
-velocity 82
-time 6
-note_on 65
-velocity 82
-time 1
-note_on 66
-velocity 38
-time 10
-note_on 46
-velocity 70
-time 3
-note_off 66
-time 11
-note_off 37
-time 22
-note_on 70
-velocity 92
-time 143
-note_on 66
-velocity 77
-time 2
-note_on 37
-velocity 76
-time 29
-note_off 46
-time 0
-note_off 65
-time 5
-note_off 68
-time 22
-note_on 46
-velocity 77
-time 180
-note_off 37
-time 93
-note_on 37
-velocity 84
-time 140
-note_off 46
-time 7
-note_off 50
-time 45
-note_on 46
-velocity 82
-time 173
-note_off 66
-time 253
-note_on 49
-velocity 94
-time 28
-note_off 46
-time 3
-note_off 58
-time 3
-note_off 70
-time 28
-note_on 46
-velocity 75
-time 0
-note_off 37
-time 45
-note_on 58
-velocity 92
-time 41
-note_on 66
-velocity 87
-time 0
-note_off 58
-time 139
-note_on 37
-velocity 78
-time 35
-note_off 46
-time 20
-note_on 70
-velocity 97
-time 209
-note_on 46
-velocity 88
-time 14
-note_off 49
-time 65
-note_off 37
-time 10
-note_off 66
-time 14
-note_on 37
-velocity 81
-time 153
-note_off 46
-time 31
-note_off 70
-time 102
-note_on 73
-velocity 94
-time 2
-note_on 46
-velocity 84
-time 23
-note_off 37
-time 14
-note_off 46
-time 27
-note_off 73
-time 48
-note_on 68
-velocity 15
-time 194
-note_off 68
-time 23
-note_on 53
-velocity 79
-time 7
-note_on 58
-velocity 89
-time 1
-note_on 73
-velocity 107
-time 2
-note_on 65
-velocity 98
-time 0
-note_off 58
-time 13
-note_off 53
-time 5
-note_on 46
-velocity 82
-time 166
-note_off 65
-time 2
-note_off 73
-time 63
-note_off 46
-time 167
-note_on 37
-velocity 91
-time 31
-note_on 77
-velocity 105
-time 261
-note_on 46
-velocity 86
-time 13
-note_off 37
-time 59
-note_off 46
-time 210
-note_on 37
-velocity 76
-time 11
-note_off 37
-time 141
-note_on 46
-velocity 87
-time 9
-note_off 46
-time 33
-note_off 77
-time 50
-note_on 82
-velocity 103
-time 42
-note_off 82
-time 130
-note_on 52
-velocity 76
-time 32
-note_on 54
-velocity 73
-time 52
-note_on 58
-velocity 90
-time 3
-note_on 64
-velocity 94
-time 10
-note_on 70
-velocity 93
-time 84
-note_off 70
-time 7
-note_on 82
-velocity 110
-time 286
-note_off 64
-time 80
-note_off 52
-time 1
-note_off 54
-time 75
-note_off 58
-time 5
-note_on 46
-velocity 90
-time 359
-note_on 37
-velocity 89
-time 375
-note_off 46
-time 2
-note_on 46
-velocity 81
-time 311
-note_off 37
-time 14
-note_on 37
-velocity 82
-time 246
-note_off 46
-time 2
-note_on 46
-velocity 82
-time 236
-note_off 37
-time 10
-note_on 52
-velocity 85
-time 210
-note_off 46
-time 7
-note_on 46
-velocity 73
-time 240
-note_off 52
-time 16
-note_off 46
-time 225
-note_on 37
-velocity 71
-time 5
-note_on 46
-velocity 70
-time 287
-note_off 37
-time 50
-note_off 46
-time 222
-note_on 37
-velocity 65
-time 6
-note_off 37
-time 157
-note_on 46
-velocity 71
-time 106
-note_off 46
-time 385
-note_on 54
-velocity 85
-time 3
-note_off 82
-time 16
-note_on 45
-velocity 51
-time 27
-note_off 54
-time 1
-note_on 69
-velocity 74
-time 164
-note_off 45
-time 135
-note_on 37
-velocity 51
-time 45
-note_off 37
-time 255
-note_on 45
-velocity 46
-time 5
-note_on 81
-velocity 78
-time 104
-note_on 78
-velocity 67
-time 13
-note_off 45
-time 191
-note_on 37
-velocity 55
-time 28
-note_off 78
-time 84
-note_on 80
-velocity 75
-time 33
-note_on 83
-velocity 85
-time 5
-note_off 37
-time 59
-note_off 81
-time 26
-note_off 83
-time 27
-note_off 80
-time 11
-note_on 45
-velocity 54
-time 95
-note_on 81
-velocity 80
-time 31
-note_on 78
-velocity 69
-time 9
-note_off 81
-time 121
-note_off 78
-time 3
-note_off 45
-time 131
-note_on 54
-velocity 74
-time 5
-note_on 81
-velocity 82
-time 79
-note_on 78
-velocity 70
-time 13
-note_off 81
-time 134
-note_off 54
-time 7
-note_off 78
-time 23
-note_on 45
-velocity 47
-time 28
-note_on 37
-velocity 52
-time 253
-note_off 45
-time 5
-note_on 74
-velocity 78
-time 97
-note_on 71
-velocity 72
-time 41
-note_off 69
-time 9
-note_off 37
-time 135
-note_on 45
-velocity 53
-time 40
-note_off 45
-time 192
-note_on 37
-velocity 52
-time 35
-note_off 37
-time 187
-note_on 45
-velocity 52
-time 80
-note_on 73
-velocity 83
-time 3
-note_on 69
-velocity 64
-time 20
-note_off 74
-time 9
-note_off 71
-time 5
-note_off 69
-time 54
-note_off 73
-time 6
-note_on 54
-velocity 63
-time 272
-note_off 45
-time 45
-note_on 72
-velocity 76
-time 66
-note_on 69
-velocity 68
-time 15
-note_off 54
-time 1
-note_on 44
-velocity 47
-time 9
-note_on 68
-velocity 73
-time 41
-note_on 65
-velocity 69
-time 7
-note_off 69
-time 29
-note_off 65
-time 24
-note_off 68
-time 41
-note_off 44
-time 70
-note_on 37
-velocity 49
-time 52
-note_on 66
-velocity 79
-time 20
-note_on 63
-velocity 74
-time 7
-note_off 63
-time 71
-note_off 66
-time 24
-note_on 44
-velocity 43
-time 188
-note_off 37
-time 18
-note_on 66
-velocity 70
-time 53
-note_on 63
-velocity 59
-time 19
-note_off 44
-time 11
-note_on 37
-velocity 45
-time 15
-note_off 37
-time 50
-note_on 44
-velocity 55
-time 83
-note_off 72
-time 48
-note_off 44
-time 127
-note_off 63
-time 1
-note_on 54
-velocity 70
-time 66
-note_off 54
-time 188
-note_on 44
-velocity 44
-time 74
-note_off 44
-time 153
-note_on 37
-velocity 49
-time 54
-note_on 68
-velocity 77
-time 243
-note_on 65
-velocity 64
-time 10
-note_off 66
-time 0
-note_on 44
-velocity 45
-time 6
-note_off 37
-time 24
-note_off 44
-time 160
-note_on 37
-velocity 48
-time 48
-note_off 68
-time 98
-note_off 37
-time 44
-note_on 69
-velocity 80
-time 2
-note_on 66
-velocity 67
-time 16
-note_off 65
-time 40
-note_on 44
-velocity 52
-time 74
-note_off 69
-time 3
-note_off 66
-time 1
-note_off 44
-time 326
-note_on 54
-velocity 55
-time 7
-note_on 69
-velocity 72
-time 13
-note_on 66
-velocity 57
-time 16
-note_off 54
-time 7
-note_on 45
-velocity 49
-time 15
-note_on 61
-velocity 71
-time 111
-note_on 57
-velocity 62
-time 10
-note_off 66
-time 52
-note_off 57
-time 20
-note_off 69
-time 5
-note_off 61
-time 10
-note_off 45
-time 20
-note_on 37
-velocity 43
-time 79
-note_on 71
-velocity 72
-time 251
-note_off 37
-time 2
-note_on 45
-velocity 39
-time 13
-note_on 68
-velocity 60
-time 7
-note_off 71
-time 131
-note_off 45
-time 35
-note_on 37
-velocity 41
-time 59
-note_off 37
-time 114
-note_on 45
-velocity 49
-time 128
-note_on 69
-velocity 72
-time 19
-note_on 66
-velocity 64
-time 10
-note_off 68
-time 5
-note_off 66
-time 63
-note_off 69
-time 19
-note_off 45
-time 7
-note_on 54
-velocity 53
-time 210
-note_on 69
-velocity 65
-time 39
-note_on 66
-velocity 56
-time 15
-note_off 54
-time 115
-note_off 69
-time 1
-note_off 66
-time 35
-note_on 45
-velocity 43
-time 76
-note_off 45
-time 217
-note_on 37
-velocity 42
-time 48
-note_on 66
-velocity 62
-time 0
-note_on 62
-velocity 56
-time 10
-note_off 62
-time 153
-note_off 66
-time 16
-note_off 37
-time 104
-note_on 45
-velocity 47
-time 15
-note_on 62
-velocity 61
-time 257
-note_on 59
-velocity 58
-time 18
-note_off 45
-time 1
-note_on 37
-velocity 44
-time 27
-note_off 59
-time 33
-note_off 62
-time 182
-note_on 45
-velocity 42
-time 23
-note_off 37
-time 3
-note_on 61
-velocity 68
-time 7
-note_on 57
-velocity 55
-time 10
-note_off 57
-time 53
-note_off 61
-time 65
-note_off 45
-time 183
-note_on 51
-velocity 50
-time 41
-note_on 60
-velocity 67
-time 101
-note_on 57
-velocity 56
-time 5
-note_on 44
-velocity 43
-time 15
-note_off 51
-time 42
-note_off 57
-time 29
-note_on 56
-velocity 57
-time 23
-note_on 53
-velocity 55
-time 6
-note_off 53
-time 41
-note_off 56
-time 32
-note_off 44
-time 70
-note_on 37
-velocity 40
-time 20
-note_on 54
-velocity 67
-time 87
-note_on 51
-velocity 55
-time 14
-note_off 51
-time 58
-note_off 54
-time 18
-note_on 44
-velocity 40
-time 252
-note_on 54
-velocity 51
-time 3
-note_on 51
-velocity 45
-time 29
-note_off 37
-time 9
-note_off 44
-time 2
-note_on 37
-velocity 28
-time 15
-note_off 51
-time 40
-note_on 44
-velocity 49
-time 164
-note_off 44
-time 276
-note_on 51
-velocity 50
-time 26
-note_off 37
-time 15
-note_on 44
-velocity 34
-time 0
-note_on 56
-velocity 58
-time 50
-note_off 60
-time 13
-note_on 53
-velocity 48
-time 6
-note_off 54
-time 0
-note_off 44
-time 104
-note_on 37
-velocity 41
-time 42
-note_on 44
-velocity 36
-time 324
-note_on 57
-velocity 60
-time 76
-note_off 53
-time 2
-note_on 54
-velocity 50
-time 6
-note_off 37
-time 6
-note_off 56
-time 6
-note_off 44
-time 3
-note_on 37
-velocity 32
-time 1
-note_off 51
-time 195
-note_on 44
-velocity 57
-time 13
-note_on 49
-velocity 70
-time 303
-note_off 44
-time 22
-note_on 44
-velocity 59
-time 11
-note_off 37
-time 52
-note_on 37
-velocity 62
-time 180
-note_off 44
-time 5
-note_off 57
-time 234
-note_on 56
-velocity 89
-time 22
-note_on 53
-velocity 81
-time 14
-note_on 44
-velocity 65
-time 9
-note_off 54
-time 33
-note_off 37
-time 19
-note_off 53
-time 23
-note_off 44
-time 5
-note_on 37
-velocity 78
-time 7
-note_off 56
-time 45
-note_off 49
-time 5
-note_on 44
-velocity 83
-time 183
-note_off 37
-time 16
-note_on 52
-velocity 80
-time 289
-note_off 44
-time 37
-note_on 61
-velocity 98
-time 7
-note_off 52
-time 2
-note_on 44
-velocity 78
-time 53
-note_on 37
-velocity 85
-time 273
-note_off 44
-time 10
-note_on 44
-velocity 89
-time 281
-note_off 37
-time 40
-note_on 37
-velocity 82
-time 223
-note_off 44
-time 35
-note_off 61
-time 62
-note_on 64
-velocity 100
-time 20
-note_off 64
-time 119
-note_off 37
-time 2
-note_on 44
-velocity 81
-time 1
-note_off 44
-time 100
-note_on 47
-velocity 85
-time 23
-note_off 47
-time 67
-note_on 56
-velocity 102
-time 71
-note_on 28
-velocity 75
-time 210
-note_off 56
-time 13
-note_on 40
-velocity 85
-time 76
-note_on 64
-velocity 108
-time 83
-note_on 56
-velocity 92
-time 5
-note_off 28
-time 15
-note_off 40
-time 53
-note_on 47
-velocity 62
-time 257
-note_off 47
-time 307
-note_on 40
-velocity 71
-time 6
-note_on 47
-velocity 72
-time 273
-note_off 40
-time 50
-note_off 56
-time 72
-note_off 47
-time 118
-note_on 40
-velocity 69
-time 9
-note_off 40
-time 191
-note_on 47
-velocity 76
-time 32
-note_off 47
-time 234
-note_on 56
-velocity 95
-time 26
-note_off 56
-time 214
-note_on 47
-velocity 72
-time 19
-note_on 66
-velocity 93
-time 130
-note_off 64
-time 31
-note_off 47
-time 100
-note_on 40
-velocity 73
-time 14
-note_off 40
-time 57
-note_on 57
-velocity 78
-time 231
-note_on 69
-velocity 97
-time 105
-note_on 61
-velocity 88
-time 11
-note_off 66
-time 18
-note_off 57
-time 22
-note_on 49
-velocity 62
-time 2
-note_off 61
-time 62
-note_off 49
-time 162
-note_on 40
-velocity 65
-time 26
-note_on 68
-velocity 92
-time 110
-note_on 59
-velocity 78
-time 9
-note_off 40
-time 18
-note_off 69
-time 10
-note_off 59
-time 75
-note_off 68
-time 31
-note_on 56
-velocity 66
-time 197
-note_on 68
-velocity 89
-time 76
-note_on 59
-velocity 76
-time 15
-note_on 64
-velocity 75
-time 7
-note_off 56
-time 18
-note_on 47
-velocity 53
-time 9
-note_off 47
-time 230
-note_on 40
-velocity 57
-time 36
-note_off 59
-time 9
-note_off 64
-time 58
-note_off 40
-time 177
-note_on 47
-velocity 59
-time 18
-note_off 47
-time 265
-note_on 40
-velocity 53
-time 5
-note_on 57
-velocity 89
-time 152
-note_off 40
-time 93
-note_off 68
-time 75
-note_off 57
-time 40
-note_on 47
-velocity 52
-time 22
-note_off 47
-time 143
-note_on 57
-velocity 51
-time 152
-note_on 59
-velocity 87
-time 144
-note_on 68
-velocity 66
-time 19
-note_on 63
-velocity 58
-time 16
-note_off 57
-time 15
-note_off 59
-time 54
-note_on 47
-velocity 39
-time 9
-note_off 47
-time 67
-note_on 40
-velocity 45
-time 184
-note_on 61
-velocity 88
-time 121
-note_off 63
-time 13
-note_off 40
-time 9
-note_on 47
-velocity 33
-time 9
-note_off 61
-time 192
-note_off 47
-time 54
-note_on 40
-velocity 37
-time 32
-note_off 40
-time 213
-note_on 47
-velocity 35
-time 28
-note_on 59
-velocity 84
-time 108
-note_off 47
-time 6
-note_off 68
-time 76
-note_off 59
-time 58
-note_on 56
-velocity 47
-time 209
-note_on 59
-velocity 68
-time 139
-note_on 68
-velocity 47
-time 42
-note_on 64
-velocity 44
-time 3
-note_off 56
-time 7
-note_on 47
-velocity 40
-time 58
-note_off 47
-time 265
-note_on 40
-velocity 14
-time 97
-note_off 40
-time 175
-note_on 47
-velocity 30
-time 125
-note_off 64
-time 165
-note_off 47
-time 79
-note_on 40
-velocity 32
-time 7
-note_off 59
-time 6
-note_off 40
-time 6
-note_off 68
-time 11
-note_on 47
-velocity 27
-time 45
-note_off 47
-time 75
-note_on 60
-velocity 64
-time 115
-note_on 66
-velocity 46
-time 33
-note_on 54
-velocity 29
-time 11
-note_on 68
-velocity 18
-time 18
-note_off 54
-time 5
-note_on 44
-velocity 35
-time 9
-note_off 44
-time 79
-note_on 39
-velocity 27
-time 91
-note_off 39
-time 151
-note_off 60
-time 182
-note_off 68
-time 49
-note_on 44
-velocity 26
-time 13
-note_off 44
-time 251
-note_off 66
-time 3
-note_on 39
-velocity 22
-time 106
-note_off 39
-time 113
-note_on 44
-velocity 31
-time 285
-note_off 44
-time 55
-note_on 53
-velocity 31
-time 156
-note_off 53
-time 52
-note_on 56
-velocity 41
-time 66
-note_on 61
-velocity 42
-time 196
-note_on 65
-velocity 44
-time 166
-note_on 68
-velocity 54
-time 380
-note_on 25
-velocity 39
-time 14
-note_on 37
-velocity 38
-time 18
-note_off 25
-time 9
-note_off 37
-time 15
-note_off 65
-time 5
-note_off 68
-time 61
-note_off 56
-time 49
-note_on 44
-velocity 24
-time 2
-note_off 61
-time 11
-note_off 44
-time 165
-note_on 37
-velocity 21
-time 105
-note_off 37
-time 252
-note_on 44
-velocity 25
-time 53
-note_on 56
-velocity 59
-time 156
-note_off 44
-time 183
-note_on 37
-velocity 32
-time 153
-note_off 37
-time 101
-note_on 44
-velocity 36
-time 171
-note_off 44
-time 134
-note_on 54
-velocity 46
-time 140
-note_on 61
-velocity 69
-time 130
-note_on 58
-velocity 45
-time 55
-note_off 54
-time 143
-note_on 44
-velocity 38
-time 79
-note_off 44
-time 164
-note_on 37
-velocity 32
-time 83
-note_off 58
-time 65
-note_off 56
-time 113
-note_off 37
-time 35
-note_on 44
-velocity 42
-time 57
-note_off 44
-time 257
-note_on 37
-velocity 41
-time 37
-note_on 65
-velocity 76
-time 127
-note_on 60
-velocity 49
-time 57
-note_off 61
-time 3
-note_off 37
-time 46
-note_on 44
-velocity 43
-time 123
-note_off 60
-time 1
-note_off 65
-time 3
-note_off 44
-time 131
-note_on 53
-velocity 40
-time 199
-note_on 65
-velocity 71
-time 109
-note_on 61
-velocity 41
-time 53
-note_on 56
-velocity 38
-time 0
-note_off 53
-time 45
-note_off 56
-time 0
-note_off 61
-time 46
-note_off 65
-time 29
-note_on 44
-velocity 35
-time 13
-note_off 44
-time 277
-note_on 37
-velocity 29
-time 108
-note_on 73
-velocity 44
-time 115
-note_off 37
-time 212
-note_off 73
-time 106
-note_on 44
-velocity 20
-time 18
-note_on 80
-velocity 39
-time 27
-note_on 77
-velocity 41
-time 14
-note_off 44
-time 57
-note_off 77
-time 140
-note_off 80
-time 9
-note_on 37
-velocity 34
-time 6
-note_on 82
-velocity 44
-time 33
-note_on 73
-velocity 41
-time 1
-note_off 37
-time 69
-note_off 82
-time 138
-note_off 73
-time 15
-note_on 80
-velocity 49
-time 18
-note_on 44
-velocity 32
-time 2
-note_on 77
-velocity 52
-time 0
-note_off 80
-time 52
-note_off 77
-time 1
-note_off 44
-time 89
-note_on 80
-velocity 51
-time 167
-note_on 53
-velocity 29
-time 10
-note_on 77
-velocity 40
-time 23
-note_off 80
-time 117
-note_off 53
-time 3
-note_off 77
-time 52
-note_on 44
-velocity 27
-time 80
-note_off 44
-time 132
-note_on 37
-velocity 31
-time 106
-note_off 37
-time 246
-note_on 78
-velocity 57
-time 9
-note_on 70
-velocity 44
-time 7
-note_on 44
-velocity 30
-time 28
-note_off 44
-time 117
-note_off 70
-time 22
-note_on 37
-velocity 21
-time 121
-note_off 37
-time 89
-note_on 44
-velocity 23
-time 188
-note_off 78
-time 0
-note_on 77
-velocity 52
-time 66
-note_on 68
-velocity 35
-time 20
-note_off 77
-time 42
-note_off 68
-time 7
-note_off 44
-time 16
-note_on 53
-velocity 31
-time 217
-note_on 77
-velocity 58
-time 5
-note_on 68
-velocity 31
-time 45
-note_off 77
-time 76
-note_off 53
-time 22
-note_off 68
-time 15
-note_on 44
-velocity 38
-time 105
-note_off 44
-time 217
-note_on 37
-velocity 42
-time 29
-note_on 63
-velocity 81
-time 264
-note_on 66
-velocity 62
-time 31
-note_on 44
-velocity 43
-time 7
-note_off 37
-time 42
-note_off 44
-time 199
-note_on 37
-velocity 45
-time 78
-note_off 63
-time 50
-note_off 37
-time 32
-note_off 66
-time 14
-note_on 44
-velocity 52
-time 115
-note_off 44
-time 251
-note_on 54
-velocity 46
-time 3
-note_on 65
-velocity 71
-time 115
-note_on 60
-velocity 69
-time 13
-note_on 68
-velocity 69
-time 22
-note_off 54
-time 2
-note_on 44
-velocity 43
-time 31
-note_off 65
-time 41
-note_off 44
-time 125
-note_on 37
-velocity 42
-time 54
-note_on 66
-velocity 76
-time 111
-note_on 70
-velocity 68
-time 24
-note_off 68
-time 54
-note_on 44
-velocity 40
-time 15
-note_off 37
-time 9
-note_off 66
-time 85
-note_off 44
-time 125
-note_on 37
-velocity 35
-time 37
-note_off 37
-time 148
-note_on 44
-velocity 40
-time 135
-note_on 65
-velocity 63
-time 76
-note_on 68
-velocity 65
-time 26
-note_off 60
-time 6
-note_off 70
-time 22
-note_off 68
-time 98
-note_off 65
-time 22
-note_off 44
-time 26
-note_on 53
-velocity 29
-time 260
-note_on 68
-velocity 53
-time 114
-note_on 61
-velocity 48
-time 11
-note_on 65
-velocity 54
-time 0
-note_off 61
-time 19
-note_off 65
-time 10
-note_off 53
-time 53
-note_off 68
-time 16
-note_on 44
-velocity 29
-time 71
-note_off 44
-time 260
-note_on 37
-velocity 33
-time 76
-note_on 73
-velocity 46
-time 79
-note_off 37
-time 209
-note_off 73
-time 53
-note_on 44
-velocity 30
-time 49
-note_on 80
-velocity 43
-time 2
-note_on 77
-velocity 41
-time 15
-note_off 44
-time 89
-note_off 77
-time 79
-note_off 80
-time 7
-note_on 37
-velocity 31
-time 48
-note_on 73
-velocity 45
-time 5
-note_on 82
-velocity 34
-time 6
-note_off 37
-time 72
-note_off 82
-time 115
-note_off 73
-time 35
-note_on 77
-velocity 52
-time 11
-note_on 44
-velocity 23
-time 7
-note_on 80
-velocity 49
-time 1
-note_off 80
-time 48
-note_off 77
-time 1
-note_off 44
-time 71
-note_on 80
-velocity 44
-time 161
-note_on 53
-velocity 32
-time 11
-note_on 77
-velocity 30
-time 41
-note_off 53
-time 78
-note_off 80
-time 0
-note_off 77
-time 31
-note_on 44
-velocity 22
-time 156
-note_off 44
-time 93
-note_on 37
-velocity 30
-time 127
-note_on 78
-velocity 53
-time 238
-note_off 37
-time 10
-note_on 75
-velocity 48
-time 11
-note_on 44
-velocity 27
-time 42
-note_off 44
-time 84
-note_off 75
-time 33
-note_off 78
-time 67
-note_on 37
-velocity 29
-time 2
-note_off 37
-time 119
-note_on 44
-velocity 32
-time 132
-note_on 77
-velocity 50
-time 7
-note_on 73
-velocity 48
-time 6
-note_off 73
-time 46
-note_off 77
-time 18
-note_off 44
-time 71
-note_on 53
-velocity 42
-time 127
-note_on 77
-velocity 57
-time 15
-note_on 73
-velocity 39
-time 28
-note_off 77
-time 10
-note_off 73
-time 19
-note_off 53
-time 114
-note_on 44
-velocity 44
-time 89
-note_on 68
-velocity 84
-time 127
-note_on 65
-velocity 71
-time 14
-note_off 44
-time 62
-note_on 37
-velocity 50
-time 70
-note_off 65
-time 3
-note_off 68
-time 84
-note_on 44
-velocity 47
-time 253
-note_on 70
-velocity 89
-time 156
-note_on 61
-velocity 64
-time 35
-note_on 66
-velocity 55
-time 6
-note_off 37
-time 35
-note_off 44
-time 7
-note_on 37
-velocity 39
-time 7
-note_off 37
-time 109
-note_on 44
-velocity 47
-time 114
-note_off 66
-time 157
-note_on 56
-velocity 72
-time 104
-note_off 44
-time 39
-note_off 56
-time 231
-note_on 44
-velocity 54
-time 6
-note_on 68
-velocity 81
-time 79
-note_on 65
-velocity 69
-time 10
-note_off 61
-time 26
-note_off 70
-time 87
-note_off 44
-time 33
-note_on 37
-velocity 55
-time 13
-note_on 66
-velocity 86
-time 199
-note_off 65
-time 24
-note_on 63
-velocity 62
-time 18
-note_on 44
-velocity 53
-time 10
-note_off 68
-time 6
-note_off 37
-time 3
-note_off 63
-time 108
-note_off 44
-time 58
-note_on 37
-velocity 62
-time 28
-note_off 37
-time 187
-note_on 44
-velocity 61
-time 59
-note_on 65
-velocity 86
-time 54
-note_on 61
-velocity 65
-time 28
-note_off 66
-time 19
-note_off 61
-time 48
-note_off 65
-time 42
-note_off 44
-time 187
-note_on 53
-velocity 51
-time 27
-note_on 65
-velocity 83
-time 65
-note_on 61
-velocity 69
-time 10
-note_off 53
-time 13
-note_on 44
-velocity 44
-time 33
-note_off 61
-time 97
-note_off 44
-time 88
-note_off 65
-time 57
-note_on 37
-velocity 42
-time 27
-note_on 68
-velocity 57
-time 2
-note_on 44
-velocity 40
-time 277
-note_on 63
-velocity 77
-time 109
-note_on 59
-velocity 61
-time 26
-note_on 71
-velocity 63
-time 1
-note_off 68
-time 9
-note_off 37
-time 3
-note_off 59
-time 11
-note_off 71
-time 0
-note_off 63
-time 10
-note_off 44
-time 52
-note_on 37
-velocity 30
-time 97
-note_on 73
-velocity 51
-time 5
-note_on 65
-velocity 39
-time 32
-note_off 37
-time 70
-note_off 65
-time 3
-note_on 71
-velocity 53
-time 135
-note_off 73
-time 14
-note_on 63
-velocity 42
-time 5
-note_on 44
-velocity 34
-time 3
-note_off 71
-time 29
-note_off 63
-time 23
-note_off 44
-time 136
-note_on 71
-velocity 56
-time 89
-note_on 63
-velocity 39
-time 14
-note_on 53
-velocity 42
-time 15
-note_off 53
-time 151
-note_off 71
-time 71
-note_on 44
-velocity 37
-time 24
-note_off 63
-time 6
-note_off 44
-time 203
-note_on 37
-velocity 41
-time 33
-note_on 65
-velocity 70
-time 337
-note_off 37
-time 24
-note_on 44
-velocity 38
-time 0
-note_on 61
-velocity 50
-time 15
-note_on 70
-velocity 45
-time 7
-note_off 44
-time 210
-note_off 61
-time 46
-note_on 37
-velocity 32
-time 9
-note_off 37
-time 117
-note_off 65
-time 79
-note_on 60
-velocity 48
-time 58
-note_on 68
-velocity 51
-time 1
-note_off 70
-time 6
-note_on 44
-velocity 39
-time 6
-note_off 60
-time 32
-note_off 68
-time 26
-note_off 44
-time 205
-note_on 53
-velocity 33
-time 61
-note_on 61
-velocity 64
-time 134
-note_on 70
-velocity 62
-time 9
-note_on 58
-velocity 55
-time 1
-note_off 58
-time 7
-note_off 53
-time 82
-note_on 46
-velocity 48
-time 33
-note_on 63
-velocity 63
-time 80
-note_on 60
-velocity 71
-time 6
-note_off 61
-time 32
-note_off 60
-time 28
-note_off 63
-time 22
-note_off 46
-time 100
-note_on 37
-velocity 40
-time 63
-note_on 65
-velocity 73
-time 35
-note_on 61
-velocity 46
-time 16
-note_off 61
-time 41
-note_off 65
-time 24
-note_on 46
-velocity 37
-time 218
-note_on 65
-velocity 58
-time 92
-note_on 61
-velocity 37
-time 13
-note_off 37
-time 7
-note_off 46
-time 2
-note_on 37
-velocity 7
-time 9
-note_off 37
-time 127
-note_on 46
-velocity 36
-time 1
-note_off 46
-time 18
-note_on 53
-velocity 51
-time 102
-note_off 53
-time 54
-note_on 46
-velocity 36
-time 79
-note_off 61
-time 33
-note_off 46
-time 54
-note_on 37
-velocity 38
-time 44
-note_off 37
-time 223
-note_off 65
-time 2
-note_on 63
-velocity 65
-time 3
-note_on 46
-velocity 39
-time 20
-note_on 60
-velocity 48
-time 5
-note_off 60
-time 121
-note_off 46
-time 89
-note_on 37
-velocity 42
-time 48
-note_off 37
-time 23
-note_on 46
-velocity 43
-time 42
-note_off 63
-time 7
-note_on 61
-velocity 71
-time 3
-note_on 58
-velocity 54
-time 22
-note_off 58
-time 13
-note_off 61
-time 27
-note_off 46
-time 79
-note_on 54
-velocity 45
-time 204
-note_on 61
-velocity 63
-time 75
-note_on 58
-velocity 47
-time 16
-note_off 54
-time 11
-note_off 70
-time 7
-note_on 46
-velocity 33
-time 7
-note_off 46
-time 192
-note_off 61
-time 5
-note_on 37
-velocity 36
-time 31
-note_on 65
-velocity 36
-time 22
-note_off 58
-time 7
-note_on 46
-velocity 31
-time 2
-note_on 63
-velocity 57
-time 58
-note_on 66
-velocity 59
-time 13
-note_on 58
-velocity 42
-time 2
-note_off 37
-time 11
-note_off 65
-time 11
-note_off 46
-time 1
-note_off 63
-time 9
-note_off 66
-time 9
-note_on 68
-velocity 41
-time 6
-note_off 68
-time 119
-note_on 45
-velocity 26
-time 44
-note_on 66
-velocity 51
-time 26
-note_on 63
-velocity 26
-time 33
-note_off 45
-time 2
-note_off 66
-time 26
-note_off 63
-time 6
-note_on 54
-velocity 40
-time 10
-note_on 66
-velocity 49
-time 2
-note_on 63
-velocity 47
-time 11
-note_off 54
-time 1
-note_off 66
-time 18
-note_on 44
-velocity 34
-time 10
-note_off 58
-time 3
-note_off 44
-time 3
-note_on 37
-velocity 35
-time 1
-note_off 37
-time 130
-note_on 44
-velocity 29
-time 13
-note_on 65
-velocity 52
-time 126
-note_on 56
-velocity 46
-time 26
-note_on 60
-velocity 42
-time 0
-note_off 63
-time 19
-note_off 56
-time 6
-note_off 44
-time 0
-note_on 37
-velocity 33
-time 28
-note_off 65
-time 118
-note_on 54
-velocity 47
-time 26
-note_on 63
-velocity 48
-time 1
-note_off 60
-time 9
-note_off 54
-time 92
-note_off 37
-time 9
-note_on 44
-velocity 35
-time 151
-note_off 63
-time 31
-note_on 61
-velocity 56
-time 33
-note_on 53
-velocity 53
-time 13
-note_off 53
-time 63
-note_off 44
-time 7
-note_off 61
-time 27
-note_on 53
-velocity 29
-time 303
-note_on 61
-velocity 50
-time 7
-note_off 53
-time 3
-note_on 44
-velocity 31
-time 52
-note_off 44
-time 20
-note_on 37
-velocity 33
-time 2
-note_off 37
-time 13
-note_on 44
-velocity 23
-time 2
-note_off 44
-time 20
-note_on 37
-velocity 34
-time 16
-note_off 37
-time 0
-note_on 44
-velocity 29
-time 14
-note_off 44
-time 102
-note_on 53
-velocity 36
-time 190
-note_off 53
-time 222
-note_on 44
-velocity 22
-time 93
-note_off 44
-time 177
-note_on 37
-velocity 24
-time 113
-note_off 37
-time 225
-note_on 44
-velocity 20
-time 83
-note_off 61
-time 151
-note_off 44
-time 49
-note_on 37
-velocity 35
-time 74
-note_off 37
-time 122
-note_on 44
-velocity 25
-time 180
-note_off 44
-time 127
-note_on 53
-velocity 28
-time 253
-note_on 65
-velocity 56
-time 109
-note_on 61
-velocity 33
-time 42
-note_off 53
-time 171
-note_on 44
-velocity 25
-time 136
-note_off 61
-time 19
-note_off 65
-time 121
-note_off 44
-time 83
-note_on 37
-velocity 36
-time 39
-note_off 37
-time 333
-note_on 68
-velocity 67
-time 2
-note_on 60
-velocity 47
-time 48
-note_on 44
-velocity 33
-time 6
-note_on 65
-velocity 41
-time 5
-note_off 44
-time 230
-note_on 37
-velocity 26
-time 78
-note_off 37
-time 67
-note_off 60
-time 26
-note_off 68
-time 18
-note_off 65
-time 5
-note_on 44
-velocity 42
-time 152
-note_off 44
-time 281
-note_on 54
-velocity 38
-time 75
-note_on 70
-velocity 62
-time 93
-note_on 66
-velocity 48
-time 36
-note_on 59
-velocity 43
-time 6
-note_on 63
-velocity 36
-time 0
-note_off 54
-time 7
-note_on 44
-velocity 27
-time 1
-note_off 66
-time 55
-note_off 70
-time 19
-note_off 59
-time 109
-note_off 44
-time 14
-note_off 63
-time 23
-note_on 37
-velocity 31
-time 41
-note_off 37
-time 342
-note_on 44
-velocity 31
-time 29
-note_on 68
-velocity 56
-time 7
-note_on 60
-velocity 37
-time 24
-note_on 65
-velocity 39
-time 23
-note_off 44
-time 57
-note_off 65
-time 15
-note_on 37
-velocity 36
-time 6
-note_on 66
-velocity 59
-time 28
-note_off 60
-time 7
-note_on 63
-velocity 51
-time 6
-note_off 68
-time 58
-note_off 37
-time 55
-note_off 63
-time 166
-note_on 44
-velocity 30
-time 57
-note_on 65
-velocity 62
-time 1
-note_on 61
-velocity 40
-time 32
-note_off 66
-time 15
-note_off 61
-time 45
-note_off 44
-time 15
-note_off 65
-time 6
-note_on 53
-velocity 36
-time 266
-note_on 65
-velocity 53
-time 102
-note_on 61
-velocity 43
-time 11
-note_off 53
-time 28
-note_off 61
-time 27
-note_off 65
-time 22
-note_on 44
-velocity 27
-time 22
-note_off 44
-time 261
-note_on 37
-velocity 28
-time 108
-note_on 73
-velocity 44
-time 85
-note_off 37
-time 217
-note_on 44
-velocity 30
-time 91
-note_off 73
-time 2
-note_on 80
-velocity 42
-time 16
-note_on 77
-velocity 41
-time 24
-note_off 44
-time 177
-note_off 77
-time 49
-note_on 37
-velocity 30
-time 31
-note_off 80
-time 36
-note_on 73
-velocity 42
-time 10
-note_on 82
-velocity 48
-time 2
-note_off 37
-time 122
-note_off 82
-time 72
-note_off 73
-time 48
-note_on 44
-velocity 29
-time 20
-note_on 80
-velocity 45
-time 2
-note_on 77
-velocity 33
-time 16
-note_off 80
-time 31
-note_off 77
-time 14
-note_off 44
-time 52
-note_on 80
-velocity 47
-time 221
-note_on 53
-velocity 28
-time 10
-note_on 77
-velocity 46
-time 18
-note_off 53
-time 196
-note_on 44
-velocity 23
-time 114
-note_off 77
-time 148
-note_off 80
-time 13
-note_off 44
-time 3
-note_on 37
-velocity 30
-time 113
-note_off 37
-time 251
-note_on 44
-velocity 27
-time 69
-note_off 44
-time 170
-note_on 37
-velocity 32
-time 118
-note_off 37
-time 102
-note_on 44
-velocity 29
-time 236
-note_off 44
-time 148
-note_on 53
-velocity 56
-time 270
-note_on 56
-velocity 31
-time 75
-note_on 61
-velocity 27
-time 6
-note_off 53
-time 195
-note_off 56
-time 147
-note_off 61
-time 15
-note_on 44
-velocity 21
-time 3
-note_off 44
-time 135
-note_on 37
-velocity 31
-time 108
-note_off 37
-time 303
-note_on 44
-velocity 29
-time 14
-note_on 57
-velocity 65
-time 80
-note_on 61
-velocity 40
-time 27
-note_on 65
-velocity 43
-time 20
-note_off 44
-time 153
-note_on 37
-velocity 26
-time 144
-note_off 57
-time 46
-note_off 37
-time 39
-note_off 61
-time 69
-note_off 65
-time 41
-note_on 44
-velocity 31
-time 105
-note_off 44
-time 101
-note_on 54
-velocity 39
-time 210
-note_on 58
-velocity 62
-time 134
-note_on 66
-velocity 44
-time 48
-note_on 60
-velocity 36
-time 9
-note_off 54
-time 5
-note_on 44
-velocity 23
-time 74
-note_off 66
-time 83
-note_off 60
-time 31
-note_off 58
-time 9
-note_off 44
-time 57
-note_on 37
-velocity 29
-time 97
-note_on 44
-velocity 33
-time 335
-note_on 56
-velocity 53
-time 29
-note_on 65
-velocity 43
-time 14
-note_on 60
-velocity 30
-time 2
-note_off 37
-time 15
-note_off 56
-time 6
-note_off 44
-time 45
-note_off 65
-time 2
-note_on 54
-velocity 53
-time 35
-note_on 63
-velocity 39
-time 16
-note_on 37
-velocity 21
-time 13
-note_off 60
-time 10
-note_off 54
-time 76
-note_off 37
-time 36
-note_off 63
-time 236
-note_on 53
-velocity 51
-time 22
-note_on 44
-velocity 35
-time 15
-note_on 61
-velocity 44
-time 1
-note_off 53
-time 58
-note_off 61
-time 18
-note_off 44
-time 46
-note_on 53
-velocity 44
-time 385
-note_on 61
-velocity 40
-time 76
-note_off 53
-time 7
-note_off 61
-time 35
-note_on 44
-velocity 28
-time 58
-note_off 44
-time 253
-note_on 37
-velocity 24
-time 109
-note_on 61
-velocity 42
-time 69
-note_off 37
-time 246
-note_off 61
-time 83
-note_on 68
-velocity 35
-time 7
-note_on 44
-velocity 24
-time 10
-note_on 65
-velocity 36
-time 2
-note_off 44
-time 171
-note_off 65
-time 67
-note_off 68
-time 33
-note_on 37
-velocity 23
-time 20
-note_on 61
-velocity 36
-time 9
-note_on 70
-velocity 22
-time 28
-note_off 37
-time 82
-note_off 70
-time 128
-note_off 61
-time 41
-note_on 68
-velocity 33
-time 22
-note_on 44
-velocity 23
-time 19
-note_on 65
-velocity 19
-time 10
-note_off 68
-time 36
-note_off 65
-time 18
-note_off 44
-time 44
-note_on 53
-velocity 19
-time 265
-note_on 68
-velocity 37
-time 7
-note_on 65
-velocity 30
-time 22
-note_off 68
-time 69
-note_off 65
-time 9
-note_off 53
-time 91
-note_on 44
-velocity 26
-time 157
-note_off 44
-time 92
-note_on 37
-velocity 26
-time 79
-note_on 56
-velocity 54
-time 108
-note_off 37
-time 315
-note_on 44
-velocity 32
-time 32
-note_on 51
-velocity 66
-time 105
-note_off 44
-time 214
-note_on 37
-velocity 22
-time 151
-note_off 37
-time 92
-note_on 44
-velocity 35
-time 207
-note_on 49
-velocity 67
-time 143
-note_off 51
-time 5
-note_off 44
-time 6
-note_off 56
-time 0
-note_off 49
-time 122
-note_on 49
-velocity 60
-time 430
-note_on 53
-velocity 44
-time 27
-note_on 56
-velocity 49
-time 6
-note_off 53
-time 7
-note_on 44
-velocity 28
-time 40
-note_off 44
-time 1
-note_on 37
-velocity 23
-time 3
-note_off 37
-time 106
-note_on 44
-velocity 18
-time 100
-note_off 44
-time 0
-note_on 37
-velocity 28
-time 29
-note_off 37
-time 15
-note_on 44
-velocity 22
-time 11
-note_off 44
-time 123
-note_on 52
-velocity 39
-time 244
-note_off 52
-time 13
-note_on 44
-velocity 29
-time 44
-note_off 44
-time 234
-note_on 37
-velocity 27
-time 110
-note_off 37
-time 127
-note_on 44
-velocity 28
-time 57
-note_off 44
-time 1
-note_on 37
-velocity 32
-time 74
-note_off 37
-time 57
-note_on 44
-velocity 27
-time 79
-note_off 44
-time 119
-note_on 53
-velocity 41
-time 248
-note_off 53
-time 11
-note_on 44
-velocity 31
-time 5
-note_off 44
-time 277
-note_on 37
-velocity 28
-time 100
-note_off 37
-time 298
-note_on 44
-velocity 31
-time 89
-note_off 44
-time 279
-note_on 37
-velocity 25
-time 104
-note_off 37
-time 195
-note_on 44
-velocity 28
-time 225
-note_off 44
-time 100
-note_on 53
-velocity 30
-time 359
-note_off 53
-time 302
-note_on 44
-velocity 27
-time 164
-note_off 44
-time 268
-note_on 37
-velocity 27
-time 212
-note_off 37
-time 162
-note_on 44
-velocity 31
-time 339
-note_off 44
-time 250
-note_on 37
-velocity 30
-time 416
-note_off 37
-time 240
-note_on 44
-velocity 28
-time 666
-note_off 44
-time 260
-note_on 53
-velocity 37
-time 1121
-note_off 53
-time 10
-note_off 49
-time 3
-note_off 56
-time 303
+TIME_SHIFT<980>
+SET_VELOCITY<56>
+NOTE_ON<53>
+TIME_SHIFT<570>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+SET_VELOCITY<32>
+NOTE_ON<44>
+TIME_SHIFT<330>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<330>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<37>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<40>
+NOTE_ON<37>
+TIME_SHIFT<240>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<160>
+SET_VELOCITY<51>
+NOTE_ON<53>
+TIME_SHIFT<240>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<34>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<290>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<36>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<46>
+NOTE_ON<53>
+TIME_SHIFT<190>
+NOTE_OFF<53>
+TIME_SHIFT<100>
+SET_VELOCITY<30>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<38>
+NOTE_ON<37>
+TIME_SHIFT<310>
+SET_VELOCITY<33>
+NOTE_ON<44>
+NOTE_OFF<37>
+TIME_SHIFT<120>
+SET_VELOCITY<84>
+NOTE_ON<56>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<330>
+SET_VELOCITY<54>
+NOTE_ON<54>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<120>
+SET_VELOCITY<88>
+NOTE_ON<61>
+TIME_SHIFT<30>
+SET_VELOCITY<66>
+NOTE_ON<58>
+TIME_SHIFT<270>
+NOTE_OFF<54>
+TIME_SHIFT<30>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<40>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<58>
+TIME_SHIFT<130>
+NOTE_OFF<56>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<38>
+NOTE_ON<37>
+TIME_SHIFT<160>
+SET_VELOCITY<81>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<62>
+NOTE_ON<60>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<110>
+NOTE_OFF<44>
+TIME_SHIFT<190>
+SET_VELOCITY<43>
+NOTE_ON<53>
+TIME_SHIFT<130>
+SET_VELOCITY<77>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<50>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<54>
+NOTE_ON<56>
+TIME_SHIFT<310>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+SET_VELOCITY<32>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<170>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+SET_VELOCITY<39>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<49>
+NOTE_ON<53>
+TIME_SHIFT<190>
+NOTE_OFF<53>
+TIME_SHIFT<110>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<26>
+NOTE_ON<37>
+TIME_SHIFT<210>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+SET_VELOCITY<30>
+NOTE_ON<44>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+SET_VELOCITY<32>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<47>
+NOTE_ON<53>
+TIME_SHIFT<180>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+NOTE_OFF<56>
+TIME_SHIFT<40>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<260>
+SET_VELOCITY<42>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<84>
+NOTE_ON<66>
+TIME_SHIFT<40>
+SET_VELOCITY<61>
+NOTE_ON<63>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<44>
+NOTE_ON<37>
+TIME_SHIFT<200>
+NOTE_OFF<63>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<57>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<280>
+NOTE_OFF<44>
+SET_VELOCITY<54>
+NOTE_ON<51>
+TIME_SHIFT<120>
+SET_VELOCITY<91>
+NOTE_ON<70>
+TIME_SHIFT<20>
+SET_VELOCITY<79>
+NOTE_ON<60>
+SET_VELOCITY<70>
+NOTE_ON<66>
+TIME_SHIFT<310>
+SET_VELOCITY<41>
+NOTE_ON<44>
+TIME_SHIFT<90>
+NOTE_OFF<51>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<37>
+NOTE_ON<37>
+TIME_SHIFT<180>
+NOTE_OFF<66>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<170>
+SET_VELOCITY<77>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<54>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+NOTE_OFF<70>
+TIME_SHIFT<80>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+SET_VELOCITY<44>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<170>
+SET_VELOCITY<39>
+NOTE_ON<53>
+TIME_SHIFT<80>
+SET_VELOCITY<73>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<50>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<54>
+NOTE_ON<65>
+TIME_SHIFT<290>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+SET_VELOCITY<32>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<29>
+NOTE_ON<37>
+TIME_SHIFT<200>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+SET_VELOCITY<41>
+NOTE_ON<44>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<130>
+SET_VELOCITY<47>
+NOTE_ON<53>
+TIME_SHIFT<190>
+NOTE_OFF<53>
+TIME_SHIFT<110>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<36>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<130>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+SET_VELOCITY<30>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<120>
+SET_VELOCITY<47>
+NOTE_ON<53>
+TIME_SHIFT<220>
+NOTE_OFF<53>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+SET_VELOCITY<36>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<310>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<140>
+SET_VELOCITY<80>
+NOTE_ON<68>
+TIME_SHIFT<50>
+SET_VELOCITY<52>
+NOTE_ON<65>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<34>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<39>
+NOTE_ON<53>
+TIME_SHIFT<90>
+NOTE_OFF<65>
+TIME_SHIFT<130>
+NOTE_OFF<53>
+TIME_SHIFT<40>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<210>
+SET_VELOCITY<80>
+NOTE_ON<66>
+TIME_SHIFT<40>
+SET_VELOCITY<57>
+NOTE_ON<63>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<140>
+NOTE_OFF<68>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<140>
+NOTE_OFF<37>
+TIME_SHIFT<100>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<20>
+SET_VELOCITY<83>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<66>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<41>
+NOTE_ON<53>
+TIME_SHIFT<60>
+SET_VELOCITY<74>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<59>
+NOTE_ON<61>
+TIME_SHIFT<190>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<23>
+NOTE_ON<44>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<25>
+NOTE_ON<37>
+TIME_SHIFT<270>
+SET_VELOCITY<39>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+SET_VELOCITY<66>
+NOTE_ON<63>
+TIME_SHIFT<20>
+SET_VELOCITY<52>
+NOTE_ON<59>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<18>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<41>
+NOTE_ON<53>
+TIME_SHIFT<210>
+NOTE_OFF<53>
+TIME_SHIFT<40>
+SET_VELOCITY<42>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<34>
+NOTE_ON<37>
+TIME_SHIFT<280>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+SET_VELOCITY<65>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<48>
+NOTE_ON<61>
+TIME_SHIFT<40>
+NOTE_OFF<63>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+NOTE_OFF<59>
+TIME_SHIFT<90>
+SET_VELOCITY<34>
+NOTE_ON<37>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<100>
+SET_VELOCITY<39>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<190>
+SET_VELOCITY<29>
+NOTE_ON<53>
+TIME_SHIFT<100>
+SET_VELOCITY<58>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<49>
+NOTE_ON<58>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<240>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<42>
+NOTE_ON<46>
+TIME_SHIFT<160>
+SET_VELOCITY<64>
+NOTE_ON<63>
+TIME_SHIFT<20>
+SET_VELOCITY<58>
+NOTE_ON<60>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+NOTE_OFF<60>
+TIME_SHIFT<70>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<310>
+SET_VELOCITY<32>
+NOTE_ON<46>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<120>
+SET_VELOCITY<54>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<49>
+NOTE_ON<61>
+TIME_SHIFT<30>
+NOTE_OFF<63>
+TIME_SHIFT<130>
+NOTE_OFF<58>
+TIME_SHIFT<60>
+NOTE_OFF<46>
+TIME_SHIFT<60>
+SET_VELOCITY<9>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+SET_VELOCITY<33>
+NOTE_ON<46>
+TIME_SHIFT<190>
+NOTE_OFF<46>
+TIME_SHIFT<100>
+SET_VELOCITY<42>
+NOTE_ON<53>
+TIME_SHIFT<210>
+NOTE_OFF<53>
+TIME_SHIFT<120>
+SET_VELOCITY<19>
+NOTE_ON<46>
+TIME_SHIFT<170>
+NOTE_OFF<46>
+TIME_SHIFT<80>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<270>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<31>
+NOTE_ON<46>
+TIME_SHIFT<210>
+NOTE_OFF<46>
+TIME_SHIFT<80>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<190>
+SET_VELOCITY<41>
+NOTE_ON<46>
+TIME_SHIFT<310>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+SET_VELOCITY<53>
+NOTE_ON<54>
+TIME_SHIFT<100>
+NOTE_OFF<61>
+TIME_SHIFT<180>
+NOTE_OFF<54>
+TIME_SHIFT<50>
+SET_VELOCITY<36>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<65>
+TIME_SHIFT<90>
+NOTE_OFF<46>
+TIME_SHIFT<130>
+SET_VELOCITY<29>
+NOTE_ON<37>
+TIME_SHIFT<290>
+SET_VELOCITY<66>
+NOTE_ON<61>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<51>
+NOTE_ON<58>
+TIME_SHIFT<10>
+SET_VELOCITY<33>
+NOTE_ON<46>
+TIME_SHIFT<90>
+NOTE_OFF<46>
+TIME_SHIFT<200>
+NOTE_OFF<58>
+TIME_SHIFT<10>
+SET_VELOCITY<40>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<520>
+SET_VELOCITY<25>
+NOTE_ON<54>
+TIME_SHIFT<80>
+SET_VELOCITY<62>
+NOTE_ON<63>
+TIME_SHIFT<40>
+SET_VELOCITY<49>
+NOTE_ON<59>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<250>
+NOTE_OFF<54>
+TIME_SHIFT<70>
+SET_VELOCITY<15>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<340>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<80>
+SET_VELOCITY<50>
+NOTE_ON<60>
+NOTE_OFF<59>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<140>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<140>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<80>
+NOTE_OFF<63>
+TIME_SHIFT<30>
+SET_VELOCITY<53>
+NOTE_ON<61>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<120>
+NOTE_OFF<61>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<33>
+NOTE_ON<53>
+TIME_SHIFT<100>
+SET_VELOCITY<51>
+NOTE_ON<61>
+TIME_SHIFT<250>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<34>
+NOTE_ON<44>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<37>
+NOTE_ON<37>
+TIME_SHIFT<280>
+SET_VELOCITY<69>
+NOTE_ON<60>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<36>
+NOTE_ON<44>
+NOTE_OFF<61>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<46>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<56>
+NOTE_ON<52>
+TIME_SHIFT<230>
+NOTE_OFF<52>
+TIME_SHIFT<40>
+SET_VELOCITY<47>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<46>
+NOTE_ON<37>
+TIME_SHIFT<250>
+SET_VELOCITY<80>
+NOTE_ON<58>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<44>
+NOTE_ON<37>
+TIME_SHIFT<220>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<54>
+NOTE_ON<44>
+TIME_SHIFT<280>
+SET_VELOCITY<69>
+NOTE_ON<53>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<230>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+SET_VELOCITY<53>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<60>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<55>
+NOTE_ON<37>
+TIME_SHIFT<270>
+SET_VELOCITY<54>
+NOTE_ON<44>
+TIME_SHIFT<100>
+SET_VELOCITY<88>
+NOTE_ON<56>
+TIME_SHIFT<50>
+NOTE_OFF<58>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<53>
+NOTE_ON<37>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<290>
+SET_VELOCITY<69>
+NOTE_ON<54>
+TIME_SHIFT<120>
+NOTE_OFF<44>
+SET_VELOCITY<91>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<58>
+TIME_SHIFT<310>
+SET_VELOCITY<53>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<54>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<57>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<58>
+TIME_SHIFT<180>
+SET_VELOCITY<65>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<240>
+SET_VELOCITY<50>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<120>
+SET_VELOCITY<87>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<72>
+NOTE_ON<60>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<56>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<40>
+SET_VELOCITY<58>
+NOTE_ON<44>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<53>
+NOTE_ON<53>
+TIME_SHIFT<100>
+SET_VELOCITY<78>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<56>
+NOTE_ON<56>
+TIME_SHIFT<10>
+SET_VELOCITY<56>
+NOTE_ON<61>
+TIME_SHIFT<30>
+NOTE_OFF<66>
+TIME_SHIFT<230>
+NOTE_OFF<53>
+TIME_SHIFT<40>
+SET_VELOCITY<41>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<46>
+NOTE_ON<37>
+TIME_SHIFT<220>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<47>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<47>
+NOTE_ON<37>
+TIME_SHIFT<170>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+SET_VELOCITY<57>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<71>
+NOTE_ON<53>
+TIME_SHIFT<200>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+SET_VELOCITY<48>
+NOTE_ON<44>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<54>
+NOTE_ON<37>
+TIME_SHIFT<260>
+SET_VELOCITY<76>
+NOTE_ON<63>
+SET_VELOCITY<70>
+NOTE_ON<60>
+TIME_SHIFT<10>
+SET_VELOCITY<51>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+NOTE_OFF<65>
+TIME_SHIFT<200>
+NOTE_OFF<56>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+SET_VELOCITY<61>
+NOTE_ON<37>
+TIME_SHIFT<230>
+NOTE_OFF<37>
+SET_VELOCITY<68>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+SET_VELOCITY<85>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<65>
+NOTE_ON<53>
+TIME_SHIFT<10>
+SET_VELOCITY<70>
+NOTE_ON<61>
+SET_VELOCITY<72>
+NOTE_ON<56>
+TIME_SHIFT<40>
+NOTE_OFF<63>
+TIME_SHIFT<210>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<80>
+NOTE_OFF<61>
+TIME_SHIFT<140>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<62>
+NOTE_ON<37>
+TIME_SHIFT<140>
+NOTE_OFF<65>
+TIME_SHIFT<90>
+SET_VELOCITY<95>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<75>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<64>
+NOTE_ON<44>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<56>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<65>
+NOTE_ON<37>
+TIME_SHIFT<50>
+NOTE_OFF<63>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+NOTE_OFF<66>
+TIME_SHIFT<40>
+SET_VELOCITY<69>
+NOTE_ON<44>
+TIME_SHIFT<280>
+SET_VELOCITY<64>
+NOTE_ON<54>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<92>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<83>
+NOTE_ON<60>
+SET_VELOCITY<77>
+NOTE_ON<65>
+TIME_SHIFT<240>
+NOTE_OFF<54>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<59>
+NOTE_ON<37>
+TIME_SHIFT<170>
+SET_VELOCITY<93>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<76>
+NOTE_ON<66>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<230>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<66>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<52>
+NOTE_ON<37>
+TIME_SHIFT<180>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+SET_VELOCITY<59>
+NOTE_ON<44>
+TIME_SHIFT<100>
+SET_VELOCITY<85>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<40>
+NOTE_OFF<70>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<60>
+NOTE_OFF<68>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<52>
+NOTE_ON<53>
+TIME_SHIFT<110>
+SET_VELOCITY<84>
+NOTE_ON<68>
+TIME_SHIFT<30>
+SET_VELOCITY<58>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<60>
+NOTE_ON<65>
+TIME_SHIFT<310>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<240>
+SET_VELOCITY<52>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<50>
+NOTE_ON<37>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<56>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<72>
+NOTE_ON<53>
+TIME_SHIFT<150>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+SET_VELOCITY<52>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<54>
+NOTE_ON<37>
+TIME_SHIFT<270>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<86>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<61>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<68>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+SET_VELOCITY<88>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<78>
+NOTE_ON<63>
+TIME_SHIFT<40>
+SET_VELOCITY<27>
+NOTE_ON<65>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<70>
+NOTE_OFF<63>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<66>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+SET_VELOCITY<67>
+NOTE_ON<53>
+TIME_SHIFT<110>
+SET_VELOCITY<91>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<81>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<65>
+TIME_SHIFT<280>
+NOTE_OFF<53>
+SET_VELOCITY<64>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<65>
+TIME_SHIFT<140>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<65>
+NOTE_ON<37>
+TIME_SHIFT<280>
+SET_VELOCITY<61>
+NOTE_ON<44>
+TIME_SHIFT<130>
+SET_VELOCITY<96>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<80>
+NOTE_ON<66>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<54>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<100>
+SET_VELOCITY<50>
+NOTE_ON<44>
+TIME_SHIFT<330>
+NOTE_OFF<66>
+SET_VELOCITY<83>
+NOTE_ON<56>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<240>
+NOTE_OFF<56>
+TIME_SHIFT<20>
+SET_VELOCITY<61>
+NOTE_ON<44>
+TIME_SHIFT<100>
+SET_VELOCITY<84>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<73>
+NOTE_ON<65>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<70>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<58>
+NOTE_ON<37>
+TIME_SHIFT<230>
+SET_VELOCITY<88>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<74>
+NOTE_ON<63>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+SET_VELOCITY<57>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+NOTE_OFF<68>
+TIME_SHIFT<100>
+NOTE_OFF<63>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<59>
+NOTE_ON<37>
+TIME_SHIFT<190>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<58>
+NOTE_ON<44>
+TIME_SHIFT<20>
+SET_VELOCITY<84>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<67>
+NOTE_ON<61>
+TIME_SHIFT<40>
+NOTE_OFF<66>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<58>
+NOTE_ON<53>
+TIME_SHIFT<60>
+SET_VELOCITY<78>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<68>
+NOTE_ON<61>
+TIME_SHIFT<230>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+SET_VELOCITY<48>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<45>
+NOTE_ON<37>
+TIME_SHIFT<300>
+SET_VELOCITY<75>
+NOTE_ON<63>
+TIME_SHIFT<30>
+SET_VELOCITY<57>
+NOTE_ON<59>
+SET_VELOCITY<42>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<210>
+NOTE_OFF<37>
+TIME_SHIFT<100>
+SET_VELOCITY<39>
+NOTE_ON<44>
+TIME_SHIFT<170>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<43>
+NOTE_ON<53>
+TIME_SHIFT<180>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<45>
+NOTE_ON<44>
+TIME_SHIFT<120>
+SET_VELOCITY<69>
+NOTE_ON<65>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+SET_VELOCITY<63>
+NOTE_ON<61>
+TIME_SHIFT<50>
+NOTE_OFF<59>
+TIME_SHIFT<30>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<48>
+NOTE_ON<37>
+TIME_SHIFT<250>
+SET_VELOCITY<44>
+NOTE_ON<44>
+TIME_SHIFT<120>
+SET_VELOCITY<74>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<63>
+NOTE_ON<59>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<43>
+NOTE_ON<37>
+TIME_SHIFT<140>
+SET_VELOCITY<80>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<70>
+NOTE_ON<61>
+TIME_SHIFT<30>
+NOTE_OFF<59>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<49>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<270>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<39>
+NOTE_ON<53>
+TIME_SHIFT<100>
+SET_VELOCITY<66>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<59>
+NOTE_ON<58>
+NOTE_OFF<65>
+TIME_SHIFT<290>
+NOTE_OFF<53>
+TIME_SHIFT<40>
+SET_VELOCITY<42>
+NOTE_ON<46>
+TIME_SHIFT<110>
+SET_VELOCITY<68>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<63>
+NOTE_ON<60>
+TIME_SHIFT<40>
+NOTE_OFF<58>
+TIME_SHIFT<80>
+NOTE_OFF<61>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+NOTE_OFF<60>
+TIME_SHIFT<40>
+SET_VELOCITY<37>
+NOTE_ON<37>
+TIME_SHIFT<300>
+SET_VELOCITY<33>
+NOTE_ON<46>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<61>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<51>
+NOTE_ON<61>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+TIME_SHIFT<230>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<40>
+NOTE_ON<46>
+TIME_SHIFT<250>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+SET_VELOCITY<55>
+NOTE_ON<53>
+TIME_SHIFT<170>
+NOTE_OFF<53>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<100>
+SET_VELOCITY<33>
+NOTE_ON<46>
+TIME_SHIFT<170>
+NOTE_OFF<46>
+TIME_SHIFT<80>
+SET_VELOCITY<37>
+NOTE_ON<37>
+TIME_SHIFT<290>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<34>
+NOTE_ON<46>
+SET_VELOCITY<66>
+NOTE_ON<63>
+TIME_SHIFT<40>
+SET_VELOCITY<51>
+NOTE_ON<60>
+TIME_SHIFT<150>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+NOTE_OFF<46>
+TIME_SHIFT<60>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<230>
+SET_VELOCITY<36>
+NOTE_ON<46>
+TIME_SHIFT<100>
+SET_VELOCITY<70>
+NOTE_ON<61>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+TIME_SHIFT<20>
+SET_VELOCITY<50>
+NOTE_ON<58>
+TIME_SHIFT<70>
+NOTE_OFF<58>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<140>
+NOTE_OFF<46>
+TIME_SHIFT<80>
+SET_VELOCITY<45>
+NOTE_ON<54>
+TIME_SHIFT<130>
+SET_VELOCITY<58>
+NOTE_ON<61>
+TIME_SHIFT<40>
+SET_VELOCITY<37>
+NOTE_ON<58>
+TIME_SHIFT<190>
+NOTE_OFF<54>
+TIME_SHIFT<60>
+SET_VELOCITY<38>
+NOTE_ON<46>
+TIME_SHIFT<150>
+NOTE_OFF<58>
+TIME_SHIFT<10>
+NOTE_OFF<46>
+TIME_SHIFT<80>
+SET_VELOCITY<38>
+NOTE_ON<37>
+TIME_SHIFT<280>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<37>
+NOTE_ON<45>
+TIME_SHIFT<120>
+SET_VELOCITY<56>
+NOTE_ON<63>
+TIME_SHIFT<30>
+SET_VELOCITY<43>
+NOTE_ON<59>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+TIME_SHIFT<110>
+NOTE_OFF<45>
+TIME_SHIFT<60>
+SET_VELOCITY<19>
+NOTE_ON<37>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<32>
+NOTE_ON<45>
+TIME_SHIFT<160>
+NOTE_OFF<45>
+TIME_SHIFT<200>
+SET_VELOCITY<45>
+NOTE_ON<60>
+TIME_SHIFT<20>
+SET_VELOCITY<37>
+NOTE_ON<54>
+TIME_SHIFT<20>
+NOTE_OFF<59>
+TIME_SHIFT<240>
+NOTE_OFF<54>
+TIME_SHIFT<70>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<26>
+NOTE_ON<37>
+TIME_SHIFT<270>
+NOTE_OFF<63>
+TIME_SHIFT<30>
+SET_VELOCITY<48>
+NOTE_ON<65>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+SET_VELOCITY<33>
+NOTE_ON<44>
+TIME_SHIFT<80>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+SET_VELOCITY<53>
+NOTE_ON<61>
+NOTE_OFF<60>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+TIME_SHIFT<250>
+SET_VELOCITY<29>
+NOTE_ON<53>
+TIME_SHIFT<130>
+SET_VELOCITY<46>
+NOTE_ON<61>
+TIME_SHIFT<330>
+NOTE_OFF<53>
+TIME_SHIFT<80>
+SET_VELOCITY<25>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<21>
+NOTE_ON<37>
+TIME_SHIFT<260>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<130>
+SET_VELOCITY<25>
+NOTE_ON<37>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<30>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<200>
+SET_VELOCITY<43>
+NOTE_ON<53>
+TIME_SHIFT<250>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<220>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<210>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<210>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+SET_VELOCITY<51>
+NOTE_ON<53>
+TIME_SHIFT<230>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+SET_VELOCITY<53>
+NOTE_ON<44>
+TIME_SHIFT<170>
+SET_VELOCITY<83>
+NOTE_ON<61>
+TIME_SHIFT<110>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<51>
+NOTE_ON<37>
+TIME_SHIFT<190>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<49>
+NOTE_ON<44>
+TIME_SHIFT<120>
+SET_VELOCITY<85>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<73>
+NOTE_ON<66>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<52>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<70>
+TIME_SHIFT<50>
+SET_VELOCITY<79>
+NOTE_ON<65>
+SET_VELOCITY<85>
+NOTE_ON<68>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+NOTE_OFF<66>
+TIME_SHIFT<10>
+SET_VELOCITY<53>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<50>
+NOTE_ON<53>
+TIME_SHIFT<80>
+SET_VELOCITY<82>
+NOTE_ON<68>
+TIME_SHIFT<20>
+SET_VELOCITY<70>
+NOTE_ON<65>
+TIME_SHIFT<160>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+NOTE_OFF<68>
+TIME_SHIFT<30>
+SET_VELOCITY<49>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<56>
+NOTE_ON<37>
+TIME_SHIFT<210>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+SET_VELOCITY<84>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<56>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<68>
+NOTE_ON<63>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<64>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<59>
+NOTE_ON<44>
+TIME_SHIFT<110>
+SET_VELOCITY<86>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<75>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<58>
+NOTE_ON<53>
+TIME_SHIFT<60>
+SET_VELOCITY<78>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<70>
+NOTE_ON<61>
+TIME_SHIFT<160>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<53>
+NOTE_ON<45>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+SET_VELOCITY<85>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<76>
+NOTE_ON<60>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<160>
+NOTE_OFF<45>
+TIME_SHIFT<50>
+SET_VELOCITY<51>
+NOTE_ON<37>
+TIME_SHIFT<30>
+SET_VELOCITY<82>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<75>
+NOTE_ON<61>
+TIME_SHIFT<30>
+NOTE_OFF<63>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<180>
+SET_VELOCITY<55>
+NOTE_ON<45>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<45>
+TIME_SHIFT<40>
+SET_VELOCITY<49>
+NOTE_ON<37>
+TIME_SHIFT<180>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<65>
+NOTE_ON<45>
+TIME_SHIFT<100>
+NOTE_OFF<45>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<100>
+SET_VELOCITY<76>
+NOTE_ON<53>
+TIME_SHIFT<150>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<120>
+SET_VELOCITY<85>
+NOTE_ON<61>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<61>
+NOTE_ON<37>
+TIME_SHIFT<210>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<87>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<77>
+NOTE_ON<65>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<57>
+NOTE_ON<37>
+TIME_SHIFT<100>
+SET_VELOCITY<89>
+NOTE_ON<70>
+SET_VELOCITY<76>
+NOTE_ON<66>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<100>
+NOTE_OFF<70>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<89>
+NOTE_ON<68>
+SET_VELOCITY<61>
+NOTE_ON<44>
+TIME_SHIFT<20>
+SET_VELOCITY<78>
+NOTE_ON<65>
+TIME_SHIFT<100>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<110>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<88>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<59>
+NOTE_ON<53>
+TIME_SHIFT<210>
+NOTE_OFF<53>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+SET_VELOCITY<54>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<56>
+NOTE_ON<37>
+TIME_SHIFT<240>
+SET_VELOCITY<85>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<76>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<60>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+NOTE_OFF<66>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+SET_VELOCITY<86>
+NOTE_ON<65>
+SET_VELOCITY<62>
+NOTE_ON<37>
+TIME_SHIFT<10>
+SET_VELOCITY<84>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<160>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<88>
+NOTE_ON<63>
+SET_VELOCITY<62>
+NOTE_ON<44>
+SET_VELOCITY<86>
+NOTE_ON<60>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<280>
+SET_VELOCITY<74>
+NOTE_ON<53>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<88>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<180>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<70>
+NOTE_ON<45>
+TIME_SHIFT<230>
+NOTE_OFF<45>
+TIME_SHIFT<10>
+SET_VELOCITY<67>
+NOTE_ON<37>
+TIME_SHIFT<60>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+SET_VELOCITY<88>
+NOTE_ON<63>
+SET_VELOCITY<85>
+NOTE_ON<60>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<220>
+SET_VELOCITY<63>
+NOTE_ON<45>
+TIME_SHIFT<30>
+SET_VELOCITY<88>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<87>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<150>
+NOTE_OFF<45>
+TIME_SHIFT<10>
+SET_VELOCITY<73>
+NOTE_ON<37>
+TIME_SHIFT<180>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+SET_VELOCITY<74>
+NOTE_ON<45>
+TIME_SHIFT<180>
+NOTE_OFF<45>
+TIME_SHIFT<90>
+SET_VELOCITY<85>
+NOTE_ON<53>
+TIME_SHIFT<280>
+SET_VELOCITY<65>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<53>
+TIME_SHIFT<110>
+SET_VELOCITY<96>
+NOTE_ON<56>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<130>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<72>
+NOTE_ON<37>
+TIME_SHIFT<30>
+NOTE_OFF<56>
+TIME_SHIFT<250>
+SET_VELOCITY<99>
+NOTE_ON<58>
+TIME_SHIFT<10>
+SET_VELOCITY<67>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<73>
+NOTE_ON<61>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<58>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<37>
+TIME_SHIFT<130>
+SET_VELOCITY<102>
+NOTE_ON<60>
+TIME_SHIFT<10>
+SET_VELOCITY<85>
+NOTE_ON<65>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<70>
+NOTE_OFF<60>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<30>
+SET_VELOCITY<85>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<98>
+NOTE_ON<61>
+SET_VELOCITY<84>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<85>
+NOTE_ON<53>
+TIME_SHIFT<280>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+SET_VELOCITY<80>
+NOTE_ON<44>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<180>
+SET_VELOCITY<83>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<240>
+SET_VELOCITY<96>
+NOTE_ON<60>
+SET_VELOCITY<92>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<88>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<88>
+NOTE_ON<44>
+TIME_SHIFT<60>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+NOTE_OFF<60>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<30>
+NOTE_OFF<68>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<86>
+NOTE_ON<37>
+TIME_SHIFT<290>
+SET_VELOCITY<86>
+NOTE_ON<44>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<106>
+NOTE_ON<73>
+SET_VELOCITY<100>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+NOTE_OFF<73>
+TIME_SHIFT<240>
+SET_VELOCITY<104>
+NOTE_ON<73>
+SET_VELOCITY<94>
+NOTE_ON<53>
+SET_VELOCITY<100>
+NOTE_ON<59>
+SET_VELOCITY<100>
+NOTE_ON<65>
+TIME_SHIFT<280>
+NOTE_OFF<59>
+TIME_SHIFT<30>
+NOTE_OFF<53>
+TIME_SHIFT<200>
+SET_VELOCITY<81>
+NOTE_ON<44>
+TIME_SHIFT<260>
+SET_VELOCITY<82>
+NOTE_ON<37>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<85>
+NOTE_ON<45>
+TIME_SHIFT<60>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<45>
+TIME_SHIFT<10>
+SET_VELOCITY<78>
+NOTE_ON<37>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<90>
+NOTE_ON<45>
+TIME_SHIFT<140>
+NOTE_OFF<45>
+TIME_SHIFT<60>
+NOTE_OFF<65>
+TIME_SHIFT<220>
+SET_VELOCITY<101>
+NOTE_ON<54>
+TIME_SHIFT<360>
+SET_VELOCITY<76>
+NOTE_ON<46>
+TIME_SHIFT<40>
+NOTE_OFF<54>
+TIME_SHIFT<70>
+SET_VELOCITY<92>
+NOTE_ON<66>
+NOTE_OFF<73>
+SET_VELOCITY<92>
+NOTE_ON<61>
+TIME_SHIFT<210>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<37>
+TIME_SHIFT<80>
+NOTE_OFF<66>
+TIME_SHIFT<150>
+SET_VELOCITY<78>
+NOTE_ON<46>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<96>
+NOTE_ON<75>
+TIME_SHIFT<20>
+SET_VELOCITY<85>
+NOTE_ON<71>
+TIME_SHIFT<170>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+NOTE_OFF<75>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<71>
+TIME_SHIFT<120>
+SET_VELOCITY<97>
+NOTE_ON<73>
+TIME_SHIFT<10>
+SET_VELOCITY<88>
+NOTE_ON<70>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+SET_VELOCITY<71>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<70>
+TIME_SHIFT<40>
+NOTE_OFF<73>
+TIME_SHIFT<140>
+SET_VELOCITY<103>
+NOTE_ON<73>
+SET_VELOCITY<87>
+NOTE_ON<54>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<84>
+NOTE_ON<70>
+TIME_SHIFT<220>
+SET_VELOCITY<68>
+NOTE_ON<46>
+TIME_SHIFT<10>
+NOTE_OFF<54>
+NOTE_OFF<73>
+TIME_SHIFT<210>
+NOTE_OFF<46>
+SET_VELOCITY<74>
+NOTE_ON<37>
+TIME_SHIFT<190>
+NOTE_OFF<70>
+TIME_SHIFT<60>
+SET_VELOCITY<94>
+NOTE_ON<71>
+TIME_SHIFT<10>
+SET_VELOCITY<70>
+NOTE_ON<46>
+SET_VELOCITY<88>
+NOTE_ON<68>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<37>
+TIME_SHIFT<230>
+SET_VELOCITY<70>
+NOTE_ON<46>
+TIME_SHIFT<60>
+SET_VELOCITY<87>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<66>
+TIME_SHIFT<20>
+NOTE_OFF<71>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<40>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<70>
+TIME_SHIFT<210>
+SET_VELOCITY<67>
+NOTE_ON<50>
+TIME_SHIFT<20>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+SET_VELOCITY<81>
+NOTE_ON<70>
+TIME_SHIFT<20>
+SET_VELOCITY<73>
+NOTE_ON<58>
+SET_VELOCITY<71>
+NOTE_ON<66>
+TIME_SHIFT<240>
+SET_VELOCITY<81>
+NOTE_ON<68>
+TIME_SHIFT<20>
+SET_VELOCITY<76>
+NOTE_ON<65>
+SET_VELOCITY<60>
+NOTE_ON<46>
+TIME_SHIFT<30>
+NOTE_OFF<70>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<190>
+SET_VELOCITY<75>
+NOTE_ON<70>
+TIME_SHIFT<10>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<66>
+SET_VELOCITY<58>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<180>
+SET_VELOCITY<67>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<200>
+SET_VELOCITY<70>
+NOTE_ON<37>
+NOTE_OFF<46>
+NOTE_OFF<50>
+TIME_SHIFT<210>
+SET_VELOCITY<74>
+NOTE_ON<46>
+TIME_SHIFT<160>
+NOTE_OFF<66>
+TIME_SHIFT<30>
+NOTE_OFF<58>
+TIME_SHIFT<40>
+SET_VELOCITY<92>
+NOTE_ON<49>
+TIME_SHIFT<10>
+NOTE_OFF<46>
+TIME_SHIFT<230>
+SET_VELOCITY<73>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<70>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+SET_VELOCITY<88>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<85>
+NOTE_ON<61>
+TIME_SHIFT<190>
+NOTE_OFF<46>
+SET_VELOCITY<76>
+NOTE_ON<37>
+NOTE_OFF<66>
+TIME_SHIFT<220>
+SET_VELOCITY<70>
+NOTE_ON<46>
+TIME_SHIFT<100>
+SET_VELOCITY<91>
+NOTE_ON<73>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<70>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+NOTE_OFF<49>
+TIME_SHIFT<100>
+SET_VELOCITY<73>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+SET_VELOCITY<90>
+NOTE_ON<75>
+TIME_SHIFT<10>
+SET_VELOCITY<80>
+NOTE_ON<71>
+TIME_SHIFT<20>
+NOTE_OFF<70>
+TIME_SHIFT<60>
+NOTE_OFF<73>
+TIME_SHIFT<20>
+NOTE_OFF<75>
+TIME_SHIFT<10>
+NOTE_OFF<71>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<70>
+NOTE_ON<46>
+TIME_SHIFT<20>
+SET_VELOCITY<97>
+NOTE_ON<73>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<70>
+TIME_SHIFT<150>
+NOTE_OFF<70>
+NOTE_OFF<73>
+TIME_SHIFT<40>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<78>
+NOTE_ON<54>
+TIME_SHIFT<90>
+SET_VELOCITY<92>
+NOTE_ON<73>
+SET_VELOCITY<86>
+NOTE_ON<70>
+TIME_SHIFT<140>
+NOTE_OFF<73>
+TIME_SHIFT<10>
+NOTE_OFF<54>
+NOTE_OFF<70>
+TIME_SHIFT<40>
+SET_VELOCITY<87>
+NOTE_ON<71>
+SET_VELOCITY<62>
+NOTE_ON<46>
+TIME_SHIFT<10>
+SET_VELOCITY<86>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<51>
+NOTE_ON<70>
+TIME_SHIFT<30>
+NOTE_OFF<70>
+TIME_SHIFT<130>
+NOTE_OFF<46>
+TIME_SHIFT<20>
+SET_VELOCITY<71>
+NOTE_ON<70>
+SET_VELOCITY<91>
+NOTE_ON<73>
+TIME_SHIFT<10>
+SET_VELOCITY<66>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+NOTE_OFF<71>
+TIME_SHIFT<100>
+NOTE_OFF<70>
+TIME_SHIFT<10>
+NOTE_OFF<73>
+TIME_SHIFT<50>
+SET_VELOCITY<90>
+NOTE_ON<71>
+TIME_SHIFT<10>
+SET_VELOCITY<89>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<37>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<190>
+SET_VELOCITY<76>
+NOTE_ON<46>
+TIME_SHIFT<20>
+NOTE_OFF<71>
+TIME_SHIFT<70>
+SET_VELOCITY<86>
+NOTE_ON<70>
+SET_VELOCITY<87>
+NOTE_ON<66>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<70>
+NOTE_OFF<66>
+TIME_SHIFT<50>
+NOTE_OFF<70>
+TIME_SHIFT<110>
+SET_VELOCITY<73>
+NOTE_ON<50>
+TIME_SHIFT<20>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<86>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<79>
+NOTE_ON<58>
+SET_VELOCITY<77>
+NOTE_ON<66>
+TIME_SHIFT<170>
+NOTE_OFF<70>
+TIME_SHIFT<50>
+NOTE_OFF<66>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<82>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<38>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<70>
+NOTE_ON<46>
+TIME_SHIFT<30>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<92>
+NOTE_ON<70>
+SET_VELOCITY<77>
+NOTE_ON<66>
+TIME_SHIFT<30>
+SET_VELOCITY<76>
+NOTE_ON<37>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+TIME_SHIFT<180>
+SET_VELOCITY<77>
+NOTE_ON<46>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<84>
+NOTE_ON<37>
+NOTE_OFF<46>
+TIME_SHIFT<50>
+NOTE_OFF<50>
+TIME_SHIFT<170>
+SET_VELOCITY<82>
+NOTE_ON<46>
+TIME_SHIFT<260>
+NOTE_OFF<66>
+TIME_SHIFT<30>
+SET_VELOCITY<94>
+NOTE_ON<49>
+NOTE_OFF<46>
+NOTE_OFF<58>
+TIME_SHIFT<30>
+NOTE_OFF<70>
+TIME_SHIFT<220>
+SET_VELOCITY<75>
+NOTE_ON<46>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<92>
+NOTE_ON<58>
+SET_VELOCITY<87>
+NOTE_ON<66>
+TIME_SHIFT<140>
+NOTE_OFF<58>
+TIME_SHIFT<40>
+SET_VELOCITY<78>
+NOTE_ON<37>
+TIME_SHIFT<20>
+NOTE_OFF<46>
+TIME_SHIFT<210>
+SET_VELOCITY<97>
+NOTE_ON<70>
+TIME_SHIFT<10>
+SET_VELOCITY<88>
+NOTE_ON<46>
+TIME_SHIFT<70>
+NOTE_OFF<49>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<66>
+TIME_SHIFT<150>
+SET_VELOCITY<81>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<46>
+TIME_SHIFT<100>
+NOTE_OFF<70>
+SET_VELOCITY<94>
+NOTE_ON<73>
+TIME_SHIFT<20>
+SET_VELOCITY<84>
+NOTE_ON<46>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+NOTE_OFF<73>
+TIME_SHIFT<200>
+SET_VELOCITY<15>
+NOTE_ON<68>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+TIME_SHIFT<30>
+SET_VELOCITY<79>
+NOTE_ON<53>
+SET_VELOCITY<89>
+NOTE_ON<58>
+SET_VELOCITY<107>
+NOTE_ON<73>
+TIME_SHIFT<10>
+SET_VELOCITY<98>
+NOTE_ON<65>
+TIME_SHIFT<100>
+NOTE_OFF<58>
+NOTE_OFF<53>
+TIME_SHIFT<190>
+SET_VELOCITY<82>
+NOTE_ON<46>
+NOTE_OFF<65>
+TIME_SHIFT<70>
+NOTE_OFF<73>
+TIME_SHIFT<160>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+SET_VELOCITY<91>
+NOTE_ON<37>
+TIME_SHIFT<260>
+SET_VELOCITY<105>
+NOTE_ON<77>
+TIME_SHIFT<10>
+SET_VELOCITY<86>
+NOTE_ON<46>
+TIME_SHIFT<60>
+NOTE_OFF<37>
+TIME_SHIFT<210>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<76>
+NOTE_ON<37>
+TIME_SHIFT<140>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<87>
+NOTE_ON<46>
+TIME_SHIFT<40>
+NOTE_OFF<46>
+TIME_SHIFT<50>
+NOTE_OFF<77>
+TIME_SHIFT<40>
+SET_VELOCITY<103>
+NOTE_ON<82>
+TIME_SHIFT<130>
+NOTE_OFF<82>
+TIME_SHIFT<30>
+SET_VELOCITY<76>
+NOTE_ON<52>
+TIME_SHIFT<60>
+SET_VELOCITY<73>
+NOTE_ON<54>
+TIME_SHIFT<60>
+SET_VELOCITY<90>
+NOTE_ON<58>
+TIME_SHIFT<50>
+SET_VELOCITY<94>
+NOTE_ON<64>
+TIME_SHIFT<80>
+SET_VELOCITY<93>
+NOTE_ON<70>
+TIME_SHIFT<50>
+NOTE_OFF<70>
+TIME_SHIFT<290>
+SET_VELOCITY<110>
+NOTE_ON<82>
+TIME_SHIFT<80>
+NOTE_OFF<64>
+NOTE_OFF<52>
+TIME_SHIFT<80>
+NOTE_OFF<54>
+NOTE_OFF<58>
+TIME_SHIFT<360>
+SET_VELOCITY<90>
+NOTE_ON<46>
+TIME_SHIFT<380>
+SET_VELOCITY<89>
+NOTE_ON<37>
+NOTE_OFF<46>
+TIME_SHIFT<310>
+SET_VELOCITY<81>
+NOTE_ON<46>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<240>
+SET_VELOCITY<82>
+NOTE_ON<37>
+NOTE_OFF<46>
+TIME_SHIFT<240>
+SET_VELOCITY<82>
+NOTE_ON<46>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<210>
+SET_VELOCITY<85>
+NOTE_ON<52>
+TIME_SHIFT<10>
+NOTE_OFF<46>
+TIME_SHIFT<240>
+SET_VELOCITY<73>
+NOTE_ON<46>
+TIME_SHIFT<20>
+NOTE_OFF<52>
+TIME_SHIFT<220>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<37>
+TIME_SHIFT<290>
+SET_VELOCITY<70>
+NOTE_ON<46>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<220>
+NOTE_OFF<46>
+TIME_SHIFT<10>
+SET_VELOCITY<65>
+NOTE_ON<37>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+SET_VELOCITY<71>
+NOTE_ON<46>
+TIME_SHIFT<390>
+NOTE_OFF<46>
+SET_VELOCITY<85>
+NOTE_ON<54>
+TIME_SHIFT<60>
+NOTE_OFF<82>
+TIME_SHIFT<310>
+SET_VELOCITY<51>
+NOTE_ON<45>
+NOTE_OFF<54>
+TIME_SHIFT<160>
+SET_VELOCITY<74>
+NOTE_ON<69>
+TIME_SHIFT<140>
+NOTE_OFF<45>
+TIME_SHIFT<40>
+SET_VELOCITY<51>
+NOTE_ON<37>
+TIME_SHIFT<260>
+NOTE_OFF<37>
+SET_VELOCITY<46>
+NOTE_ON<45>
+TIME_SHIFT<110>
+SET_VELOCITY<78>
+NOTE_ON<81>
+TIME_SHIFT<10>
+SET_VELOCITY<67>
+NOTE_ON<78>
+TIME_SHIFT<190>
+NOTE_OFF<45>
+TIME_SHIFT<30>
+SET_VELOCITY<55>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<78>
+TIME_SHIFT<30>
+SET_VELOCITY<75>
+NOTE_ON<80>
+TIME_SHIFT<10>
+SET_VELOCITY<85>
+NOTE_ON<83>
+TIME_SHIFT<60>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+NOTE_OFF<81>
+TIME_SHIFT<30>
+NOTE_OFF<83>
+TIME_SHIFT<10>
+NOTE_OFF<80>
+TIME_SHIFT<100>
+SET_VELOCITY<54>
+NOTE_ON<45>
+TIME_SHIFT<30>
+SET_VELOCITY<80>
+NOTE_ON<81>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<78>
+TIME_SHIFT<120>
+NOTE_OFF<81>
+NOTE_OFF<78>
+TIME_SHIFT<130>
+NOTE_OFF<45>
+TIME_SHIFT<10>
+SET_VELOCITY<74>
+NOTE_ON<54>
+TIME_SHIFT<80>
+SET_VELOCITY<82>
+NOTE_ON<81>
+TIME_SHIFT<10>
+SET_VELOCITY<70>
+NOTE_ON<78>
+TIME_SHIFT<130>
+NOTE_OFF<81>
+TIME_SHIFT<10>
+NOTE_OFF<54>
+TIME_SHIFT<30>
+NOTE_OFF<78>
+TIME_SHIFT<20>
+SET_VELOCITY<47>
+NOTE_ON<45>
+TIME_SHIFT<260>
+SET_VELOCITY<52>
+NOTE_ON<37>
+NOTE_OFF<45>
+TIME_SHIFT<100>
+SET_VELOCITY<78>
+NOTE_ON<74>
+TIME_SHIFT<40>
+SET_VELOCITY<72>
+NOTE_ON<71>
+TIME_SHIFT<10>
+NOTE_OFF<69>
+TIME_SHIFT<140>
+NOTE_OFF<37>
+TIME_SHIFT<40>
+SET_VELOCITY<53>
+NOTE_ON<45>
+TIME_SHIFT<190>
+NOTE_OFF<45>
+TIME_SHIFT<40>
+SET_VELOCITY<52>
+NOTE_ON<37>
+TIME_SHIFT<180>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+SET_VELOCITY<52>
+NOTE_ON<45>
+TIME_SHIFT<10>
+SET_VELOCITY<83>
+NOTE_ON<73>
+TIME_SHIFT<20>
+SET_VELOCITY<64>
+NOTE_ON<69>
+TIME_SHIFT<10>
+NOTE_OFF<74>
+NOTE_OFF<71>
+TIME_SHIFT<60>
+NOTE_OFF<69>
+NOTE_OFF<73>
+TIME_SHIFT<280>
+SET_VELOCITY<63>
+NOTE_ON<54>
+TIME_SHIFT<40>
+NOTE_OFF<45>
+TIME_SHIFT<70>
+SET_VELOCITY<76>
+NOTE_ON<72>
+TIME_SHIFT<10>
+SET_VELOCITY<68>
+NOTE_ON<69>
+TIME_SHIFT<220>
+NOTE_OFF<54>
+TIME_SHIFT<30>
+SET_VELOCITY<47>
+NOTE_ON<44>
+TIME_SHIFT<50>
+SET_VELOCITY<73>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<69>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<49>
+NOTE_ON<37>
+TIME_SHIFT<20>
+SET_VELOCITY<79>
+NOTE_ON<66>
+SET_VELOCITY<74>
+NOTE_ON<63>
+TIME_SHIFT<80>
+NOTE_OFF<63>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<190>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<70>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<59>
+NOTE_ON<63>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<45>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+SET_VELOCITY<55>
+NOTE_ON<44>
+TIME_SHIFT<50>
+NOTE_OFF<72>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+NOTE_OFF<63>
+TIME_SHIFT<70>
+SET_VELOCITY<70>
+NOTE_ON<54>
+TIME_SHIFT<180>
+NOTE_OFF<54>
+TIME_SHIFT<80>
+SET_VELOCITY<44>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<49>
+NOTE_ON<37>
+TIME_SHIFT<240>
+SET_VELOCITY<77>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<64>
+NOTE_ON<65>
+NOTE_OFF<66>
+TIME_SHIFT<10>
+SET_VELOCITY<45>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<48>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<68>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<80>
+NOTE_ON<69>
+TIME_SHIFT<10>
+SET_VELOCITY<67>
+NOTE_ON<66>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<80>
+SET_VELOCITY<52>
+NOTE_ON<44>
+NOTE_OFF<69>
+NOTE_OFF<66>
+TIME_SHIFT<330>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<54>
+TIME_SHIFT<10>
+SET_VELOCITY<72>
+NOTE_ON<69>
+TIME_SHIFT<20>
+SET_VELOCITY<57>
+NOTE_ON<66>
+TIME_SHIFT<210>
+NOTE_OFF<54>
+TIME_SHIFT<50>
+SET_VELOCITY<49>
+NOTE_ON<45>
+TIME_SHIFT<120>
+SET_VELOCITY<71>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<62>
+NOTE_ON<57>
+TIME_SHIFT<50>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<57>
+TIME_SHIFT<10>
+NOTE_OFF<69>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<45>
+TIME_SHIFT<80>
+SET_VELOCITY<43>
+NOTE_ON<37>
+TIME_SHIFT<250>
+SET_VELOCITY<72>
+NOTE_ON<71>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<39>
+NOTE_ON<45>
+TIME_SHIFT<10>
+SET_VELOCITY<60>
+NOTE_ON<68>
+TIME_SHIFT<130>
+NOTE_OFF<71>
+TIME_SHIFT<40>
+NOTE_OFF<45>
+TIME_SHIFT<60>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+SET_VELOCITY<49>
+NOTE_ON<45>
+TIME_SHIFT<20>
+SET_VELOCITY<72>
+NOTE_ON<69>
+TIME_SHIFT<10>
+SET_VELOCITY<64>
+NOTE_ON<66>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<60>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<69>
+TIME_SHIFT<10>
+NOTE_OFF<45>
+TIME_SHIFT<210>
+SET_VELOCITY<53>
+NOTE_ON<54>
+TIME_SHIFT<40>
+SET_VELOCITY<65>
+NOTE_ON<69>
+TIME_SHIFT<10>
+SET_VELOCITY<56>
+NOTE_ON<66>
+TIME_SHIFT<120>
+NOTE_OFF<54>
+NOTE_OFF<69>
+TIME_SHIFT<40>
+NOTE_OFF<66>
+TIME_SHIFT<70>
+SET_VELOCITY<43>
+NOTE_ON<45>
+TIME_SHIFT<220>
+NOTE_OFF<45>
+TIME_SHIFT<50>
+SET_VELOCITY<42>
+NOTE_ON<37>
+SET_VELOCITY<62>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<56>
+NOTE_ON<62>
+TIME_SHIFT<150>
+NOTE_OFF<62>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<47>
+NOTE_ON<45>
+TIME_SHIFT<260>
+SET_VELOCITY<61>
+NOTE_ON<62>
+TIME_SHIFT<20>
+SET_VELOCITY<58>
+NOTE_ON<59>
+NOTE_OFF<45>
+TIME_SHIFT<20>
+SET_VELOCITY<44>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<59>
+TIME_SHIFT<180>
+NOTE_OFF<62>
+TIME_SHIFT<20>
+SET_VELOCITY<42>
+NOTE_ON<45>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<68>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<57>
+TIME_SHIFT<50>
+NOTE_OFF<57>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<190>
+NOTE_OFF<45>
+TIME_SHIFT<40>
+SET_VELOCITY<50>
+NOTE_ON<51>
+TIME_SHIFT<100>
+SET_VELOCITY<67>
+NOTE_ON<60>
+TIME_SHIFT<40>
+SET_VELOCITY<56>
+NOTE_ON<57>
+TIME_SHIFT<270>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<50>
+NOTE_OFF<51>
+TIME_SHIFT<30>
+NOTE_OFF<57>
+TIME_SHIFT<20>
+SET_VELOCITY<57>
+NOTE_ON<56>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<53>
+TIME_SHIFT<40>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+NOTE_OFF<56>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<40>
+NOTE_ON<37>
+TIME_SHIFT<90>
+SET_VELOCITY<67>
+NOTE_ON<54>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<51>
+TIME_SHIFT<60>
+NOTE_OFF<51>
+TIME_SHIFT<20>
+NOTE_OFF<54>
+TIME_SHIFT<250>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<51>
+NOTE_ON<54>
+TIME_SHIFT<30>
+SET_VELOCITY<45>
+NOTE_ON<51>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<70>
+NOTE_OFF<51>
+TIME_SHIFT<170>
+SET_VELOCITY<49>
+NOTE_ON<44>
+TIME_SHIFT<270>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<50>
+NOTE_ON<51>
+TIME_SHIFT<310>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<34>
+NOTE_ON<44>
+TIME_SHIFT<130>
+SET_VELOCITY<58>
+NOTE_ON<56>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+SET_VELOCITY<48>
+NOTE_ON<53>
+NOTE_OFF<54>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<330>
+SET_VELOCITY<36>
+NOTE_ON<44>
+TIME_SHIFT<70>
+SET_VELOCITY<60>
+NOTE_ON<57>
+TIME_SHIFT<10>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+SET_VELOCITY<50>
+NOTE_ON<54>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+NOTE_OFF<56>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<230>
+NOTE_OFF<51>
+TIME_SHIFT<20>
+SET_VELOCITY<57>
+NOTE_ON<44>
+TIME_SHIFT<300>
+SET_VELOCITY<70>
+NOTE_ON<49>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<59>
+NOTE_ON<44>
+TIME_SHIFT<60>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+SET_VELOCITY<62>
+NOTE_ON<37>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<230>
+NOTE_OFF<57>
+TIME_SHIFT<20>
+SET_VELOCITY<89>
+NOTE_ON<56>
+TIME_SHIFT<20>
+SET_VELOCITY<81>
+NOTE_ON<53>
+TIME_SHIFT<10>
+SET_VELOCITY<65>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<54>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<150>
+NOTE_OFF<53>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<78>
+NOTE_ON<37>
+TIME_SHIFT<50>
+NOTE_OFF<56>
+NOTE_OFF<49>
+TIME_SHIFT<180>
+SET_VELOCITY<83>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<37>
+TIME_SHIFT<290>
+SET_VELOCITY<80>
+NOTE_ON<52>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<98>
+NOTE_ON<61>
+TIME_SHIFT<260>
+NOTE_OFF<52>
+TIME_SHIFT<50>
+SET_VELOCITY<78>
+NOTE_ON<44>
+TIME_SHIFT<270>
+SET_VELOCITY<85>
+NOTE_ON<37>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<280>
+SET_VELOCITY<89>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<230>
+SET_VELOCITY<82>
+NOTE_ON<37>
+TIME_SHIFT<30>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+SET_VELOCITY<100>
+NOTE_ON<64>
+TIME_SHIFT<120>
+NOTE_OFF<64>
+NOTE_OFF<37>
+SET_VELOCITY<81>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<85>
+NOTE_ON<47>
+TIME_SHIFT<70>
+NOTE_OFF<47>
+TIME_SHIFT<70>
+SET_VELOCITY<102>
+NOTE_ON<56>
+TIME_SHIFT<210>
+SET_VELOCITY<75>
+NOTE_ON<28>
+TIME_SHIFT<20>
+NOTE_OFF<56>
+TIME_SHIFT<70>
+SET_VELOCITY<85>
+NOTE_ON<40>
+TIME_SHIFT<90>
+SET_VELOCITY<108>
+NOTE_ON<64>
+SET_VELOCITY<92>
+NOTE_ON<56>
+TIME_SHIFT<210>
+NOTE_OFF<28>
+TIME_SHIFT<60>
+NOTE_OFF<40>
+TIME_SHIFT<260>
+SET_VELOCITY<62>
+NOTE_ON<47>
+TIME_SHIFT<300>
+NOTE_OFF<47>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<40>
+TIME_SHIFT<270>
+SET_VELOCITY<72>
+NOTE_ON<47>
+TIME_SHIFT<50>
+NOTE_OFF<40>
+TIME_SHIFT<80>
+NOTE_OFF<56>
+TIME_SHIFT<110>
+NOTE_OFF<47>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<40>
+TIME_SHIFT<200>
+NOTE_OFF<40>
+TIME_SHIFT<30>
+SET_VELOCITY<76>
+NOTE_ON<47>
+TIME_SHIFT<230>
+NOTE_OFF<47>
+TIME_SHIFT<30>
+SET_VELOCITY<95>
+NOTE_ON<56>
+TIME_SHIFT<210>
+NOTE_OFF<56>
+TIME_SHIFT<20>
+SET_VELOCITY<72>
+NOTE_ON<47>
+TIME_SHIFT<130>
+SET_VELOCITY<93>
+NOTE_ON<66>
+TIME_SHIFT<30>
+NOTE_OFF<64>
+TIME_SHIFT<100>
+NOTE_OFF<47>
+TIME_SHIFT<20>
+SET_VELOCITY<73>
+NOTE_ON<40>
+TIME_SHIFT<60>
+NOTE_OFF<40>
+TIME_SHIFT<230>
+SET_VELOCITY<78>
+NOTE_ON<57>
+TIME_SHIFT<100>
+SET_VELOCITY<97>
+NOTE_ON<69>
+TIME_SHIFT<10>
+SET_VELOCITY<88>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<230>
+NOTE_OFF<57>
+TIME_SHIFT<10>
+SET_VELOCITY<62>
+NOTE_ON<49>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<160>
+NOTE_OFF<49>
+TIME_SHIFT<30>
+SET_VELOCITY<65>
+NOTE_ON<40>
+TIME_SHIFT<110>
+SET_VELOCITY<92>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<78>
+NOTE_ON<59>
+TIME_SHIFT<20>
+NOTE_OFF<40>
+TIME_SHIFT<10>
+NOTE_OFF<69>
+TIME_SHIFT<70>
+NOTE_OFF<59>
+TIME_SHIFT<30>
+NOTE_OFF<68>
+TIME_SHIFT<200>
+SET_VELOCITY<66>
+NOTE_ON<56>
+TIME_SHIFT<80>
+SET_VELOCITY<89>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<76>
+NOTE_ON<59>
+TIME_SHIFT<10>
+SET_VELOCITY<75>
+NOTE_ON<64>
+TIME_SHIFT<210>
+NOTE_OFF<56>
+TIME_SHIFT<30>
+SET_VELOCITY<53>
+NOTE_ON<47>
+TIME_SHIFT<230>
+NOTE_OFF<47>
+TIME_SHIFT<40>
+SET_VELOCITY<57>
+NOTE_ON<40>
+TIME_SHIFT<10>
+NOTE_OFF<59>
+TIME_SHIFT<60>
+NOTE_OFF<64>
+TIME_SHIFT<170>
+NOTE_OFF<40>
+TIME_SHIFT<20>
+SET_VELOCITY<59>
+NOTE_ON<47>
+TIME_SHIFT<270>
+NOTE_OFF<47>
+SET_VELOCITY<53>
+NOTE_ON<40>
+TIME_SHIFT<150>
+SET_VELOCITY<89>
+NOTE_ON<57>
+TIME_SHIFT<100>
+NOTE_OFF<40>
+TIME_SHIFT<70>
+NOTE_OFF<68>
+TIME_SHIFT<40>
+NOTE_OFF<57>
+TIME_SHIFT<30>
+SET_VELOCITY<52>
+NOTE_ON<47>
+TIME_SHIFT<140>
+NOTE_OFF<47>
+TIME_SHIFT<150>
+SET_VELOCITY<51>
+NOTE_ON<57>
+TIME_SHIFT<150>
+SET_VELOCITY<87>
+NOTE_ON<59>
+TIME_SHIFT<20>
+SET_VELOCITY<66>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<58>
+NOTE_ON<63>
+TIME_SHIFT<190>
+NOTE_OFF<57>
+TIME_SHIFT<60>
+NOTE_OFF<59>
+TIME_SHIFT<10>
+SET_VELOCITY<39>
+NOTE_ON<47>
+TIME_SHIFT<60>
+NOTE_OFF<47>
+TIME_SHIFT<190>
+SET_VELOCITY<45>
+NOTE_ON<40>
+TIME_SHIFT<120>
+SET_VELOCITY<88>
+NOTE_ON<61>
+TIME_SHIFT<150>
+NOTE_OFF<63>
+TIME_SHIFT<160>
+NOTE_OFF<40>
+TIME_SHIFT<40>
+SET_VELOCITY<33>
+NOTE_ON<47>
+TIME_SHIFT<200>
+NOTE_OFF<61>
+TIME_SHIFT<50>
+NOTE_OFF<47>
+TIME_SHIFT<30>
+SET_VELOCITY<37>
+NOTE_ON<40>
+TIME_SHIFT<220>
+NOTE_OFF<40>
+TIME_SHIFT<30>
+SET_VELOCITY<35>
+NOTE_ON<47>
+TIME_SHIFT<100>
+SET_VELOCITY<84>
+NOTE_ON<59>
+TIME_SHIFT<10>
+NOTE_OFF<47>
+TIME_SHIFT<80>
+NOTE_OFF<68>
+TIME_SHIFT<60>
+NOTE_OFF<59>
+TIME_SHIFT<210>
+SET_VELOCITY<47>
+NOTE_ON<56>
+TIME_SHIFT<130>
+SET_VELOCITY<68>
+NOTE_ON<59>
+TIME_SHIFT<50>
+SET_VELOCITY<47>
+NOTE_ON<68>
+SET_VELOCITY<44>
+NOTE_ON<64>
+TIME_SHIFT<230>
+NOTE_OFF<56>
+TIME_SHIFT<70>
+SET_VELOCITY<40>
+NOTE_ON<47>
+TIME_SHIFT<270>
+NOTE_OFF<47>
+TIME_SHIFT<90>
+SET_VELOCITY<14>
+NOTE_ON<40>
+TIME_SHIFT<180>
+NOTE_OFF<40>
+TIME_SHIFT<120>
+SET_VELOCITY<30>
+NOTE_ON<47>
+TIME_SHIFT<170>
+NOTE_OFF<64>
+TIME_SHIFT<80>
+NOTE_OFF<47>
+TIME_SHIFT<80>
+SET_VELOCITY<32>
+NOTE_ON<40>
+TIME_SHIFT<80>
+NOTE_OFF<59>
+TIME_SHIFT<20>
+NOTE_OFF<40>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<190>
+SET_VELOCITY<27>
+NOTE_ON<47>
+TIME_SHIFT<80>
+NOTE_OFF<47>
+TIME_SHIFT<320>
+SET_VELOCITY<64>
+NOTE_ON<60>
+TIME_SHIFT<40>
+SET_VELOCITY<46>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<29>
+NOTE_ON<54>
+TIME_SHIFT<30>
+SET_VELOCITY<18>
+NOTE_ON<68>
+TIME_SHIFT<340>
+NOTE_OFF<54>
+TIME_SHIFT<10>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<290>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<27>
+NOTE_ON<39>
+TIME_SHIFT<150>
+NOTE_OFF<39>
+TIME_SHIFT<180>
+NOTE_OFF<60>
+TIME_SHIFT<50>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+SET_VELOCITY<26>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+NOTE_OFF<66>
+TIME_SHIFT<110>
+SET_VELOCITY<22>
+NOTE_ON<39>
+TIME_SHIFT<110>
+NOTE_OFF<39>
+TIME_SHIFT<280>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<160>
+SET_VELOCITY<31>
+NOTE_ON<53>
+TIME_SHIFT<50>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<41>
+NOTE_ON<56>
+TIME_SHIFT<190>
+SET_VELOCITY<42>
+NOTE_ON<61>
+TIME_SHIFT<170>
+SET_VELOCITY<44>
+NOTE_ON<65>
+TIME_SHIFT<380>
+SET_VELOCITY<54>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<39>
+NOTE_ON<25>
+TIME_SHIFT<20>
+SET_VELOCITY<38>
+NOTE_ON<37>
+TIME_SHIFT<200>
+NOTE_OFF<25>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<60>
+NOTE_OFF<68>
+TIME_SHIFT<50>
+NOTE_OFF<56>
+TIME_SHIFT<200>
+SET_VELOCITY<24>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<21>
+NOTE_ON<37>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<50>
+SET_VELOCITY<25>
+NOTE_ON<44>
+TIME_SHIFT<160>
+SET_VELOCITY<59>
+NOTE_ON<56>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<160>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+SET_VELOCITY<36>
+NOTE_ON<44>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<150>
+SET_VELOCITY<46>
+NOTE_ON<54>
+TIME_SHIFT<130>
+SET_VELOCITY<69>
+NOTE_ON<61>
+TIME_SHIFT<50>
+SET_VELOCITY<45>
+NOTE_ON<58>
+TIME_SHIFT<140>
+NOTE_OFF<54>
+TIME_SHIFT<80>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<170>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<70>
+NOTE_OFF<58>
+TIME_SHIFT<110>
+NOTE_OFF<56>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+SET_VELOCITY<42>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<130>
+SET_VELOCITY<76>
+NOTE_ON<65>
+TIME_SHIFT<50>
+SET_VELOCITY<49>
+NOTE_ON<60>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+SET_VELOCITY<43>
+NOTE_ON<44>
+NOTE_OFF<60>
+NOTE_OFF<65>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<200>
+SET_VELOCITY<40>
+NOTE_ON<53>
+TIME_SHIFT<110>
+SET_VELOCITY<71>
+NOTE_ON<65>
+TIME_SHIFT<60>
+SET_VELOCITY<41>
+NOTE_ON<61>
+SET_VELOCITY<38>
+NOTE_ON<56>
+TIME_SHIFT<320>
+NOTE_OFF<53>
+NOTE_OFF<56>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<10>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<280>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<29>
+NOTE_ON<37>
+TIME_SHIFT<110>
+SET_VELOCITY<44>
+NOTE_ON<73>
+TIME_SHIFT<210>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+NOTE_OFF<73>
+TIME_SHIFT<20>
+SET_VELOCITY<20>
+NOTE_ON<44>
+TIME_SHIFT<30>
+SET_VELOCITY<39>
+NOTE_ON<80>
+TIME_SHIFT<10>
+SET_VELOCITY<41>
+NOTE_ON<77>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<140>
+NOTE_OFF<77>
+TIME_SHIFT<10>
+NOTE_OFF<80>
+SET_VELOCITY<34>
+NOTE_ON<37>
+TIME_SHIFT<40>
+SET_VELOCITY<44>
+NOTE_ON<82>
+SET_VELOCITY<41>
+NOTE_ON<73>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+NOTE_OFF<82>
+TIME_SHIFT<10>
+NOTE_OFF<73>
+TIME_SHIFT<20>
+SET_VELOCITY<49>
+NOTE_ON<80>
+SET_VELOCITY<32>
+NOTE_ON<44>
+SET_VELOCITY<52>
+NOTE_ON<77>
+TIME_SHIFT<60>
+NOTE_OFF<80>
+NOTE_OFF<77>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<160>
+SET_VELOCITY<51>
+NOTE_ON<80>
+TIME_SHIFT<20>
+SET_VELOCITY<29>
+NOTE_ON<53>
+TIME_SHIFT<20>
+SET_VELOCITY<40>
+NOTE_ON<77>
+TIME_SHIFT<120>
+NOTE_OFF<80>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+NOTE_OFF<77>
+TIME_SHIFT<80>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<140>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<57>
+NOTE_ON<78>
+TIME_SHIFT<10>
+SET_VELOCITY<44>
+NOTE_ON<70>
+TIME_SHIFT<20>
+SET_VELOCITY<30>
+NOTE_ON<44>
+TIME_SHIFT<120>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+NOTE_OFF<70>
+TIME_SHIFT<120>
+SET_VELOCITY<21>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<190>
+SET_VELOCITY<23>
+NOTE_ON<44>
+NOTE_OFF<78>
+TIME_SHIFT<70>
+SET_VELOCITY<52>
+NOTE_ON<77>
+TIME_SHIFT<20>
+SET_VELOCITY<35>
+NOTE_ON<68>
+TIME_SHIFT<40>
+NOTE_OFF<77>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<220>
+SET_VELOCITY<31>
+NOTE_ON<53>
+SET_VELOCITY<58>
+NOTE_ON<77>
+TIME_SHIFT<50>
+SET_VELOCITY<31>
+NOTE_ON<68>
+TIME_SHIFT<70>
+NOTE_OFF<77>
+TIME_SHIFT<20>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+TIME_SHIFT<110>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<270>
+SET_VELOCITY<81>
+NOTE_ON<63>
+TIME_SHIFT<30>
+SET_VELOCITY<62>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<45>
+NOTE_ON<37>
+TIME_SHIFT<50>
+NOTE_OFF<63>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<66>
+TIME_SHIFT<120>
+SET_VELOCITY<52>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<46>
+NOTE_ON<54>
+TIME_SHIFT<110>
+SET_VELOCITY<71>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<60>
+TIME_SHIFT<30>
+SET_VELOCITY<69>
+NOTE_ON<68>
+TIME_SHIFT<170>
+NOTE_OFF<54>
+TIME_SHIFT<70>
+SET_VELOCITY<43>
+NOTE_ON<44>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<110>
+SET_VELOCITY<76>
+NOTE_ON<66>
+TIME_SHIFT<30>
+SET_VELOCITY<68>
+NOTE_ON<70>
+TIME_SHIFT<50>
+NOTE_OFF<68>
+TIME_SHIFT<300>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<120>
+NOTE_OFF<66>
+TIME_SHIFT<120>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<80>
+SET_VELOCITY<63>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<65>
+NOTE_ON<68>
+NOTE_OFF<60>
+TIME_SHIFT<30>
+NOTE_OFF<70>
+TIME_SHIFT<90>
+NOTE_OFF<68>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<260>
+SET_VELOCITY<29>
+NOTE_ON<53>
+TIME_SHIFT<120>
+SET_VELOCITY<53>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<48>
+NOTE_ON<61>
+SET_VELOCITY<54>
+NOTE_ON<65>
+TIME_SHIFT<310>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<50>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+TIME_SHIFT<70>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<33>
+NOTE_ON<37>
+TIME_SHIFT<80>
+SET_VELOCITY<46>
+NOTE_ON<73>
+TIME_SHIFT<200>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+NOTE_OFF<73>
+TIME_SHIFT<50>
+SET_VELOCITY<30>
+NOTE_ON<44>
+SET_VELOCITY<43>
+NOTE_ON<80>
+TIME_SHIFT<20>
+SET_VELOCITY<41>
+NOTE_ON<77>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+NOTE_OFF<77>
+NOTE_OFF<80>
+TIME_SHIFT<50>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<10>
+SET_VELOCITY<45>
+NOTE_ON<73>
+SET_VELOCITY<34>
+NOTE_ON<82>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+NOTE_OFF<82>
+TIME_SHIFT<40>
+NOTE_OFF<73>
+TIME_SHIFT<10>
+SET_VELOCITY<52>
+NOTE_ON<77>
+TIME_SHIFT<10>
+SET_VELOCITY<23>
+NOTE_ON<44>
+SET_VELOCITY<49>
+NOTE_ON<80>
+TIME_SHIFT<50>
+NOTE_OFF<80>
+NOTE_OFF<77>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<160>
+SET_VELOCITY<44>
+NOTE_ON<80>
+TIME_SHIFT<10>
+SET_VELOCITY<32>
+NOTE_ON<53>
+TIME_SHIFT<40>
+SET_VELOCITY<30>
+NOTE_ON<77>
+TIME_SHIFT<80>
+NOTE_OFF<53>
+NOTE_OFF<80>
+TIME_SHIFT<30>
+NOTE_OFF<77>
+TIME_SHIFT<160>
+SET_VELOCITY<22>
+NOTE_ON<44>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<130>
+SET_VELOCITY<30>
+NOTE_ON<37>
+TIME_SHIFT<240>
+SET_VELOCITY<53>
+NOTE_ON<78>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+SET_VELOCITY<48>
+NOTE_ON<75>
+TIME_SHIFT<40>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+NOTE_OFF<75>
+TIME_SHIFT<70>
+NOTE_OFF<78>
+SET_VELOCITY<29>
+NOTE_ON<37>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<32>
+NOTE_ON<44>
+SET_VELOCITY<50>
+NOTE_ON<77>
+TIME_SHIFT<10>
+SET_VELOCITY<48>
+NOTE_ON<73>
+TIME_SHIFT<50>
+NOTE_OFF<73>
+TIME_SHIFT<10>
+NOTE_OFF<77>
+TIME_SHIFT<80>
+NOTE_OFF<44>
+TIME_SHIFT<120>
+SET_VELOCITY<42>
+NOTE_ON<53>
+TIME_SHIFT<20>
+SET_VELOCITY<57>
+NOTE_ON<77>
+TIME_SHIFT<30>
+SET_VELOCITY<39>
+NOTE_ON<73>
+TIME_SHIFT<10>
+NOTE_OFF<77>
+TIME_SHIFT<20>
+NOTE_OFF<73>
+TIME_SHIFT<110>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<44>
+NOTE_ON<44>
+TIME_SHIFT<130>
+SET_VELOCITY<84>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<65>
+TIME_SHIFT<70>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<50>
+NOTE_ON<37>
+NOTE_OFF<65>
+TIME_SHIFT<90>
+NOTE_OFF<68>
+TIME_SHIFT<250>
+SET_VELOCITY<47>
+NOTE_ON<44>
+TIME_SHIFT<160>
+SET_VELOCITY<89>
+NOTE_ON<70>
+TIME_SHIFT<30>
+SET_VELOCITY<64>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<66>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<39>
+NOTE_ON<37>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+SET_VELOCITY<47>
+NOTE_ON<44>
+TIME_SHIFT<160>
+NOTE_OFF<66>
+TIME_SHIFT<100>
+SET_VELOCITY<72>
+NOTE_ON<56>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<230>
+NOTE_OFF<56>
+TIME_SHIFT<10>
+SET_VELOCITY<54>
+NOTE_ON<44>
+TIME_SHIFT<80>
+SET_VELOCITY<81>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<80>
+NOTE_OFF<70>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<10>
+SET_VELOCITY<55>
+NOTE_ON<37>
+TIME_SHIFT<200>
+SET_VELOCITY<86>
+NOTE_ON<66>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+SET_VELOCITY<62>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<53>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+NOTE_OFF<37>
+TIME_SHIFT<110>
+NOTE_OFF<63>
+TIME_SHIFT<60>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<62>
+NOTE_ON<37>
+TIME_SHIFT<190>
+NOTE_OFF<37>
+TIME_SHIFT<60>
+SET_VELOCITY<61>
+NOTE_ON<44>
+TIME_SHIFT<50>
+SET_VELOCITY<86>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<65>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<190>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+SET_VELOCITY<51>
+NOTE_ON<53>
+TIME_SHIFT<70>
+SET_VELOCITY<83>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<69>
+NOTE_ON<61>
+TIME_SHIFT<250>
+NOTE_OFF<53>
+TIME_SHIFT<60>
+SET_VELOCITY<44>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<61>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+NOTE_OFF<65>
+TIME_SHIFT<30>
+SET_VELOCITY<42>
+NOTE_ON<37>
+SET_VELOCITY<57>
+NOTE_ON<68>
+TIME_SHIFT<280>
+SET_VELOCITY<40>
+NOTE_ON<44>
+TIME_SHIFT<110>
+SET_VELOCITY<77>
+NOTE_ON<63>
+TIME_SHIFT<30>
+SET_VELOCITY<61>
+NOTE_ON<59>
+SET_VELOCITY<63>
+NOTE_ON<71>
+TIME_SHIFT<10>
+NOTE_OFF<68>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+NOTE_OFF<59>
+NOTE_OFF<71>
+TIME_SHIFT<50>
+NOTE_OFF<63>
+TIME_SHIFT<90>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<30>
+NOTE_ON<37>
+TIME_SHIFT<10>
+SET_VELOCITY<51>
+NOTE_ON<73>
+TIME_SHIFT<30>
+SET_VELOCITY<39>
+NOTE_ON<65>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<130>
+SET_VELOCITY<53>
+NOTE_ON<71>
+TIME_SHIFT<10>
+NOTE_OFF<73>
+TIME_SHIFT<10>
+SET_VELOCITY<42>
+NOTE_ON<63>
+SET_VELOCITY<34>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<71>
+TIME_SHIFT<30>
+NOTE_OFF<63>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<56>
+NOTE_ON<71>
+TIME_SHIFT<20>
+SET_VELOCITY<39>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<42>
+NOTE_ON<53>
+TIME_SHIFT<150>
+NOTE_OFF<53>
+TIME_SHIFT<80>
+NOTE_OFF<71>
+TIME_SHIFT<20>
+SET_VELOCITY<37>
+NOTE_ON<44>
+TIME_SHIFT<10>
+NOTE_OFF<63>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+SET_VELOCITY<41>
+NOTE_ON<37>
+TIME_SHIFT<340>
+SET_VELOCITY<70>
+NOTE_ON<65>
+TIME_SHIFT<30>
+NOTE_OFF<37>
+SET_VELOCITY<38>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<50>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<45>
+NOTE_ON<70>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+NOTE_OFF<61>
+TIME_SHIFT<10>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+NOTE_OFF<65>
+TIME_SHIFT<60>
+SET_VELOCITY<48>
+NOTE_ON<60>
+SET_VELOCITY<51>
+NOTE_ON<68>
+TIME_SHIFT<10>
+NOTE_OFF<70>
+TIME_SHIFT<10>
+SET_VELOCITY<39>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<30>
+NOTE_OFF<68>
+TIME_SHIFT<200>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+SET_VELOCITY<33>
+NOTE_ON<53>
+TIME_SHIFT<140>
+SET_VELOCITY<64>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<62>
+NOTE_ON<70>
+SET_VELOCITY<55>
+NOTE_ON<58>
+TIME_SHIFT<180>
+NOTE_OFF<58>
+TIME_SHIFT<90>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+SET_VELOCITY<48>
+NOTE_ON<46>
+TIME_SHIFT<80>
+SET_VELOCITY<63>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<60>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<100>
+NOTE_OFF<46>
+TIME_SHIFT<70>
+SET_VELOCITY<40>
+NOTE_ON<37>
+TIME_SHIFT<30>
+SET_VELOCITY<73>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<46>
+NOTE_ON<61>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<220>
+SET_VELOCITY<37>
+NOTE_ON<46>
+TIME_SHIFT<90>
+SET_VELOCITY<58>
+NOTE_ON<65>
+TIME_SHIFT<10>
+SET_VELOCITY<37>
+NOTE_ON<61>
+TIME_SHIFT<110>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+NOTE_OFF<46>
+TIME_SHIFT<40>
+SET_VELOCITY<7>
+NOTE_ON<37>
+TIME_SHIFT<160>
+NOTE_OFF<37>
+TIME_SHIFT<140>
+SET_VELOCITY<36>
+NOTE_ON<46>
+TIME_SHIFT<120>
+NOTE_OFF<46>
+TIME_SHIFT<120>
+SET_VELOCITY<51>
+NOTE_ON<53>
+TIME_SHIFT<150>
+NOTE_OFF<53>
+TIME_SHIFT<110>
+SET_VELOCITY<36>
+NOTE_ON<46>
+TIME_SHIFT<110>
+NOTE_OFF<61>
+TIME_SHIFT<100>
+NOTE_OFF<46>
+TIME_SHIFT<50>
+SET_VELOCITY<38>
+NOTE_ON<37>
+TIME_SHIFT<260>
+NOTE_OFF<37>
+NOTE_OFF<65>
+SET_VELOCITY<65>
+NOTE_ON<63>
+TIME_SHIFT<30>
+SET_VELOCITY<39>
+NOTE_ON<46>
+SET_VELOCITY<48>
+NOTE_ON<60>
+TIME_SHIFT<120>
+NOTE_OFF<60>
+TIME_SHIFT<90>
+NOTE_OFF<46>
+TIME_SHIFT<50>
+SET_VELOCITY<42>
+NOTE_ON<37>
+TIME_SHIFT<90>
+NOTE_OFF<37>
+TIME_SHIFT<160>
+SET_VELOCITY<43>
+NOTE_ON<46>
+TIME_SHIFT<100>
+NOTE_OFF<63>
+TIME_SHIFT<10>
+SET_VELOCITY<71>
+NOTE_ON<61>
+TIME_SHIFT<20>
+SET_VELOCITY<54>
+NOTE_ON<58>
+TIME_SHIFT<60>
+NOTE_OFF<58>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<80>
+NOTE_OFF<46>
+TIME_SHIFT<210>
+SET_VELOCITY<45>
+NOTE_ON<54>
+TIME_SHIFT<80>
+SET_VELOCITY<63>
+NOTE_ON<61>
+TIME_SHIFT<20>
+SET_VELOCITY<47>
+NOTE_ON<58>
+TIME_SHIFT<250>
+NOTE_OFF<54>
+TIME_SHIFT<10>
+NOTE_OFF<70>
+TIME_SHIFT<20>
+SET_VELOCITY<33>
+NOTE_ON<46>
+TIME_SHIFT<210>
+NOTE_OFF<46>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<30>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<20>
+SET_VELOCITY<36>
+NOTE_ON<65>
+TIME_SHIFT<10>
+NOTE_OFF<58>
+TIME_SHIFT<300>
+SET_VELOCITY<31>
+NOTE_ON<46>
+TIME_SHIFT<60>
+SET_VELOCITY<57>
+NOTE_ON<63>
+TIME_SHIFT<10>
+SET_VELOCITY<59>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<42>
+NOTE_ON<58>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<140>
+NOTE_OFF<46>
+TIME_SHIFT<110>
+NOTE_OFF<63>
+NOTE_OFF<66>
+TIME_SHIFT<30>
+SET_VELOCITY<41>
+NOTE_ON<68>
+TIME_SHIFT<190>
+NOTE_OFF<68>
+TIME_SHIFT<50>
+SET_VELOCITY<26>
+NOTE_ON<45>
+TIME_SHIFT<20>
+SET_VELOCITY<51>
+NOTE_ON<66>
+TIME_SHIFT<40>
+SET_VELOCITY<26>
+NOTE_ON<63>
+NOTE_OFF<45>
+TIME_SHIFT<30>
+NOTE_OFF<66>
+NOTE_OFF<63>
+TIME_SHIFT<280>
+SET_VELOCITY<40>
+NOTE_ON<54>
+SET_VELOCITY<49>
+NOTE_ON<66>
+TIME_SHIFT<20>
+SET_VELOCITY<47>
+NOTE_ON<63>
+TIME_SHIFT<250>
+NOTE_OFF<54>
+TIME_SHIFT<30>
+NOTE_OFF<66>
+TIME_SHIFT<40>
+SET_VELOCITY<34>
+NOTE_ON<44>
+TIME_SHIFT<190>
+NOTE_OFF<58>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<330>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<120>
+SET_VELOCITY<52>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<46>
+NOTE_ON<56>
+TIME_SHIFT<10>
+SET_VELOCITY<42>
+NOTE_ON<60>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<120>
+NOTE_OFF<56>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<33>
+NOTE_ON<37>
+TIME_SHIFT<110>
+NOTE_OFF<65>
+TIME_SHIFT<30>
+SET_VELOCITY<47>
+NOTE_ON<54>
+SET_VELOCITY<48>
+NOTE_ON<63>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<90>
+NOTE_OFF<54>
+TIME_SHIFT<10>
+NOTE_OFF<37>
+TIME_SHIFT<150>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<30>
+NOTE_OFF<63>
+TIME_SHIFT<40>
+SET_VELOCITY<56>
+NOTE_ON<61>
+TIME_SHIFT<10>
+SET_VELOCITY<53>
+NOTE_ON<53>
+TIME_SHIFT<60>
+NOTE_OFF<53>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<300>
+SET_VELOCITY<29>
+NOTE_ON<53>
+TIME_SHIFT<60>
+SET_VELOCITY<50>
+NOTE_ON<61>
+TIME_SHIFT<270>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<220>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<33>
+NOTE_ON<37>
+TIME_SHIFT<230>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<23>
+NOTE_ON<44>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<90>
+SET_VELOCITY<34>
+NOTE_ON<37>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<190>
+SET_VELOCITY<36>
+NOTE_ON<53>
+TIME_SHIFT<230>
+NOTE_OFF<53>
+TIME_SHIFT<90>
+SET_VELOCITY<22>
+NOTE_ON<44>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<24>
+NOTE_ON<37>
+TIME_SHIFT<230>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+SET_VELOCITY<20>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<61>
+TIME_SHIFT<50>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<35>
+NOTE_ON<37>
+TIME_SHIFT<130>
+NOTE_OFF<37>
+TIME_SHIFT<180>
+SET_VELOCITY<25>
+NOTE_ON<44>
+TIME_SHIFT<130>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<28>
+NOTE_ON<53>
+TIME_SHIFT<110>
+SET_VELOCITY<56>
+NOTE_ON<65>
+TIME_SHIFT<40>
+SET_VELOCITY<33>
+NOTE_ON<61>
+TIME_SHIFT<170>
+NOTE_OFF<53>
+TIME_SHIFT<140>
+SET_VELOCITY<25>
+NOTE_ON<44>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<120>
+NOTE_OFF<65>
+TIME_SHIFT<80>
+NOTE_OFF<44>
+TIME_SHIFT<40>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<340>
+NOTE_OFF<37>
+SET_VELOCITY<67>
+NOTE_ON<68>
+TIME_SHIFT<50>
+SET_VELOCITY<47>
+NOTE_ON<60>
+SET_VELOCITY<33>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<41>
+NOTE_ON<65>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<26>
+NOTE_ON<37>
+TIME_SHIFT<70>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+NOTE_OFF<60>
+TIME_SHIFT<20>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<150>
+SET_VELOCITY<42>
+NOTE_ON<44>
+TIME_SHIFT<280>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<38>
+NOTE_ON<54>
+TIME_SHIFT<100>
+SET_VELOCITY<62>
+NOTE_ON<70>
+TIME_SHIFT<30>
+SET_VELOCITY<48>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<43>
+NOTE_ON<59>
+TIME_SHIFT<20>
+SET_VELOCITY<36>
+NOTE_ON<63>
+TIME_SHIFT<230>
+NOTE_OFF<54>
+TIME_SHIFT<50>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<70>
+NOTE_OFF<66>
+TIME_SHIFT<20>
+NOTE_OFF<70>
+TIME_SHIFT<110>
+NOTE_OFF<59>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+TIME_SHIFT<20>
+NOTE_OFF<63>
+TIME_SHIFT<40>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<340>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<56>
+NOTE_ON<68>
+TIME_SHIFT<30>
+SET_VELOCITY<37>
+NOTE_ON<60>
+TIME_SHIFT<20>
+SET_VELOCITY<39>
+NOTE_ON<65>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<30>
+NOTE_OFF<65>
+TIME_SHIFT<20>
+SET_VELOCITY<36>
+NOTE_ON<37>
+TIME_SHIFT<20>
+SET_VELOCITY<59>
+NOTE_ON<66>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+SET_VELOCITY<51>
+NOTE_ON<63>
+TIME_SHIFT<60>
+NOTE_OFF<68>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<170>
+NOTE_OFF<63>
+TIME_SHIFT<60>
+SET_VELOCITY<30>
+NOTE_ON<44>
+SET_VELOCITY<62>
+NOTE_ON<65>
+TIME_SHIFT<30>
+SET_VELOCITY<40>
+NOTE_ON<61>
+TIME_SHIFT<20>
+NOTE_OFF<66>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<44>
+NOTE_OFF<65>
+TIME_SHIFT<270>
+SET_VELOCITY<36>
+NOTE_ON<53>
+TIME_SHIFT<100>
+SET_VELOCITY<53>
+NOTE_ON<65>
+TIME_SHIFT<20>
+SET_VELOCITY<43>
+NOTE_ON<61>
+TIME_SHIFT<350>
+NOTE_OFF<53>
+TIME_SHIFT<30>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<30>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<80>
+SET_VELOCITY<44>
+NOTE_ON<73>
+TIME_SHIFT<220>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<30>
+NOTE_ON<44>
+NOTE_OFF<73>
+TIME_SHIFT<20>
+SET_VELOCITY<42>
+NOTE_ON<80>
+TIME_SHIFT<20>
+SET_VELOCITY<41>
+NOTE_ON<77>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<50>
+NOTE_OFF<77>
+TIME_SHIFT<30>
+SET_VELOCITY<30>
+NOTE_ON<37>
+TIME_SHIFT<40>
+NOTE_OFF<80>
+TIME_SHIFT<10>
+SET_VELOCITY<42>
+NOTE_ON<73>
+SET_VELOCITY<48>
+NOTE_ON<82>
+TIME_SHIFT<120>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+NOTE_OFF<82>
+TIME_SHIFT<40>
+NOTE_OFF<73>
+TIME_SHIFT<30>
+SET_VELOCITY<29>
+NOTE_ON<44>
+SET_VELOCITY<45>
+NOTE_ON<80>
+TIME_SHIFT<10>
+SET_VELOCITY<33>
+NOTE_ON<77>
+TIME_SHIFT<40>
+NOTE_OFF<80>
+TIME_SHIFT<10>
+NOTE_OFF<77>
+TIME_SHIFT<50>
+NOTE_OFF<44>
+TIME_SHIFT<220>
+SET_VELOCITY<47>
+NOTE_ON<80>
+TIME_SHIFT<10>
+SET_VELOCITY<28>
+NOTE_ON<53>
+TIME_SHIFT<20>
+SET_VELOCITY<46>
+NOTE_ON<77>
+TIME_SHIFT<200>
+NOTE_OFF<53>
+TIME_SHIFT<110>
+SET_VELOCITY<23>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<77>
+TIME_SHIFT<20>
+NOTE_OFF<80>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<30>
+NOTE_ON<37>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<170>
+NOTE_OFF<44>
+TIME_SHIFT<120>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<240>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<270>
+SET_VELOCITY<56>
+NOTE_ON<53>
+TIME_SHIFT<80>
+SET_VELOCITY<31>
+NOTE_ON<56>
+SET_VELOCITY<27>
+NOTE_ON<61>
+TIME_SHIFT<200>
+NOTE_OFF<53>
+TIME_SHIFT<150>
+NOTE_OFF<56>
+TIME_SHIFT<10>
+NOTE_OFF<61>
+SET_VELOCITY<21>
+NOTE_ON<44>
+TIME_SHIFT<140>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<31>
+NOTE_ON<37>
+TIME_SHIFT<300>
+NOTE_OFF<37>
+TIME_SHIFT<20>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<80>
+SET_VELOCITY<65>
+NOTE_ON<57>
+TIME_SHIFT<20>
+SET_VELOCITY<40>
+NOTE_ON<61>
+TIME_SHIFT<30>
+SET_VELOCITY<43>
+NOTE_ON<65>
+TIME_SHIFT<150>
+NOTE_OFF<44>
+TIME_SHIFT<140>
+SET_VELOCITY<26>
+NOTE_ON<37>
+TIME_SHIFT<50>
+NOTE_OFF<57>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+NOTE_OFF<61>
+TIME_SHIFT<40>
+NOTE_OFF<65>
+TIME_SHIFT<110>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<210>
+SET_VELOCITY<39>
+NOTE_ON<54>
+TIME_SHIFT<130>
+SET_VELOCITY<62>
+NOTE_ON<58>
+TIME_SHIFT<50>
+SET_VELOCITY<44>
+NOTE_ON<66>
+TIME_SHIFT<10>
+SET_VELOCITY<36>
+NOTE_ON<60>
+TIME_SHIFT<340>
+NOTE_OFF<54>
+TIME_SHIFT<70>
+SET_VELOCITY<23>
+NOTE_ON<44>
+TIME_SHIFT<90>
+NOTE_OFF<66>
+TIME_SHIFT<30>
+NOTE_OFF<60>
+TIME_SHIFT<10>
+NOTE_OFF<58>
+TIME_SHIFT<50>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<29>
+NOTE_ON<37>
+TIME_SHIFT<340>
+SET_VELOCITY<33>
+NOTE_ON<44>
+TIME_SHIFT<30>
+SET_VELOCITY<53>
+NOTE_ON<56>
+TIME_SHIFT<10>
+SET_VELOCITY<43>
+NOTE_ON<65>
+TIME_SHIFT<50>
+SET_VELOCITY<30>
+NOTE_ON<60>
+TIME_SHIFT<50>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+NOTE_OFF<56>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+SET_VELOCITY<53>
+NOTE_ON<54>
+TIME_SHIFT<10>
+SET_VELOCITY<39>
+NOTE_ON<63>
+TIME_SHIFT<20>
+SET_VELOCITY<21>
+NOTE_ON<37>
+TIME_SHIFT<10>
+NOTE_OFF<60>
+TIME_SHIFT<70>
+NOTE_OFF<54>
+TIME_SHIFT<40>
+NOTE_OFF<37>
+TIME_SHIFT<240>
+NOTE_OFF<63>
+TIME_SHIFT<20>
+SET_VELOCITY<51>
+NOTE_ON<53>
+TIME_SHIFT<10>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<44>
+NOTE_ON<61>
+TIME_SHIFT<50>
+NOTE_OFF<53>
+TIME_SHIFT<20>
+NOTE_OFF<61>
+TIME_SHIFT<50>
+NOTE_OFF<44>
+TIME_SHIFT<390>
+SET_VELOCITY<44>
+NOTE_ON<53>
+TIME_SHIFT<70>
+SET_VELOCITY<40>
+NOTE_ON<61>
+TIME_SHIFT<370>
+NOTE_OFF<53>
+TIME_SHIFT<60>
+NOTE_OFF<61>
+TIME_SHIFT<60>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<24>
+NOTE_ON<37>
+TIME_SHIFT<70>
+SET_VELOCITY<42>
+NOTE_ON<61>
+TIME_SHIFT<250>
+NOTE_OFF<37>
+TIME_SHIFT<80>
+NOTE_OFF<61>
+TIME_SHIFT<10>
+SET_VELOCITY<35>
+NOTE_ON<68>
+TIME_SHIFT<10>
+SET_VELOCITY<24>
+NOTE_ON<44>
+SET_VELOCITY<36>
+NOTE_ON<65>
+TIME_SHIFT<180>
+NOTE_OFF<44>
+TIME_SHIFT<60>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<20>
+SET_VELOCITY<23>
+NOTE_ON<37>
+TIME_SHIFT<10>
+SET_VELOCITY<36>
+NOTE_ON<61>
+TIME_SHIFT<30>
+SET_VELOCITY<22>
+NOTE_ON<70>
+TIME_SHIFT<80>
+NOTE_OFF<37>
+TIME_SHIFT<130>
+NOTE_OFF<70>
+TIME_SHIFT<40>
+NOTE_OFF<61>
+TIME_SHIFT<20>
+SET_VELOCITY<33>
+NOTE_ON<68>
+TIME_SHIFT<20>
+SET_VELOCITY<23>
+NOTE_ON<44>
+TIME_SHIFT<10>
+SET_VELOCITY<19>
+NOTE_ON<65>
+TIME_SHIFT<40>
+NOTE_OFF<68>
+TIME_SHIFT<20>
+NOTE_OFF<65>
+TIME_SHIFT<40>
+NOTE_OFF<44>
+TIME_SHIFT<270>
+SET_VELOCITY<19>
+NOTE_ON<53>
+SET_VELOCITY<37>
+NOTE_ON<68>
+TIME_SHIFT<30>
+SET_VELOCITY<30>
+NOTE_ON<65>
+TIME_SHIFT<60>
+NOTE_OFF<68>
+TIME_SHIFT<10>
+NOTE_OFF<65>
+TIME_SHIFT<90>
+NOTE_OFF<53>
+TIME_SHIFT<160>
+SET_VELOCITY<26>
+NOTE_ON<44>
+TIME_SHIFT<230>
+NOTE_OFF<44>
+TIME_SHIFT<80>
+SET_VELOCITY<26>
+NOTE_ON<37>
+TIME_SHIFT<100>
+SET_VELOCITY<54>
+NOTE_ON<56>
+TIME_SHIFT<320>
+NOTE_OFF<37>
+TIME_SHIFT<30>
+SET_VELOCITY<32>
+NOTE_ON<44>
+TIME_SHIFT<110>
+SET_VELOCITY<66>
+NOTE_ON<51>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<150>
+SET_VELOCITY<22>
+NOTE_ON<37>
+TIME_SHIFT<100>
+NOTE_OFF<37>
+TIME_SHIFT<200>
+SET_VELOCITY<35>
+NOTE_ON<44>
+TIME_SHIFT<150>
+SET_VELOCITY<67>
+NOTE_ON<49>
+NOTE_OFF<51>
+TIME_SHIFT<10>
+NOTE_OFF<44>
+NOTE_OFF<56>
+TIME_SHIFT<120>
+NOTE_OFF<49>
+TIME_SHIFT<430>
+SET_VELOCITY<60>
+NOTE_ON<49>
+TIME_SHIFT<30>
+SET_VELOCITY<44>
+NOTE_ON<53>
+TIME_SHIFT<10>
+SET_VELOCITY<49>
+NOTE_ON<56>
+TIME_SHIFT<460>
+NOTE_OFF<53>
+TIME_SHIFT<70>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<270>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<23>
+NOTE_ON<37>
+TIME_SHIFT<260>
+NOTE_OFF<37>
+TIME_SHIFT<100>
+SET_VELOCITY<18>
+NOTE_ON<44>
+TIME_SHIFT<210>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<140>
+NOTE_OFF<37>
+TIME_SHIFT<210>
+SET_VELOCITY<22>
+NOTE_ON<44>
+TIME_SHIFT<120>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<39>
+NOTE_ON<52>
+TIME_SHIFT<280>
+NOTE_OFF<52>
+TIME_SHIFT<90>
+SET_VELOCITY<29>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<110>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<280>
+NOTE_OFF<37>
+TIME_SHIFT<70>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<240>
+NOTE_OFF<44>
+TIME_SHIFT<70>
+SET_VELOCITY<32>
+NOTE_ON<37>
+TIME_SHIFT<150>
+NOTE_OFF<37>
+TIME_SHIFT<240>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<120>
+NOTE_OFF<44>
+TIME_SHIFT<250>
+SET_VELOCITY<41>
+NOTE_ON<53>
+TIME_SHIFT<350>
+NOTE_OFF<53>
+TIME_SHIFT<50>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<280>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<28>
+NOTE_ON<37>
+TIME_SHIFT<300>
+NOTE_OFF<37>
+TIME_SHIFT<90>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<280>
+NOTE_OFF<44>
+TIME_SHIFT<100>
+SET_VELOCITY<25>
+NOTE_ON<37>
+TIME_SHIFT<200>
+NOTE_OFF<37>
+TIME_SHIFT<220>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<100>
+NOTE_OFF<44>
+TIME_SHIFT<360>
+SET_VELOCITY<30>
+NOTE_ON<53>
+TIME_SHIFT<300>
+NOTE_OFF<53>
+TIME_SHIFT<170>
+SET_VELOCITY<27>
+NOTE_ON<44>
+TIME_SHIFT<270>
+NOTE_OFF<44>
+TIME_SHIFT<210>
+SET_VELOCITY<27>
+NOTE_ON<37>
+TIME_SHIFT<160>
+NOTE_OFF<37>
+TIME_SHIFT<340>
+SET_VELOCITY<31>
+NOTE_ON<44>
+TIME_SHIFT<250>
+NOTE_OFF<44>
+TIME_SHIFT<420>
+SET_VELOCITY<30>
+NOTE_ON<37>
+TIME_SHIFT<240>
+NOTE_OFF<37>
+TIME_SHIFT<670>
+SET_VELOCITY<28>
+NOTE_ON<44>
+TIME_SHIFT<260>
+NOTE_OFF<44>
+TIME_SHIFT<1000>
+TIME_SHIFT<120>
+SET_VELOCITY<37>
+NOTE_ON<53>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<1000>
+TIME_SHIFT<220>
+NOTE_OFF<53>
+TIME_SHIFT<530>
+NOTE_OFF<49>
+TIME_SHIFT<540>
+NOTE_OFF<56>
