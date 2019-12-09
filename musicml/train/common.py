@@ -1,3 +1,4 @@
+import pathlib
 import pickle
 import random
 import time
@@ -8,6 +9,13 @@ import torch.nn.functional as F
 from ..hyperp import Hyperparameters
 from ..model import MusicTransformer, create_attention_mask
 from .optimizer import StandardOptimizer
+
+def checkpoint_model( model, checkpoint_path ):
+    # Move any existing checkpoint to a backup file because don't trust computers.
+    checkpoint_path = pathlib.Path( checkpoint_path )
+    if checkpoint_path.exists():
+        checkpoint_path.replace( checkpoint_path.with_suffix( ".bak" ) )
+    torch.save( model.state_dict(), str( checkpoint_path ) )
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
     number_epochs=2, checkpoint_interval_sec=30 ):
@@ -90,12 +98,12 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                         f"Current epoch loss for epoch: {epoch_loss:.5}. "
                         f"Current average epoch loss: {(epoch_loss / epoch_steps):.5}. "
                         f"Most recent loss: {loss.item():.5}.") )
-                    torch.save( model.state_dict(), checkpoint_path )
-                    start_time = current_time
+                    checkpoint_model( model, checkpoint_path )
+                    start_time = time.monotonic()
 
         print( (f"Completed epoch {epoch_idx + 1} with total epoch loss of {epoch_loss:.5} "
             f"and average epoch loss of {(epoch_loss / epoch_steps):.4}. Checkpointing.") )
-        torch.save( model.state_dict(), checkpoint_path )
+        checkpoint_model( model, checkpoint_path )
 
     print( f"Training complete after {total_steps} steps." )
 
@@ -110,3 +118,7 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size ):
     optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
     loss_criterion = F.cross_entropy
     train_model( data_path, model, loss_criterion, optimizer, checkpoint_path )
+
+    # Ensure the trained model parameters are back on the CPU before checkpointing.
+    model.cpu()
+    checkpoint_model( model, checkpoint_path )
