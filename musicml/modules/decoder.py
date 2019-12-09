@@ -57,10 +57,10 @@ class DecoderStack( nn.Module ):
                 as d(E).
         """
         super().__init__()
-        self.decoder_layers = [
+        self.decoder_layers = nn.ModuleList( [
             DecoderLayer( embedding_size )
             for _ in range( number_layers )
-        ]
+        ] )
 
     def forward( self, target, encoder_output, attention_mask ):
         """Passes the given target sequence, encoder outputs, and attention mask through the decoder

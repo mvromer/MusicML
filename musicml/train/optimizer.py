@@ -19,13 +19,14 @@ class StandardOptimizer:
     """
 
     def __init__( self,
+        model_parameters,
         embedding_size=Defaults.EmbeddingSize,
         warmup_steps=Defaults.OptimizerWarmupSteps ):
         self.current_step = 0
         self.current_learning_rate = 0.0
         self.warmup_steps = warmup_steps
         self.embedding_size = embedding_size
-        self.optimizer = torch.optim.Adam( lr=0.0, betas=(0.9, 0.98), eps=1e-9 )
+        self.optimizer = torch.optim.Adam( model_parameters, lr=0.0, betas=(0.9, 0.98), eps=1e-9 )
 
     def update_learning_rate( self ):
         """Updates the optimizer's learning rate based on the formula given in the paper Attention

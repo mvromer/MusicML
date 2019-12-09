@@ -52,10 +52,10 @@ class EncoderStack( nn.Module ):
                 as d(E).
         """
         super().__init__()
-        self.encoder_layers = [
+        self.encoder_layers = nn.ModuleList( [
             EncoderLayer( embedding_size )
             for _ in range( number_layers )
-        ]
+        ] )
 
     def forward( self, source ):
         """Passes the given source sequence through the encoder stack.

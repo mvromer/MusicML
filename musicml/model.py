@@ -33,12 +33,12 @@ class MusicTransformer( nn.Module ):
                 masked must be set to -inf, and all other entries must be set to zero.
         """
         # Encode the input source sequence if given. Otherwise use the previously generated results.
-        if input_sequence:
+        if input_sequence is not None:
             # Embed the input token sequences into the embedded vector space.
             source = self.input_embedding( input_sequence )
             self.encoder_output = self.encoder( source )
 
-        if output_sequence:
+        if output_sequence is not None:
             # Embed the output token sequences into the embedded vector space.
             target = self.output_embedding( output_sequence )
 
