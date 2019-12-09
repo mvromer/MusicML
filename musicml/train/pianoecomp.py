@@ -1,9 +1,16 @@
 import csv
 import os
 import pathlib
+import pickle
 import random
+import warnings
+
+import torch
 
 from mido import MidiFile, tick2second
+
+StartToken = "START"
+StopToken = "STOP"
 
 Vocabulary = [
     "NOTE_ON<0>",
@@ -362,6 +369,7 @@ Vocabulary = [
     "TIME_SHIFT<980>",
     "TIME_SHIFT<990>",
     "TIME_SHIFT<1000>",
+    "SET_VELOCITY<0>",
     "SET_VELOCITY<1>",
     "SET_VELOCITY<2>",
     "SET_VELOCITY<3>",
@@ -393,10 +401,11 @@ Vocabulary = [
     "SET_VELOCITY<29>",
     "SET_VELOCITY<30>",
     "SET_VELOCITY<31>",
-    "SET_VELOCITY<32>",
-    "START",
-    "STOP"
+    StartToken,
+    StopToken
 ]
+
+VocabularyIndexMap = { token: token_idx for token_idx, token in enumerate( Vocabulary ) }
 
 def prepare_data( input_path, output_path ):
     input_path = pathlib.Path( input_path )
@@ -454,6 +463,18 @@ def write_time_shifts( output_file, shift_delta, shift_resolution_ms=10 ):
 
     return shift_delta
 
+def quantize_velocity( velocity, number_bins=32 ):
+    """Quantizes the given velocity to a binned value in the range [0, number_bins - 1], inclusive.
+
+    Args:
+        velocity: Original MIDI velocity read from the message.
+        number_bins: Number of velocity bins to quantize over.
+
+    Returns:
+        Quantized velocity value.
+    """
+    return velocity // number_bins + 1
+
 def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, max_files=None ):
     """Creates training and test data sets from the corpus of Piano-e-Competition data located in
     the given input path.
@@ -461,7 +482,8 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
     This uses the canonical training/test split provided by the Maestro v2.0.0 manifest file. The
     input data is converted in the following manner:
         * The file contents are read, and a random crop is selected from the file. The number of
-          tokens (lines/events) cropped from the file is equal to the given crop size.
+          tokens cropped from the file is equal to the given crop size. If for whatever reason the
+          file doesn't have enough tokens for a full crop, then the entire file is used.
         * The crop is divided in half. The first half is marked as the source sequence, which is the
           sequence fed through the Music Transformer's encoder. The second half is marked as the
           target sequence. It consists of the tokens the decoder is expected to produce.
@@ -492,26 +514,67 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
     input_path = pathlib.Path( input_path )
 
     with open( manifest_path, newline="" ) as manifest_file:
+        number_data_sets_created = 0
         manifest_reader = csv.DictReader( manifest_file )
-        for row in manifest_reader:
-            input_file_name = (input_path / row["midi_filename"]).with_suffix( ".out" )
 
+        for row in manifest_reader:
+            if number_data_sets_created == max_files:
+                break
+
+            data_set_type = row["split"]
+            if data_set_type == "validation":
+                continue
+
+            input_file_name = (input_path / row["midi_filename"]).with_suffix( ".out" )
             with open( input_file_name, "r" ) as input_file:
-                input_lines = input_file.readlines()
-                number_lines = len( input_lines )
+                input_tokens = input_file.readlines()
+                number_tokens = len( input_tokens )
 
                 # Randomly select the offset into this file where we will begin our crop_size crop.
                 # If for whatever reason the desired crop size is larger than the input, than just
                 # select the entire input.
-                if crop_size >= number_lines:
-                    source_range = range( 0, number_lines // 2 )
-                    target_range = range( source_range.stop, number_lines )
-                else:
-                    source_length = crop_size // 2
-                    target_length = crop_size - source_length
-                    source_start = random.randint( 0, number_lines - crop_size )
-                    source_range = range( source_start, source_start + source_length )
-                    target_range = range( source_range.stop, source_range.stop + target_length )
+                crop_size = crop_size if crop_size < number_tokens else number_tokens
+                source_length = crop_size // 2
+                target_length = crop_size - source_length
+                source_start = random.randint( 0, number_tokens - crop_size )
+                source_range = range( source_start, source_start + source_length )
+                target_range = range( source_range.stop, source_range.stop + target_length )
 
-                for line_idx in source_range:
-                    line = input_lines[line_idx]
+                if (source_range.stop - source_range.start) <= 0 or (target_range.stop - target_range.start) <= 0:
+                    warnings.warn( f"File {input_file_name} does not have enough tokens for a source and target sequence." )
+                    continue
+
+                source_sequence = torch.empty( source_length, dtype=torch.long )
+                for seq_idx, token_idx in enumerate( source_range ):
+                    token = input_tokens[token_idx].strip()
+                    source_sequence[seq_idx] = VocabularyIndexMap[token]
+
+                # Add 2 to the target sequence to accommodate start and stop tokens. For the target
+                # output, we store one row per predicted output token (including the stop token),
+                # with each row being the expected probability distribution for that token across
+                # all tokens in the vocabulary.
+                target_sequence = torch.empty( target_length, dtype=torch.long )
+                target_sequence[0] = VocabularyIndexMap[StartToken]
+                target_sequence[-1] = VocabularyIndexMap[StopToken]
+
+                target_output = torch.zeros( target_length + 1, len( VocabularyIndexMap ) )
+
+                for seq_idx, token_idx in enumerate( target_range, start=1 ):
+                    token = input_tokens[token_idx].strip()
+                    expected_vocab_idx = VocabularyIndexMap[token]
+                    target_sequence[seq_idx] = expected_vocab_idx
+                    # Offset by 1 because we don't store a probability distribution for the start
+                    # token we initially feed into the decoder.
+                    target_output[seq_idx - 1, expected_vocab_idx] = 1.0
+
+                data_set = {
+                    "source_sequence": source_sequence,
+                    "target_sequence": target_sequence,
+                    "target_output": target_output
+                }
+
+                data_sets[data_set_type].append( data_set )
+                number_data_sets_created += 1
+
+    with open( output_path, "w" ) as output_file:
+        pickle.dump( data_sets, output_file )
