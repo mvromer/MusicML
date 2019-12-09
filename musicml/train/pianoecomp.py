@@ -433,7 +433,7 @@ def prepare_data( input_path, output_path ):
 
                 if (msg.type == "note_on" and msg.velocity != 0):
                     shift_delta = write_time_shifts(f, shift_delta)
-                    f.write(f"SET_VELOCITY<{msg.velocity}>\n")
+                    f.write(f"SET_VELOCITY<{quantize_velocity(msg.velocity)}>\n")
                     f.write(f"NOTE_ON<{msg.note}>\n")
 
                 if (msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0)):
@@ -473,7 +473,9 @@ def quantize_velocity( velocity, number_bins=32 ):
     Returns:
         Quantized velocity value.
     """
-    return velocity // number_bins + 1
+    NumberVelocityValues = 128
+    bin_width = NumberVelocityValues / number_bins
+    return int(velocity // bin_width)
 
 def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, max_files=None ):
     """Creates training and test data sets from the corpus of Piano-e-Competition data located in
@@ -553,7 +555,7 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
                 # output, we store one row per predicted output token (including the stop token),
                 # with each row being the expected probability distribution for that token across
                 # all tokens in the vocabulary.
-                target_sequence = torch.empty( target_length, dtype=torch.long )
+                target_sequence = torch.empty( target_length + 2, dtype=torch.long )
                 target_sequence[0] = VocabularyIndexMap[StartToken]
                 target_sequence[-1] = VocabularyIndexMap[StopToken]
 
@@ -576,5 +578,5 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
                 data_sets[data_set_type].append( data_set )
                 number_data_sets_created += 1
 
-    with open( output_path, "w" ) as output_file:
+    with open( output_path, "wb" ) as output_file:
         pickle.dump( data_sets, output_file )
