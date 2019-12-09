@@ -505,13 +505,13 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, ma
                 # select the entire input.
                 if crop_size >= number_lines:
                     source_range = range( 0, number_lines // 2 )
-                    target_range = range( source_range.start, number_lines )
+                    target_range = range( source_range.stop, number_lines )
                 else:
                     source_length = crop_size // 2
                     target_length = crop_size - source_length
                     source_start = random.randint( 0, number_lines - crop_size )
                     source_range = range( source_start, source_start + source_length )
-                    target_range = range( source_range.start, source_range.start + target_length )
+                    target_range = range( source_range.stop, source_range.stop + target_length )
 
                 for line_idx in source_range:
                     line = input_lines[line_idx]
