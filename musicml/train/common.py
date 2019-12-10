@@ -27,7 +27,7 @@ def checkpoint_model( model, checkpoint_path ):
     torch.save( model.state_dict(), str( checkpoint_path ) )
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
-    number_epochs=5, checkpoint_interval_sec=30 ):
+    number_epochs=1, checkpoint_interval_sec=600 ):
     data_sets = load_compressed_pickle( data_path )
 
     # We'll randomize the order of the training data.
@@ -115,7 +115,8 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
 
     print( f"Training complete after {total_steps} steps." )
 
-def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=None ):
+def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=None,
+    number_epochs=1, checkpoint_interval_sec=600 ):
     """Runs the standard Music Transformer trainer.
 
     Args:
@@ -124,6 +125,8 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
         vocab_size: The size of the vocabulary used by the training data.
         weights_path: Optional path to a file containing model weights previously checkpointed by
             this trainer. This allows training to resume from a previous checkpoint.
+        number_epochs: Number of times to loop over the training set.
+        checkpoint_interval_sec: Number of seconds to wait before checkpointing the model weights.
     """
     hyper = Hyperparameters( vocab_size )
     model = MusicTransformer( hyper )
@@ -138,7 +141,7 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
 
     optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
     loss_criterion = F.cross_entropy
-    train_model( data_path, model, loss_criterion, optimizer, checkpoint_path )
+    train_model( data_path, model, loss_criterion, optimizer, checkpoint_path, number_epochs, checkpoint_interval_sec )
 
     # Ensure the trained model parameters are back on the CPU before checkpointing.
     model.cpu()
