@@ -115,9 +115,22 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
 
     print( f"Training complete after {total_steps} steps." )
 
-def run_standard_trainer( data_path, checkpoint_path, vocab_size ):
+def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=None ):
+    """Runs the standard Music Transformer trainer.
+
+    Args:
+        data_path: Path to the .pkl.bz2 data file containing the training data.
+        checkpoint_path: Path to which model weights will be periodically checkpointed.
+        vocab_size: The size of the vocabulary used by the training data.
+        weights_path: Optional path to a file containing model weights previously checkpointed by
+            this trainer. This allows training to resume from a previous checkpoint.
+    """
     hyper = Hyperparameters( vocab_size )
     model = MusicTransformer( hyper )
+
+    # If a weights path is given, load the pre-trained weights into our model.
+    if weights_path:
+        model.load_state_dict( torch.load( weights_path, map_location="cpu" ) )
 
     # Run on the GPU if it's available.
     if torch.cuda.is_available():
