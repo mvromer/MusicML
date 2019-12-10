@@ -100,7 +100,7 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
 
                 # Output every 100 steps just to show we're making progress.
                 if epoch_steps % 100 == 0:
-                    print( (f"Processed {epoch_steps} on epoch {epoch_idx + 1}. "
+                    print( (f"Processed {epoch_steps} steps on epoch {epoch_idx + 1}. "
                         f"Current average epoch loss: {(epoch_loss / epoch_steps):.5}.") )
 
                 # Checkpoint and report current status if we've hit our checkpoint interval.
