@@ -1,13 +1,14 @@
 import csv
 import os
 import pathlib
-import pickle
 import random
 import warnings
 
 import torch
 
 from mido import MidiFile, tick2second
+
+from .common import dump_compressed_pickle
 
 StartToken = "START"
 StopToken = "STOP"
@@ -513,7 +514,7 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
 
     input_path = pathlib.Path( input_path )
 
-    with open( manifest_path, newline="" ) as manifest_file:
+    with open( manifest_path, newline="", encoding="utf-8" ) as manifest_file:
         manifest_reader = csv.DictReader( manifest_file )
 
         for row in manifest_reader:
@@ -571,5 +572,4 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
 
                 data_sets[data_set_type].append( data_set )
 
-    with open( output_path, "wb" ) as output_file:
-        pickle.dump( data_sets, output_file )
+    dump_compressed_pickle( data_sets, output_path )

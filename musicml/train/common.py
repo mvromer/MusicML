@@ -1,3 +1,4 @@
+import bz2
 import pathlib
 import pickle
 import random
@@ -10,6 +11,14 @@ from ..hyperp import Hyperparameters
 from ..model import MusicTransformer, create_attention_mask
 from .optimizer import StandardOptimizer
 
+def dump_compressed_pickle( obj, output_path ):
+    with bz2.open( output_path, "wb" ) as output_file:
+        output_file.write( pickle.dumps( obj ) )
+
+def load_compressed_pickle( input_path ):
+    with bz2.open( input_path, "rb" ) as input_file:
+        return pickle.loads( input_file.read() )
+
 def checkpoint_model( model, checkpoint_path ):
     # Move any existing checkpoint to a backup file because don't trust computers.
     checkpoint_path = pathlib.Path( checkpoint_path )
@@ -19,8 +28,7 @@ def checkpoint_model( model, checkpoint_path ):
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
     number_epochs=5, checkpoint_interval_sec=30 ):
-    with open( data_path, "rb" ) as data_file:
-        data_sets = pickle.load( data_file )
+    data_sets = load_compressed_pickle( data_path )
 
     # We'll randomize the order of the training data.
     training_indices = list( range( len( data_sets["train"] ) ) )
