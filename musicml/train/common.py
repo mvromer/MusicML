@@ -98,6 +98,11 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 epoch_steps += 1
                 total_steps += 1
 
+                # Output every 100 steps just to show we're making progress.
+                if epoch_steps % 100 == 0:
+                    print( (f"Processed {epoch_steps} on epoch {epoch_idx + 1}. "
+                        f"Current average epoch loss: {(epoch_loss / epoch_steps):.5}.") )
+
                 # Checkpoint and report current status if we've hit our checkpoint interval.
                 current_time = time.monotonic()
                 elapsed_time = current_time - start_time
@@ -137,6 +142,7 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
 
     # Run on the GPU if it's available.
     if torch.cuda.is_available():
+        print( "Using GPU for training" )
         model.cuda()
 
     optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
