@@ -554,8 +554,15 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
                 target_sequence[0] = VocabularyIndexMap[StartToken]
                 target_sequence[-1] = VocabularyIndexMap[StopToken]
 
+                # Target output stores one row per predicted output token with each row being the
+                # expected probability distribution for that token across all tokens in the
+                # vocabulary. Add 1 to the target output to accommodate the probability distribution
+                # for the stop token.
                 target_output = torch.zeros( target_length + 1, len( VocabularyIndexMap ) )
+                target_output[-1, VocabularyIndexMap[StopToken]] = 1.0
 
+                # Start the enumeration of the target sequence indices at 1 because the first token
+                # in the target sequence is the start token.
                 for seq_idx, token_idx in enumerate( target_range, start=1 ):
                     token = input_tokens[token_idx].strip()
                     expected_vocab_idx = VocabularyIndexMap[token]
