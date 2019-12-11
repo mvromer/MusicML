@@ -407,6 +407,8 @@ Vocabulary = [
 ]
 
 VocabularyIndexMap = { token: token_idx for token_idx, token in enumerate( Vocabulary ) }
+StartTokenIndex = VocabularyIndexMap[StartToken]
+StopTokenIndex = VocabularyIndexMap[StopToken]
 
 def prepare_data( input_path, output_path ):
     input_path = pathlib.Path( input_path )
