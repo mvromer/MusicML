@@ -8,16 +8,18 @@ from .train import pianoecomp as midimodel
 class MusicGenerator:
     """Generates music using a trained Music Transformer model."""
 
-    def __init__( self, hyper, weights_path ):
+    def __init__( self, hyper, weights_path=None ):
         self.model = MusicTransformer( hyper )
-        self.model.load_state_dict( torch.load( weights_path, map_location="cpu" ) )
+        if weights_path:
+            self.model.load_state_dict( torch.load( weights_path, map_location="cpu" ) )
+        self.model.eval()
 
         self.using_gpu = False
         if torch.cuda.is_available():
             self.model.cuda()
             self.using_gpu = True
 
-    def generate( self, input_sequence, start_token, stop_token, max_output_length=1000 ):
+    def generate( self, input_sequence, start_token, stop_token, max_output_length=10 ):
         with torch.no_grad():
             input_sequence = torch.tensor( input_sequence, dtype=torch.long )
             output_sequence = torch.empty( max_output_length, dtype=torch.long )
@@ -37,6 +39,10 @@ class MusicGenerator:
                 current_output_length = current_output_sequence.size( 0 )
                 attention_mask = create_attention_mask( current_output_length, current_output_length )
 
+                print( f"Next output index: {next_output_idx}" )
+                print( f"Current output length: {current_output_length}" )
+                print( f"Current output sequence: {current_output_sequence}" )
+
                 if torch.cuda.is_available():
                     attention_mask = attention_mask.cuda()
 
@@ -50,6 +56,42 @@ class MusicGenerator:
                     break
 
         return output_sequence[:output_length].tolist()
+
+    def encode_inputs( self, input_sequence ):
+        with torch.no_grad():
+            input_sequence = torch.tensor( input_sequence, dtype=torch.long )
+            if torch.cuda.is_available():
+                input_sequence = input_sequence.cuda()
+            self.model( input_sequence=input_sequence )
+
+    def decode_outputs( self, start_token, stop_token, max_output_length=1000 ):
+        with torch.no_grad():
+            output_sequence = torch.empty( max_output_length, dtype=torch.long )
+            output_sequence[0] = start_token
+            if torch.cuda.is_available():
+                output_sequence = output_sequence.cuda()
+
+            for next_output_idx in range( 1, output_sequence.size( 0 ) ):
+                current_output_sequence = output_sequence[:next_output_idx]
+                current_output_length = current_output_sequence.size( 0 )
+
+                print( f"Next output index: {next_output_idx}" )
+                print( f"Current output length: {current_output_length}" )
+                print( f"Current output sequence: {current_output_sequence}" )
+
+                attention_mask = create_attention_mask( current_output_length, current_output_length )
+                if torch.cuda.is_available():
+                    attention_mask = attention_mask.cuda()
+
+                model_output = self.model( output_sequence=current_output_sequence,
+                    attention_mask=attention_mask )
+                next_output_scores = model_output[-1, :]
+                next_output = next_output_scores.argmax().item()
+                output_sequence[next_output_idx] = next_output
+                yield (next_output, next_output_scores)
+
+                if next_output == stop_token:
+                    break
 
 def generate_from_midi( input_midi_path, output_path, weights_path ):
     hyper = Hyperparameters( len( midimodel.Vocabulary ) )
