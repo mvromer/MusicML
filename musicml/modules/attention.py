@@ -87,6 +87,10 @@ class MultiheadAttention( nn.Module ):
         # embedding vector space. Expressed as linear layer with no bias.
         self.z_trans = nn.Linear( self.value_size * self.number_heads, embedding_size, bias=False )
 
+        self.invariant_logits = None
+        self.attention_weights = None
+        self.relative_logits = None
+
     def forward( self, source, target, attention_mask=None ):
         """Computes multihead attention for the given source and target sequences.
 
@@ -131,15 +135,18 @@ class MultiheadAttention( nn.Module ):
 
         # Start computing attention in parallel across all heads. First Z = QK^T.
         z = torch.bmm( queriesView, keyTransView )
+        self.invariant_logits = z
 
         # If we are embedding relative positions, then compute the relative position logits that
         # will modulate are attention logits in Z.
         if self.embed_relative_positions:
             relative_logits = self.compute_relative_logits( queriesView )
+            self.relative_logits = relative_logits
             z = z + relative_logits
 
         # Scale by root inverse of K.
         z = self.scale_factor * z
+        self.invariant_logits = self.scale_factor * self.invariant_logits
 
         # If given, add the attention mask prior to computing softmax. At this point Z has
         # dimensions H x T x S. Adding the attention mask, which must be T x S, to Z will cause it
@@ -149,6 +156,7 @@ class MultiheadAttention( nn.Module ):
 
         # Softmax along innermost dimension of Z.
         z = self.z_softmax( z )
+        self.attention_weights = z
 
         # Finally multiply by V to get final attention value for each head.
         z = torch.bmm( z, valuesView )
