@@ -420,32 +420,42 @@ def prepare_data( input_path, output_path ):
         output_file_name.parent.mkdir( parents=True, exist_ok=True )
 
         # create a parsed file for each file
-        with output_file_name.open("w+") as f:
+        with output_file_name.open("w") as f:
             print(f"Processing input file: {input_file_name}.")
-            mid = MidiFile(str(input_file_name))
-            shift_delta = 0
+            f.writelines("\n".join(convert_to_midi_model(str(input_file_name))))
 
-            for msg in mid:
-                # get tempo of the music from meta
-                if (msg.is_meta and msg.type == "set_tempo"):
-                    tempo = msg.tempo
-
-                shift_delta += msg.time * 1000
-
-                if (msg.type == "note_on" and msg.velocity != 0):
-                    shift_delta = write_time_shifts(f, shift_delta)
-                    f.write(f"SET_VELOCITY<{quantize_velocity(msg.velocity)}>\n")
-                    f.write(f"NOTE_ON<{msg.note}>\n")
-
-                if (msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0)):
-                    shift_delta = write_time_shifts(f, shift_delta)
-                    f.write(f"NOTE_OFF<{msg.note}>\n")
-
-def write_time_shifts( output_file, shift_delta, shift_resolution_ms=10 ):
-    """Write TIME_SHIFT messages if the given shift_delta exceeds the shift resolution.
+def convert_to_midi_model( input_midi_path ):
+    """Converts the given MIDI model to a list of tokens using the MIDI Model vocabulary.
 
     Args:
-        output_file: Text file to write the TIME_SHIFT messages to.
+        input_midi_path: Path to the input MIDI file to process.
+
+    Returns:
+        List of tokens from the MIDI Model vocabulary representing the given MIDI file.
+    """
+    output_model = []
+    input_midi = MidiFile( input_midi_path )
+    shift_delta = 0
+
+    for msg in input_midi:
+        shift_delta += msg.time * 1000
+
+        if msg.type == "note_on" and msg.velocity != 0:
+            shift_delta = append_time_shifts( output_model, shift_delta )
+            output_model.append( f"SET_VELOCITY<{quantize_velocity( msg.velocity )}>" )
+            output_model.append( f"NOTE_ON<{msg.note}>" )
+
+        if msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0):
+            shift_delta = append_time_shifts( output_model, shift_delta )
+            output_model.append( f"NOTE_OFF<{msg.note}>" )
+
+    return output_model
+
+def append_time_shifts( output_model, shift_delta, shift_resolution_ms=10 ):
+    """Appends TIME_SHIFT messages if the given shift_delta exceeds the shift resolution.
+
+    Args:
+        output_model: List of tokens to append the TIME_SHIFT messages to.
         shift_delta: Number of milliseconds that have elapsed in the MIDI event stream since the
             last TIME_SHIFT message.
         shift_resolution_ms: The smallest resolution of elapsed time that can be captured by a
@@ -453,13 +463,13 @@ def write_time_shifts( output_file, shift_delta, shift_resolution_ms=10 ):
     """
     # We can encapsulate up to 1 second (1000 ms) of time in each TIME_SHIFT.
     while shift_delta >= 1000:
-        output_file.write( "TIME_SHIFT<1000>\n" )
+        output_model.append( "TIME_SHIFT<1000>" )
         shift_delta -= 1000
 
     # Figure out if we can emit another TIME_SHIFT message.
     shift_amount = int(shift_delta // shift_resolution_ms * shift_resolution_ms)
     if shift_amount:
-        output_file.write( f"TIME_SHIFT<{shift_amount}>\n" )
+        output_model.append( f"TIME_SHIFT<{shift_amount}>" )
         shift_delta -= shift_amount
 
     return shift_delta
