@@ -19,30 +19,39 @@ class EncoderLayer( nn.Module ):
     def __init__( self,
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
-        attention_value_size=Defaults.AttentionValueSize ):
+        attention_value_size=Defaults.AttentionValueSize,
+        dropout=Defaults.Dropout ):
         super().__init__()
+
         # First sublayer is self attention with the source sequence as input.
         self.self_attention = MultiheadAttention( embedding_size,
             key_size=attention_key_size,
             value_size=attention_value_size,
             embed_relative_positions=False )
-        self.self_attention_residual = ResidualNorm( embedding_size )
+        self.self_attention_norm = nn.LayerNorm( embedding_size )
+        self.self_attention_dropout = nn.Dropout( dropout )
 
         # Second sublayer is the feed-forward network.
         self.feed_forward = FeedForward( embedding_size )
-        self.feed_forward_residual = ResidualNorm( embedding_size )
+        self.feed_formward_norm = nn.LayerNorm( embedding_size )
+        self.feed_forward_dropout = nn.Dropout( dropout )
 
     def forward( self, source ):
         # NOTE: There appears to be some discrepancy between what the Vaswani paper says for the
         # ordering of the sublayer with respect to the residual connection and layer normalization
         # and what is actually implemented in the authors' reference implementation. This uses the
-        # order prescribed in the paper, which is sublayer computation, residual connection, and
-        # then layer normalization. This also applies to the decoder layer.
-        self_attention_output = self.self_attention( source, source )
-        self_attention_output = self.self_attention_residual( source, self_attention_output )
+        # order prescribed in the reference implementation, which normalizes the input the sublayer,
+        # applies a dropout to the sublayer output, and then adds the residual connection. This also
+        # applies to the decoder layer.
+        source_norm = self.self_attention_norm( source )
+        self_attention_output = self.self_attention( source_norm, source_norm )
+        self_attention_output = self.self_attention_dropout( self_attention_output )
+        self_attention_output += source
 
-        feed_forward_output = self.feed_forward( self_attention_output )
-        return self.feed_forward_residual( self_attention_output, feed_forward_output )
+        self_attention_output_norm = self.feed_formward_norm( self_attention_output )
+        feed_forward_output = self.feed_forward( self_attention_output_norm )
+        feed_forward_output = self.feed_forward_dropout( feed_forward_output )
+        return self_attention_output + feed_forward_output
 
 class EncoderStack( nn.Module ):
     """Stack of encoder layers executed in series."""
