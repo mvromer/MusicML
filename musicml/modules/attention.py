@@ -135,13 +135,13 @@ class MultiheadAttention( nn.Module ):
 
         # Start computing attention in parallel across all heads. First Z = QK^T.
         z = torch.bmm( queriesView, keyTransView )
-        self.invariant_logits = z
+        self.invariant_logits = z.cpu()
 
         # If we are embedding relative positions, then compute the relative position logits that
         # will modulate are attention logits in Z.
         if self.embed_relative_positions:
             relative_logits = self.compute_relative_logits( queriesView )
-            self.relative_logits = relative_logits
+            self.relative_logits = relative_logits.cpu()
             z = z + relative_logits
 
         # Scale by root inverse of K.
@@ -156,7 +156,7 @@ class MultiheadAttention( nn.Module ):
 
         # Softmax along innermost dimension of Z.
         z = self.z_softmax( z )
-        self.attention_weights = z
+        self.attention_weights = z.cpu()
 
         # Finally multiply by V to get final attention value for each head.
         z = torch.bmm( z, valuesView )
