@@ -439,13 +439,17 @@ def convert_to_midi_model( input_midi_path ):
     output_model = []
     input_midi = MidiFile( input_midi_path )
     shift_delta = 0
+    last_velocity = 0
 
     for msg in input_midi:
         shift_delta += msg.time * 1000
 
         if msg.type == "note_on" and msg.velocity != 0:
             shift_delta = append_time_shifts( output_model, shift_delta )
-            output_model.append( f"SET_VELOCITY<{quantize_velocity( msg.velocity )}>" )
+            velocity = quantize_velocity( msg.velocity )
+            if velocity != last_velocity:
+                output_model.append( f"SET_VELOCITY<{velocity}>" )
+                last_velocity = velocity
             output_model.append( f"NOTE_ON<{msg.note}>" )
 
         if msg.type == "note_off" or (msg.type == "note_on" and msg.velocity == 0):
@@ -567,27 +571,16 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
                 target_sequence[0] = VocabularyIndexMap[StartToken]
                 target_sequence[-1] = VocabularyIndexMap[StopToken]
 
-                # Target output stores one row per predicted output token with each row being the
-                # expected probability distribution for that token across all tokens in the
-                # vocabulary. Add 1 to the target output to accommodate the probability distribution
-                # for the stop token.
-                target_output = torch.zeros( target_length + 1, len( VocabularyIndexMap ) )
-                target_output[-1, VocabularyIndexMap[StopToken]] = 1.0
-
                 # Start the enumeration of the target sequence indices at 1 because the first token
                 # in the target sequence is the start token.
                 for seq_idx, token_idx in enumerate( target_range, start=1 ):
                     token = input_tokens[token_idx].strip()
                     expected_vocab_idx = VocabularyIndexMap[token]
                     target_sequence[seq_idx] = expected_vocab_idx
-                    # Offset by 1 because we don't store a probability distribution for the start
-                    # token we initially feed into the decoder.
-                    target_output[seq_idx - 1, expected_vocab_idx] = 1.0
 
                 data_set = {
                     "source_sequence": source_sequence,
-                    "target_sequence": target_sequence,
-                    "target_output": target_output
+                    "target_sequence": target_sequence
                 }
 
                 data_sets[data_set_type].append( data_set )
