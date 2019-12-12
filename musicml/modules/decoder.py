@@ -18,15 +18,23 @@ class DecoderLayer( nn.Module ):
         * Residual connections followed by layer normalization.
     """
 
-    def __init__( self, embedding_size=Defaults.EmbeddingSize ):
+    def __init__( self,
+        embedding_size=Defaults.EmbeddingSize,
+        attention_key_size=Defaults.AttentionKeySize,
+        attention_value_size=Defaults.AttentionValueSize ):
         super().__init__()
         # First sublayer is masked self attention against the target sequence.
-        self.self_attention = MultiheadAttention( embedding_size, embed_relative_positions=True )
+        self.self_attention = MultiheadAttention( embedding_size,
+            key_size=attention_key_size,
+            value_size=attention_value_size,
+            embed_relative_positions=False )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is encoder-decoder attention against the encodder output and target
         # sequence.
-        self.enc_dec_attention = MultiheadAttention( embedding_size )
+        self.enc_dec_attention = MultiheadAttention( embedding_size,
+            key_size=attention_key_size,
+            value_size=attention_value_size )
         self.enc_dec_attention_residual = ResidualNorm( embedding_size )
 
         # The final sublayer is the feed-forward network.
@@ -48,7 +56,9 @@ class DecoderStack( nn.Module ):
 
     def __init__( self,
         number_layers=Defaults.NumberDecoderLayers,
-        embedding_size=Defaults.EmbeddingSize ):
+        embedding_size=Defaults.EmbeddingSize,
+        attention_key_size=Defaults.AttentionKeySize,
+        attention_value_size=Defaults.AttentionValueSize ):
         """Creates a new decoder stack.
 
         Args:
@@ -58,7 +68,7 @@ class DecoderStack( nn.Module ):
         """
         super().__init__()
         self.decoder_layers = nn.ModuleList( [
-            DecoderLayer( embedding_size )
+            DecoderLayer( embedding_size, attention_key_size, attention_value_size )
             for _ in range( number_layers )
         ] )
 

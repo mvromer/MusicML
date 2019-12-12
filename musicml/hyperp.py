@@ -5,6 +5,8 @@ class Defaults:
     EmbeddingSize = 512
     FeedForwardHiddenSize = 2048
     NumberAttentionHeads = 8
+    AttentionKeySize = int(EmbeddingSize / NumberAttentionHeads)
+    AttentionValueSize = int(EmbeddingSize / NumberAttentionHeads)
     NumberDecoderLayers = 6
     NumberEncoderLayers = 6
     MaxRelativeAttentionDistance = 10
@@ -17,6 +19,8 @@ class Hyperparameters:
         embedding_size=Defaults.EmbeddingSize,
         feed_forward_hidden_size=Defaults.FeedForwardHiddenSize,
         number_attention_heads=Defaults.NumberAttentionHeads,
+        attention_key_size=Defaults.AttentionKeySize,
+        attention_value_size=Defaults.AttentionValueSize,
         number_decoder_layers=Defaults.NumberDecoderLayers,
         number_encoder_layers=Defaults.NumberEncoderLayers,
         max_relative_attention_distance=Defaults.MaxRelativeAttentionDistance,
@@ -27,6 +31,8 @@ class Hyperparameters:
         self.embedding_size = embedding_size
         self.feed_forward_hidden_size = feed_forward_hidden_size
         self.number_attention_heads = number_attention_heads
+        self.attention_key_size = attention_key_size
+        self.attention_value_size = attention_value_size
         self.number_decoder_layers = number_decoder_layers
         self.number_encoder_layers = number_encoder_layers
         self.max_relative_attention_distance = max_relative_attention_distance

@@ -15,8 +15,14 @@ class MusicTransformer( nn.Module ):
         super().__init__()
         self.input_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
         self.output_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
-        self.encoder = EncoderStack( hyper.number_encoder_layers, hyper.embedding_size )
-        self.decoder = DecoderStack( hyper.number_decoder_layers, hyper.embedding_size )
+        self.encoder = EncoderStack( hyper.number_encoder_layers,
+            hyper.embedding_size,
+            hyper.attention_key_size,
+            hyper.attention_value_size )
+        self.decoder = DecoderStack( hyper.number_decoder_layers,
+            hyper.embedding_size,
+            hyper.attention_key_size,
+            hyper.attention_value_size )
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
         self.encoder_output = None
 

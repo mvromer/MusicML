@@ -16,10 +16,16 @@ class EncoderLayer( nn.Module ):
         * Another set of residual connections followed by layer normalization.
     """
 
-    def __init__( self, embedding_size=Defaults.EmbeddingSize ):
+    def __init__( self,
+        embedding_size=Defaults.EmbeddingSize,
+        attention_key_size=Defaults.AttentionKeySize,
+        attention_value_size=Defaults.AttentionValueSize ):
         super().__init__()
         # First sublayer is self attention with the source sequence as input.
-        self.self_attention = MultiheadAttention( embedding_size, embed_relative_positions=True )
+        self.self_attention = MultiheadAttention( embedding_size,
+            key_size=attention_key_size,
+            value_size=attention_value_size,
+            embed_relative_positions=False )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is the feed-forward network.
@@ -43,7 +49,9 @@ class EncoderStack( nn.Module ):
 
     def __init__( self,
         number_layers=Defaults.NumberEncoderLayers,
-        embedding_size=Defaults.EmbeddingSize ):
+        embedding_size=Defaults.EmbeddingSize,
+        attention_key_size=Defaults.AttentionKeySize,
+        attention_value_size=Defaults.AttentionValueSize ):
         """Creates a new encoder stack.
 
         Args:
@@ -53,7 +61,7 @@ class EncoderStack( nn.Module ):
         """
         super().__init__()
         self.encoder_layers = nn.ModuleList( [
-            EncoderLayer( embedding_size )
+            EncoderLayer( embedding_size, attention_key_size, attention_value_size )
             for _ in range( number_layers )
         ] )
 
