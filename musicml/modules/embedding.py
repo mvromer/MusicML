@@ -12,7 +12,7 @@ class Embedding( nn.Module ):
         self.scale_factor = embedding_size ** -0.5
 
     def forward( self, x ):
-        return self.positional( self.scale_factor * self.embedding( x ) )
+        return self.scale_factor * self.embedding( x )
 
 
 import math
