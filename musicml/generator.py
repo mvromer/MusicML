@@ -69,7 +69,7 @@ class MusicGenerator:
             if torch.cuda.is_available():
                 attention_mask = attention_mask.cuda()
 
-            return self.model( source_sequence=input_sequence, attention_mask=None, encode_only=True )
+            return self.model( source_sequence=input_sequence, source_mask=None, encode_only=True )
 
     def decode_outputs( self, start_token, stop_token, max_output_length=1000 ):
         with torch.no_grad():
@@ -91,7 +91,7 @@ class MusicGenerator:
                     attention_mask = attention_mask.cuda()
 
                 model_output = self.model( target_sequence=current_output_sequence,
-                    attention_mask=attention_mask )
+                    target_mask=attention_mask )
                 next_output_scores = model_output[-1, :]
                 next_output = next_output_scores.argmax().item()
                 output_sequence[next_output_idx] = next_output
