@@ -22,9 +22,9 @@ class MusicTransformer( nn.Module ):
             hyper.cache_attention_weights )
         self.decoder = DecoderStack( hyper.number_decoder_layers,
             hyper.embedding_size,
-             hyper.attention_key_size,
-             hyper.attention_value_size,
-             hyper.cache_attention_weights )
+            hyper.attention_key_size,
+            hyper.attention_value_size,
+            hyper.cache_attention_weights )
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
         self.encoder_output = None
 
