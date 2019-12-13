@@ -60,9 +60,16 @@ class MusicGenerator:
     def encode_inputs( self, input_sequence ):
         with torch.no_grad():
             input_sequence = torch.tensor( input_sequence, dtype=torch.long )
+            input_length = input_sequence.size( 0 )
+
             if torch.cuda.is_available():
                 input_sequence = input_sequence.cuda()
-            self.model( input_sequence=input_sequence )
+
+            attention_mask = create_attention_mask( input_length, input_length )
+            if torch.cuda.is_available():
+                attention_mask = attention_mask.cuda()
+
+            return self.model( input_sequence=input_sequence, attention_mask=attention_mask )
 
     def decode_outputs( self, start_token, stop_token, max_output_length=1000 ):
         with torch.no_grad():
