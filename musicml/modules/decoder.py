@@ -31,8 +31,7 @@ class DecoderLayer( nn.Module ):
             key_size=attention_key_size,
             value_size=attention_value_size,
             embed_relative_positions=False )
-        self.self_attention_norm = nn.LayerNorm( embedding_size )
-        self.self_attention_dropout = nn.Dropout( dropout )
+        self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is encoder-decoder attention against the encodder output and target
         # sequence.
@@ -40,29 +39,20 @@ class DecoderLayer( nn.Module ):
             key_size=attention_key_size,
             value_size=attention_value_size )
         self.enc_dec_attention_residual = ResidualNorm( embedding_size )
-        self.enc_dec_attention_norm = nn.LayerNorm( embedding_size )
-        self.enc_dec_attention_dropout = nn.Dropout( dropout )
 
         # The final sublayer is the feed-forward network.
         self.feed_forward = FeedForward( embedding_size )
-        self.feed_formward_norm = nn.LayerNorm( embedding_size )
-        self.feed_forward_dropout = nn.Dropout( dropout )
+        self.feed_forward_residual = ResidualNorm( embedding_size )
 
     def forward( self, target, encoder_output, attention_mask ):
-        target_norm = self.self_attention_norm( target )
-        self_attention_output = self.self_attention( target_norm, target_norm, attention_mask )
-        self_attention_output = self.self_attention_dropout( self_attention_output )
-        self_attention_output += target
+        self_attention_output = self.self_attention( target, target, attention_mask )
+        self_attention_output = self.self_attention( target, target, attention_mask )
 
-        self_attention_output_norm = self.enc_dec_attention_norm( self_attention_output )
-        enc_dec_attention_output = self.enc_dec_attention( encoder_output, self_attention_output_norm )
-        enc_dec_attention_output = self.enc_dec_attention_dropout( enc_dec_attention_output )
-        enc_dec_attention_output += self_attention_output
+        enc_dec_attention_output = self.enc_dec_attention( encoder_output, self_attention_output )
+        enc_dec_attention_output = self.enc_dec_attention_residual( self_attention_output, enc_dec_attention_output )
 
-        enc_dec_attention_output_norm = self.feed_formward_norm( enc_dec_attention_output )
-        feed_forward_output = self.feed_forward( enc_dec_attention_output_norm )
-        feed_forward_output = self.feed_forward_dropout( feed_forward_output )
-        return enc_dec_attention_output + feed_forward_output
+        feed_forward_output = self.feed_forward( enc_dec_attention_output )
+        return self.feed_forward_residual( enc_dec_attention_output, feed_forward_output )
 
 class DecoderStack( nn.Module ):
     """Stack of decoder layers executed in series."""
