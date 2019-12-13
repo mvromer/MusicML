@@ -62,7 +62,7 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 attention_mask = attention_mask.cuda()
 
             # Run one step of the model.
-            model_output = model( source_sequence=source_sequence, attention_mask=attention_mask, encode_only=True )
+            model_output = model( source_sequence=source_sequence, source_mask=attention_mask, encode_only=True )
             loss = loss_criterion( model_output, target_sequence )
             optimizer.zero_grad()
             loss.backward()
