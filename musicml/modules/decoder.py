@@ -22,6 +22,7 @@ class DecoderLayer( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        cache_attention_weights=Defaults.CacheAttentionWeights,
         dropout=Defaults.Dropout ):
         super().__init__()
 
@@ -70,7 +71,8 @@ class DecoderStack( nn.Module ):
         number_layers=Defaults.NumberDecoderLayers,
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
-        attention_value_size=Defaults.AttentionValueSize ):
+        attention_value_size=Defaults.AttentionValueSize,
+        cache_attention_weights=Defaults.CacheAttentionWeights ):
         """Creates a new decoder stack.
 
         Args:
@@ -80,7 +82,7 @@ class DecoderStack( nn.Module ):
         """
         super().__init__()
         self.decoder_layers = nn.ModuleList( [
-            DecoderLayer( embedding_size, attention_key_size, attention_value_size )
+            DecoderLayer( embedding_size, attention_key_size, attention_value_size, cache_attention_weights )
             for _ in range( number_layers )
         ] )
 
