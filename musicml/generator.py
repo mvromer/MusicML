@@ -94,7 +94,7 @@ class MusicGenerator:
                     target_mask=attention_mask )
                 next_output_scores = model_output[-1, :]
                 next_output = next_output_scores.argmax().item()
-                output_sequence[next_output_idx] = next_output
+                output_sequence[next_output_idx] = next_output + 1
                 yield (next_output, next_output_scores)
 
                 if next_output == stop_token:
