@@ -14,14 +14,21 @@ class MusicTransformer( nn.Module ):
     def __init__( self, hyper ):
         super().__init__()
         self.input_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
+        self.output_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
         self.encoder = EncoderStack( hyper.number_encoder_layers,
             hyper.embedding_size,
             hyper.attention_key_size,
             hyper.attention_value_size,
             hyper.cache_attention_weights )
+        self.decoder = DecoderStack( hyper.number_decoder_layers,
+            hyper.embedding_size,
+             hyper.attention_key_size,
+             hyper.attention_value_size,
+             hyper.cache_attention_weights )
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
+        self.encoder_output = None
 
-    def forward( self, input_sequence, attention_mask=None ):
+    def forward( self, source_sequence=None, target_sequence=None, source_mask=None, target_mask=None, encode_only=False ):
         """Runs one pass of the Music Transformer across the given input and output sequences.
 
         Args:
@@ -35,11 +42,17 @@ class MusicTransformer( nn.Module ):
         """
         # Encode the input source sequence if given. Otherwise use the previously generated results.
         # Embed the input token sequences into the embedded vector space.
-        source = self.input_embedding( input_sequence )
-        encoder_output = self.encoder( source, attention_mask )
+        if source_sequence is not None:
+            source = self.input_embedding( source_sequence )
+            self.encoder_output = self.encoder( source, source_mask )
 
-        # Build the final list of scores for each possible output token.
-        return self.output( encoder_output )
+        if encode_only:
+            return self.encoder_output
+
+        if target_sequence is not None:
+            target = self.output_embedding( target_sequence )
+            decoder_output = self.decoder( target, target_mask )
+            return self.output( decoder_output )
 
 def create_attention_mask( output_length, input_length ):
     """Create an attention mask that is output_length x input_length.
