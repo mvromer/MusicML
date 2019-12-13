@@ -51,7 +51,7 @@ class MusicTransformer( nn.Module ):
 
         if target_sequence is not None:
             target = self.output_embedding( target_sequence )
-            decoder_output = self.decoder( target, target_mask )
+            decoder_output = self.decoder( target, self.encoder_output, target_mask )
             return self.output( decoder_output )
 
 def create_attention_mask( output_length, input_length ):
