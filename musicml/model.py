@@ -47,7 +47,7 @@ class MusicTransformer( nn.Module ):
             self.encoder_output = self.encoder( source, source_mask )
 
         if encode_only:
-            return self.encoder_output
+            return self.output( self.encoder_output )
 
         if target_sequence is not None:
             target = self.output_embedding( target_sequence )
