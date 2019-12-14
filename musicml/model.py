@@ -14,21 +14,12 @@ class MusicTransformer( nn.Module ):
     def __init__( self, hyper ):
         super().__init__()
         self.input_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
-        self.output_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
 
-        self.encoder = EncoderStack( hyper.number_encoder_layers,
-            hyper.embedding_size,
-            hyper.attention_key_size,
-            hyper.attention_value_size,
-            hyper.embed_relative_positions,
-            hyper.cache_attention_weights )
-
-        self.decoder = DecoderStack( hyper.number_decoder_layers,
-            hyper.embedding_size,
-            hyper.attention_key_size,
-            hyper.attention_value_size,
-            hyper.embed_relative_positions,
-            hyper.cache_attention_weights )
+        encoder_layer = nn.TransformerEncoderLayer( d_model=hyper.embedding_size,
+            nhead=hyper.number_attention_heads,
+            dim_feedforward=hyper.feed_forward_hidden_size,
+            dropout=hyper.dropout )
+        self.encoder = nn.TransformerEncoder( encoder_layer, hyper.number_encoder_layers )
 
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
         self.encoder_output = None
@@ -50,17 +41,20 @@ class MusicTransformer( nn.Module ):
         # Embed the input token sequences into the embedded vector space.
         if source_sequence is not None:
             source = self.input_embedding( source_sequence )
-            self.encoder_output = self.encoder( source, source_mask )
+
+            # NOTE: Pytorch's Transformer implementation requires input to be S x N x E where S is
+            # the sequence length, N is the batch size, and E is the embedding size. We don't
+            # currently implement batching (or at least attempt to support it), so we'll reshape our
+            # 2D S x E source sequence to a S x 1 x E through an unsqueeze. After running that
+            # through the encoder, we'll squeeze it back to S x E.
+            source = source.unsqueeze( 1 )
+            self.encoder_output = self.encoder( source, source_mask ).squeeze( 1 )
+
             if self.encoder_only:
                 return self.output( self.encoder_output )
 
         if encode_only:
             return self.encoder_output
-
-        if target_sequence is not None:
-            target = self.output_embedding( target_sequence )
-            decoder_output = self.decoder( target, self.encoder_output, target_mask )
-            return self.output( decoder_output )
 
 def create_attention_mask( output_length, input_length ):
     """Create an attention mask that is output_length x input_length.
