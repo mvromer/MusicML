@@ -20,6 +20,7 @@ class EncoderLayer( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
         cache_attention_weights=Defaults.CacheAttentionWeights,
         dropout=Defaults.Dropout ):
         super().__init__()
@@ -28,7 +29,7 @@ class EncoderLayer( nn.Module ):
         self.self_attention = MultiheadAttention( embedding_size,
             key_size=attention_key_size,
             value_size=attention_value_size,
-            embed_relative_positions=False,
+            embed_relative_positions=embed_relative_positions,
             cache_attention_weights=cache_attention_weights )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
@@ -57,6 +58,7 @@ class EncoderStack( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
         cache_attention_weights=Defaults.CacheAttentionWeights ):
         """Creates a new encoder stack.
 
@@ -67,7 +69,11 @@ class EncoderStack( nn.Module ):
         """
         super().__init__()
         self.encoder_layers = nn.ModuleList( [
-            EncoderLayer( embedding_size, attention_key_size, attention_value_size, cache_attention_weights )
+            EncoderLayer( embedding_size,
+                attention_key_size,
+                attention_value_size,
+                embed_relative_positions,
+                cache_attention_weights )
             for _ in range( number_layers )
         ] )
 

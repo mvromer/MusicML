@@ -22,6 +22,7 @@ class DecoderLayer( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
         cache_attention_weights=Defaults.CacheAttentionWeights,
         dropout=Defaults.Dropout ):
         super().__init__()
@@ -30,7 +31,8 @@ class DecoderLayer( nn.Module ):
         self.self_attention = MultiheadAttention( embedding_size,
             key_size=attention_key_size,
             value_size=attention_value_size,
-            embed_relative_positions=False )
+            embed_relative_positions=embed_relative_positions,
+            cache_attention_weights=cache_attention_weights )
         self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is encoder-decoder attention against the encodder output and target
@@ -62,6 +64,7 @@ class DecoderStack( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
         cache_attention_weights=Defaults.CacheAttentionWeights ):
         """Creates a new decoder stack.
 
@@ -72,7 +75,11 @@ class DecoderStack( nn.Module ):
         """
         super().__init__()
         self.decoder_layers = nn.ModuleList( [
-            DecoderLayer( embedding_size, attention_key_size, attention_value_size, cache_attention_weights )
+            DecoderLayer( embedding_size,
+                attention_key_size,
+                attention_value_size,
+                embed_relative_positions,
+                cache_attention_weights )
             for _ in range( number_layers )
         ] )
 
