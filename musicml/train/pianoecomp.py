@@ -547,42 +547,12 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
                 # Randomly select the offset into this file where we will begin our crop_size crop.
                 # If for whatever reason the desired crop size is larger than the input, than just
                 # select the entire input.
-                crop_size = crop_size if crop_size < number_tokens else number_tokens
-                source_length = crop_size // 2
-                target_length = crop_size - source_length
-                source_start = random.randint( 0, number_tokens - crop_size )
-                source_range = range( source_start, source_start + source_length )
-                target_range = range( source_range.stop, source_range.stop + target_length )
-
-                if (source_range.stop - source_range.start) <= 0 or (target_range.stop - target_range.start) <= 0:
-                    warnings.warn( f"File {input_file_name} does not have enough tokens for a source and target sequence." )
-                    continue
-
-                source_sequence = torch.empty( source_length, dtype=torch.long )
-                for seq_idx, token_idx in enumerate( source_range ):
-                    token = input_tokens[token_idx].strip()
-                    source_sequence[seq_idx] = VocabularyIndexMap[token]
-
-                # Add 2 to the target sequence to accommodate start and stop tokens. For the target
-                # output, we store one row per predicted output token (including the stop token),
-                # with each row being the expected probability distribution for that token across
-                # all tokens in the vocabulary.
-                target_sequence = torch.empty( target_length + 2, dtype=torch.long )
-                target_sequence[0] = VocabularyIndexMap[StartToken]
-                target_sequence[-1] = VocabularyIndexMap[StopToken]
-
-                # Start the enumeration of the target sequence indices at 1 because the first token
-                # in the target sequence is the start token.
-                for seq_idx, token_idx in enumerate( target_range, start=1 ):
-                    token = input_tokens[token_idx].strip()
-                    expected_vocab_idx = VocabularyIndexMap[token]
-                    target_sequence[seq_idx] = expected_vocab_idx
-
-                data_set = {
-                    "source_sequence": source_sequence,
-                    "target_sequence": target_sequence
-                }
-
+                data_size = crop_size if crop_size < number_tokens else number_tokens
+                data_start = random.randint( 0, number_tokens - data_size )
+                data_stop = data_start + data_size
+                data_values = [VocabularyIndexMap[input_tokens[input_idx].strip()]
+                    for input_idx in range( data_start, data_stop )]
+                data_set = torch.tensor( data_values, dtype=torch.long )
                 data_sets[data_set_type].append( data_set )
 
     dump_compressed_pickle( data_sets, output_path )

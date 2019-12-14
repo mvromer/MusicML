@@ -20,6 +20,8 @@ class EncoderLayer( nn.Module ):
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
         attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
+        cache_attention_weights=Defaults.CacheAttentionWeights,
         dropout=Defaults.Dropout ):
         super().__init__()
 
@@ -27,31 +29,26 @@ class EncoderLayer( nn.Module ):
         self.self_attention = MultiheadAttention( embedding_size,
             key_size=attention_key_size,
             value_size=attention_value_size,
-            embed_relative_positions=False )
-        self.self_attention_norm = nn.LayerNorm( embedding_size )
-        self.self_attention_dropout = nn.Dropout( dropout )
+            embed_relative_positions=embed_relative_positions,
+            cache_attention_weights=cache_attention_weights )
+        self.self_attention_residual = ResidualNorm( embedding_size )
 
         # Second sublayer is the feed-forward network.
         self.feed_forward = FeedForward( embedding_size )
-        self.feed_formward_norm = nn.LayerNorm( embedding_size )
-        self.feed_forward_dropout = nn.Dropout( dropout )
+        self.feed_forward_residual = ResidualNorm( embedding_size )
 
-    def forward( self, source ):
+    def forward( self, source, attention_mask=None ):
         # NOTE: There appears to be some discrepancy between what the Vaswani paper says for the
         # ordering of the sublayer with respect to the residual connection and layer normalization
         # and what is actually implemented in the authors' reference implementation. This uses the
         # order prescribed in the reference implementation, which normalizes the input the sublayer,
         # applies a dropout to the sublayer output, and then adds the residual connection. This also
         # applies to the decoder layer.
-        source_norm = self.self_attention_norm( source )
-        self_attention_output = self.self_attention( source_norm, source_norm )
-        self_attention_output = self.self_attention_dropout( self_attention_output )
-        self_attention_output += source
+        self_attention_output = self.self_attention( source, source, attention_mask )
+        self_attention_output = self.self_attention_residual( source, self_attention_output )
 
-        self_attention_output_norm = self.feed_formward_norm( self_attention_output )
-        feed_forward_output = self.feed_forward( self_attention_output_norm )
-        feed_forward_output = self.feed_forward_dropout( feed_forward_output )
-        return self_attention_output + feed_forward_output
+        feed_forward_output = self.feed_forward( self_attention_output )
+        return self.feed_forward_residual( self_attention_output, feed_forward_output )
 
 class EncoderStack( nn.Module ):
     """Stack of encoder layers executed in series."""
@@ -60,7 +57,9 @@ class EncoderStack( nn.Module ):
         number_layers=Defaults.NumberEncoderLayers,
         embedding_size=Defaults.EmbeddingSize,
         attention_key_size=Defaults.AttentionKeySize,
-        attention_value_size=Defaults.AttentionValueSize ):
+        attention_value_size=Defaults.AttentionValueSize,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
+        cache_attention_weights=Defaults.CacheAttentionWeights ):
         """Creates a new encoder stack.
 
         Args:
@@ -70,11 +69,15 @@ class EncoderStack( nn.Module ):
         """
         super().__init__()
         self.encoder_layers = nn.ModuleList( [
-            EncoderLayer( embedding_size, attention_key_size, attention_value_size )
+            EncoderLayer( embedding_size,
+                attention_key_size,
+                attention_value_size,
+                embed_relative_positions,
+                cache_attention_weights )
             for _ in range( number_layers )
         ] )
 
-    def forward( self, source ):
+    def forward( self, source, attention_mask=None ):
         """Passes the given source sequence through the encoder stack.
 
         Args:
@@ -82,5 +85,5 @@ class EncoderStack( nn.Module ):
         """
         x = source
         for layer in self.encoder_layers:
-            x = layer( x )
+            x = layer( x, attention_mask )
         return x

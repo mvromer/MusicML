@@ -15,18 +15,25 @@ class MusicTransformer( nn.Module ):
         super().__init__()
         self.input_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
         self.output_embedding = Embedding( hyper.vocab_size, hyper.embedding_size )
+
         self.encoder = EncoderStack( hyper.number_encoder_layers,
             hyper.embedding_size,
             hyper.attention_key_size,
-            hyper.attention_value_size )
+            hyper.attention_value_size,
+            hyper.embed_relative_positions,
+            hyper.cache_attention_weights )
+
         self.decoder = DecoderStack( hyper.number_decoder_layers,
             hyper.embedding_size,
             hyper.attention_key_size,
-            hyper.attention_value_size )
+            hyper.attention_value_size,
+            hyper.embed_relative_positions,
+            hyper.cache_attention_weights )
+
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
         self.encoder_output = None
 
-    def forward( self, input_sequence=None, output_sequence=None, attention_mask=None ):
+    def forward( self, source_sequence=None, target_sequence=None, source_mask=None, target_mask=None, encode_only=False ):
         """Runs one pass of the Music Transformer across the given input and output sequences.
 
         Args:
@@ -39,19 +46,17 @@ class MusicTransformer( nn.Module ):
                 masked must be set to -inf, and all other entries must be set to zero.
         """
         # Encode the input source sequence if given. Otherwise use the previously generated results.
-        if input_sequence is not None:
-            # Embed the input token sequences into the embedded vector space.
-            source = self.input_embedding( input_sequence )
-            self.encoder_output = self.encoder( source )
+        # Embed the input token sequences into the embedded vector space.
+        if source_sequence is not None:
+            source = self.input_embedding( source_sequence )
+            self.encoder_output = self.encoder( source, source_mask )
 
-        if output_sequence is not None:
-            # Embed the output token sequences into the embedded vector space.
-            target = self.output_embedding( output_sequence )
+        if encode_only:
+            return self.encoder_output
 
-            # Decode the next output in the target.
-            decoder_output = self.decoder( target, self.encoder_output, attention_mask )
-
-            # Build the final list of scores for each possible output token.
+        if target_sequence is not None:
+            target = self.output_embedding( target_sequence )
+            decoder_output = self.decoder( target, self.encoder_output, target_mask )
             return self.output( decoder_output )
 
 def create_attention_mask( output_length, input_length ):

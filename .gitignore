@@ -4,6 +4,9 @@
 # Ignore weights files.
 *.dat
 *.bak
+output2/
+*.wt
+*.txt
 
 .vscode/
 

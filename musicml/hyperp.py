@@ -9,8 +9,11 @@ class Defaults:
     AttentionValueSize = int(EmbeddingSize / NumberAttentionHeads)
     NumberDecoderLayers = 6
     NumberEncoderLayers = 6
-    MaxRelativeAttentionDistance = 10
+    MaxRelativeAttentionDistance = 500
     OptimizerWarmupSteps = 4000
+    EmbedRelativePositions = False
+    CacheAttentionWeights = False
+    LabelSmoothingValue = 0.1
 
 class Hyperparameters:
     def __init__( self,
@@ -24,6 +27,8 @@ class Hyperparameters:
         number_decoder_layers=Defaults.NumberDecoderLayers,
         number_encoder_layers=Defaults.NumberEncoderLayers,
         max_relative_attention_distance=Defaults.MaxRelativeAttentionDistance,
+        embed_relative_positions=Defaults.EmbedRelativePositions,
+        cache_attention_weights=Defaults.CacheAttentionWeights,
         optimizer_warmup_steps=Defaults.OptimizerWarmupSteps ):
         """Creates a new package of hyperparameters for the Music Transformer model."""
         self.vocab_size = vocab_size
@@ -36,4 +41,6 @@ class Hyperparameters:
         self.number_decoder_layers = number_decoder_layers
         self.number_encoder_layers = number_encoder_layers
         self.max_relative_attention_distance = max_relative_attention_distance
+        self.embed_relative_positions = embed_relative_positions
+        self.cache_attention_weights = cache_attention_weights
         self.optimizer_warmup_steps = optimizer_warmup_steps

@@ -18,7 +18,10 @@ class Embedding( nn.Module ):
 import math
 import torch
 class PositionalEncoding(nn.Module):
-    "Implement the PE function."
+    """Sinusoidal positional encoding added to embedding vectors.
+
+    Adapted from http://nlp.seas.harvard.edu/2018/04/03/attention.html
+    """
     def __init__( self, d_model, dropout=0.1, max_len=5000 ):
         super().__init__()
         self.dropout = nn.Dropout( p=dropout )

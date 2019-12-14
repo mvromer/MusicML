@@ -30,7 +30,7 @@ class MusicGenerator:
                 output_sequence = output_sequence.cuda()
 
             # Run the encoder once for all decode steps.
-            self.model( input_sequence=input_sequence )
+            self.model( source_sequence=input_sequence, encode_only=True )
 
             # Run the decoder until either a stop token is generated or we've hit our max length.
             output_length = 1
@@ -46,7 +46,7 @@ class MusicGenerator:
                 if torch.cuda.is_available():
                     attention_mask = attention_mask.cuda()
 
-                model_output = self.model( output_sequence=current_output_sequence,
+                model_output = self.model( target_sequence=current_output_sequence,
                     attention_mask=attention_mask )
                 next_output = model_output[-1:, :].argmax().item()
                 output_sequence[next_output_idx] = next_output
@@ -60,9 +60,16 @@ class MusicGenerator:
     def encode_inputs( self, input_sequence ):
         with torch.no_grad():
             input_sequence = torch.tensor( input_sequence, dtype=torch.long )
+            input_length = input_sequence.size( 0 )
+
             if torch.cuda.is_available():
                 input_sequence = input_sequence.cuda()
-            self.model( input_sequence=input_sequence )
+
+            attention_mask = create_attention_mask( input_length, input_length )
+            if torch.cuda.is_available():
+                attention_mask = attention_mask.cuda()
+
+            return self.model( source_sequence=input_sequence, source_mask=None, encode_only=True )
 
     def decode_outputs( self, start_token, stop_token, max_output_length=1000 ):
         with torch.no_grad():
@@ -83,8 +90,8 @@ class MusicGenerator:
                 if torch.cuda.is_available():
                     attention_mask = attention_mask.cuda()
 
-                model_output = self.model( output_sequence=current_output_sequence,
-                    attention_mask=attention_mask )
+                model_output = self.model( target_sequence=current_output_sequence,
+                    target_mask=attention_mask )
                 next_output_scores = model_output[-1, :]
                 next_output = next_output_scores.argmax().item()
                 output_sequence[next_output_idx] = next_output
