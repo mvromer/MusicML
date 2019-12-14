@@ -3,7 +3,7 @@ import torch
 
 from .hyperp import Hyperparameters
 from .model import MusicTransformer, create_attention_mask
-from .train import pianoecomp as midimodel
+from .train import midimodel
 
 class MusicGenerator:
     """Generates music using a trained Music Transformer model."""
