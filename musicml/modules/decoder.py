@@ -46,7 +46,7 @@ class DecoderLayer( nn.Module ):
 
     def forward( self, target, encoder_output, attention_mask ):
         self_attention_output = self.self_attention( target, target, attention_mask )
-        self_attention_output = self.self_attention( target, target, attention_mask )
+        self_attention_output = self.self_attention_residual( target, self_attention_output )
 
         enc_dec_attention_output = self.enc_dec_attention( encoder_output, self_attention_output )
         enc_dec_attention_output = self.enc_dec_attention_residual( self_attention_output, enc_dec_attention_output )
