@@ -184,7 +184,7 @@ def test_model( data_path, model, loss_criterion ):
     return (total_loss, total_steps)
 
 def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=None,
-    number_epochs=1, checkpoint_interval_sec=600 ):
+    number_epochs=1, checkpoint_interval_sec=600, hyper=None ):
     """Runs the standard Music Transformer trainer.
 
     Args:
@@ -196,7 +196,7 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
         number_epochs: Number of times to loop over the training set.
         checkpoint_interval_sec: Number of seconds to wait before checkpointing the model weights.
     """
-    hyper = Hyperparameters( vocab_size )
+    hyper = hyper or Hyperparameters( vocab_size )
     model = MusicTransformer( hyper )
 
     # If a weights path is given, load the pre-trained weights into our model.
