@@ -60,14 +60,14 @@ class MusicGenerator:
 
             self.output_sequence = self.output_sequence.cpu()
 
-def generate_from_midi( input_midi_path, output_path, weights_path, **hyper_kwargs ):
+def generate_from_midi( input_midi_path, output_path, generated_length, weights_path, **hyper_kwargs ):
     hyper = Hyperparameters( len( midimodel.Vocabulary ), **hyper_kwargs )
     generator = MusicGenerator( hyper, weights_path )
     priming_sequence = [
         midimodel.VocabularyIndexMap[input_token]
         for input_token in midimodel.convert_to_midi_model( input_midi_path )
     ]
-    output_sequence = generator.generate_sequence( priming_sequence )
+    output_sequence = generator.generate_sequence( priming_sequence, generated_length )
     output_tokens = [
         midimodel.Vocabulary[output_token_idx]
         for output_token_idx in output_sequence
