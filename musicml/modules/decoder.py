@@ -96,5 +96,5 @@ class DecoderStack( nn.Module ):
         """
         x = target
         for layer in self.decoder_layers:
-            x = layer( target, encoder_output, attention_mask )
+            x = layer( x, encoder_output, attention_mask )
         return x
