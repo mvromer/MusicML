@@ -495,7 +495,7 @@ def quantize_velocity( velocity, number_bins=32 ):
     bin_width = NumberVelocityValues / number_bins
     return int(velocity // bin_width)
 
-def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
+def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, number_rounds=5 ):
     """Creates training and test data sets from the corpus of Piano-e-Competition data located in
     the given input path.
 
@@ -531,28 +531,29 @@ def create_data_sets( input_path, output_path, manifest_path, crop_size=2000 ):
 
     input_path = pathlib.Path( input_path )
 
-    with open( manifest_path, newline="", encoding="utf-8" ) as manifest_file:
-        manifest_reader = csv.DictReader( manifest_file )
+    for round_idx in range( number_rounds ):
+        with open( manifest_path, newline="", encoding="utf-8" ) as manifest_file:
+            manifest_reader = csv.DictReader( manifest_file )
 
-        for row in manifest_reader:
-            data_set_type = row["split"]
-            if data_set_type == "validation":
-                continue
+            for row in manifest_reader:
+                data_set_type = row["split"]
+                if data_set_type == "validation":
+                    continue
 
-            input_file_name = (input_path / row["midi_filename"]).with_suffix( ".out" )
-            with open( input_file_name, "r" ) as input_file:
-                input_tokens = input_file.readlines()
-                number_tokens = len( input_tokens )
+                input_file_name = (input_path / row["midi_filename"]).with_suffix( ".out" )
+                with open( input_file_name, "r" ) as input_file:
+                    input_tokens = input_file.readlines()
+                    number_tokens = len( input_tokens )
 
-                # Randomly select the offset into this file where we will begin our crop_size crop.
-                # If for whatever reason the desired crop size is larger than the input, than just
-                # select the entire input.
-                data_size = crop_size if crop_size < number_tokens else number_tokens
-                data_start = random.randint( 0, number_tokens - data_size )
-                data_stop = data_start + data_size
-                data_values = [VocabularyIndexMap[input_tokens[input_idx].strip()]
-                    for input_idx in range( data_start, data_stop )]
-                data_set = torch.tensor( data_values, dtype=torch.long )
-                data_sets[data_set_type].append( data_set )
+                    # Randomly select the offset into this file where we will begin our crop_size crop.
+                    # If for whatever reason the desired crop size is larger than the input, than just
+                    # select the entire input.
+                    data_size = crop_size if crop_size < number_tokens else number_tokens
+                    data_start = random.randint( 0, number_tokens - data_size )
+                    data_stop = data_start + data_size
+                    data_values = [VocabularyIndexMap[input_tokens[input_idx].strip()]
+                        for input_idx in range( data_start, data_stop )]
+                    data_set = torch.tensor( data_values, dtype=torch.long )
+                    data_sets[data_set_type].append( data_set )
 
     dump_compressed_pickle( data_sets, output_path )
