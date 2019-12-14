@@ -46,10 +46,10 @@ class MusicGenerator:
                 current_output_sequence = self.output_sequence[:next_output_idx]
                 current_output_length = current_output_sequence.size( 0 )
 
-                print( "-----------" )
-                print( f"Next output index: {next_output_idx}" )
-                print( f"Current output length: {current_output_length}" )
-                print( f"Current output sequence: {current_output_sequence}" )
+                #print( "-----------" )
+                #print( f"Next output index: {next_output_idx}" )
+                #print( f"Current output length: {current_output_length}" )
+                #print( f"Current output sequence: {current_output_sequence}" )
 
                 model_output = self.model( source_sequence=current_output_sequence )
                 next_output_scores = model_output[-1, :]
