@@ -1,6 +1,7 @@
 class Defaults:
     """Default hyperparamter values used in this package's Transformer model."""
 
+    EncoderOnly = True
     Dropout = 0.1
     EmbeddingSize = 512
     FeedForwardHiddenSize = 2048
@@ -18,6 +19,7 @@ class Defaults:
 class Hyperparameters:
     def __init__( self,
         vocab_size,
+        encoder_only=Defaults.EncoderOnly,
         dropout=Defaults.Dropout,
         embedding_size=Defaults.EmbeddingSize,
         feed_forward_hidden_size=Defaults.FeedForwardHiddenSize,
@@ -32,6 +34,7 @@ class Hyperparameters:
         optimizer_warmup_steps=Defaults.OptimizerWarmupSteps ):
         """Creates a new package of hyperparameters for the Music Transformer model."""
         self.vocab_size = vocab_size
+        self.encoder_only = encoder_only
         self.dropout = dropout
         self.embedding_size = embedding_size
         self.feed_forward_hidden_size = feed_forward_hidden_size

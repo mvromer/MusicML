@@ -32,6 +32,7 @@ class MusicTransformer( nn.Module ):
 
         self.output = Output( hyper.vocab_size, hyper.embedding_size )
         self.encoder_output = None
+        self.encoder_only = hyper.encoder_only
 
     def forward( self, source_sequence=None, target_sequence=None, source_mask=None, target_mask=None, encode_only=False ):
         """Runs one pass of the Music Transformer across the given input and output sequences.
@@ -50,6 +51,8 @@ class MusicTransformer( nn.Module ):
         if source_sequence is not None:
             source = self.input_embedding( source_sequence )
             self.encoder_output = self.encoder( source, source_mask )
+            if self.encoder_only:
+                return self.output( self.encoder_output )
 
         if encode_only:
             return self.encoder_output
