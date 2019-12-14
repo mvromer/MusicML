@@ -467,11 +467,14 @@ def write_midi_file( token_sequence, output_path, ticks_per_beat=480, tempo=5000
             note_number = int( match["note_number"] )
             if active_keys[note_number]:
                 midi_tick = int( second2tick( current_delta / 1000.0, ticks_per_beat, tempo ) )
-                print( midi_tick )
                 music_track.append( Message( "note_off", note=note_number, velocity=0, time=midi_tick ) )
                 active_keys[note_number] = False
                 current_delta = 0
             continue
+
+    for note_number, is_key_active in enumerate( active_keys ):
+        if is_key_active:
+            music_track.append( Message( "note_off", note=note_number, velocity=0, time=0 ) )
 
     midi_file.save( output_path )
 
