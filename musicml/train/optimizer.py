@@ -26,13 +26,13 @@ class StandardOptimizer:
         self.current_learning_rate = 0.0
         self.warmup_steps = warmup_steps
         self.embedding_size = embedding_size
-        self.optimizer = torch.optim.Adam( model_parameters, lr=0.0, betas=(0.9, 0.98), eps=1e-9 )
+        self.optimizer = torch.optim.Adam( model_parameters, lr=0.0001, betas=(0.9, 0.98), eps=1e-9 )
 
     def update_learning_rate( self ):
         """Updates the optimizer's learning rate based on the formula given in the paper Attention
         Is All You Need."""
         self.current_learning_rate = (self.embedding_size ** -0.5 *
-            min( self.current_step ** -0.5, self.current_step * self.warmup_steps ** 1.5 ) )
+            min( self.current_step ** -0.5, self.current_step * self.warmup_steps ** -1.5 ) )
 
     def step( self ):
         """Computes the new learning rate and runs another step of the optimizer."""
