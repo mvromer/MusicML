@@ -76,3 +76,6 @@ def generate_from_midi( input_midi_path, output_path, weights_path, **hyper_kwar
 
     with open( output_path, "w" ) as output_file:
         output_file.writelines( "\n".join( output_tokens ) )
+
+    output_midi_path = f"{output_path}.midi"
+    midimodel.write_midi_file( output_sequence, output_midi_path )
