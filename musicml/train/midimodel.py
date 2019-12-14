@@ -2,11 +2,12 @@ import csv
 import os
 import pathlib
 import random
+import re
 import warnings
 
 import torch
 
-from mido import MidiFile, tick2second
+from mido import Message, MetaMessage, MidiFile, MidiTrack, second2tick
 
 from .common import dump_compressed_pickle
 
@@ -411,6 +412,69 @@ StartTokenIndex = VocabularyIndexMap[StartToken]
 StopTokenIndex = VocabularyIndexMap[StopToken]
 VocabularyLength = len( Vocabulary )
 
+def write_midi_file( token_sequence, output_path, ticks_per_beat=480, tempo=500000 ):
+    note_on_pattern = re.compile( "^NOTE_ON<(?P<note_number>\d+)>$" )
+    note_off_pattern = re.compile( "^NOTE_OFF<(?P<note_number>\d+)>$" )
+    time_shift_pattern = re.compile( "^TIME_SHIFT<(?P<shift_ms>\d+)>$" )
+    set_velocity_pattern = re.compile( "^SET_VELOCITY<(?P<quantized_velocity>\d+)>$" )
+
+    current_velocity = 0
+    current_delta = 0
+    active_keys = [False for _ in range( 128 )]
+
+    midi_file = MidiFile( ticks_per_beat=ticks_per_beat )
+    control_track = MidiTrack()
+    music_track = MidiTrack()
+
+    midi_file.tracks.append( control_track )
+    midi_file.tracks.append( music_track )
+
+    # Set the tempo.
+    control_track.append( MetaMessage( "set_tempo", tempo=tempo ) )
+
+    # Generate the musical events.
+    for token_idx in token_sequence:
+        if token_idx == StartTokenIndex or token_idx == StopTokenIndex:
+            continue
+
+        token = Vocabulary[token_idx]
+
+        match = time_shift_pattern.match( token )
+        if match:
+            current_delta += int( match["shift_ms"] )
+            continue
+
+        match = set_velocity_pattern.match( token )
+        if match:
+            quantized_velocity = int( match["quantized_velocity"] )
+            current_velocity = rescale_velocity( quantized_velocity )
+            continue
+
+        match = note_on_pattern.match( token )
+        if match:
+            note_number = int( match["note_number"] )
+
+            # Avoid the case where a note on was generated before any set velocities.
+            if not active_keys[note_number] and current_velocity != 0:
+                midi_tick = int( second2tick( current_delta / 1000.0, ticks_per_beat, tempo ) )
+                music_track.append( Message( "note_on", note=note_number, velocity=current_velocity, time=midi_tick ) )
+                active_keys[note_number] = True
+                current_delta = 0
+            continue
+
+        match = note_off_pattern.match( token )
+        if match:
+            note_number = int( match["note_number"] )
+            if active_keys[note_number]:
+                midi_tick = int( second2tick( current_delta / 1000.0, ticks_per_beat, tempo ) )
+                print( midi_tick )
+                music_track.append( Message( "note_off", note=note_number, velocity=0, time=midi_tick ) )
+                active_keys[note_number] = False
+                current_delta = 0
+            continue
+
+    midi_file.save( output_path )
+
 def prepare_data( input_path, output_path ):
     input_path = pathlib.Path( input_path )
     output_path = pathlib.Path( output_path )
@@ -494,6 +558,11 @@ def quantize_velocity( velocity, number_bins=32 ):
     NumberVelocityValues = 128
     bin_width = NumberVelocityValues / number_bins
     return int(velocity // bin_width)
+
+def rescale_velocity( quantized_velocity, number_bins=32 ):
+    NumberVelocityValues = 128
+    bin_width = NumberVelocityValues / number_bins
+    return int(quantized_velocity * bin_width)
 
 def create_data_sets( input_path, output_path, manifest_path, crop_size=2000, number_rounds=5 ):
     """Creates training and test data sets from the corpus of Piano-e-Competition data located in
