@@ -1,0 +1,4 @@
+baseURL = "https://mvromer.github.io/MusicML"
+languageCode = "en-us"
+title = "MusicML Blog"
+theme = "ananke"
