@@ -4,9 +4,9 @@ import pickle
 import random
 import time
 
-import adabound
 import torch
 import torch.nn.functional as F
+import torch.optim
 
 from ..hyperp import Hyperparameters
 from .loss import LabelSmoothing
@@ -211,7 +211,7 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
 
     #optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
     #loss_criterion = F.cross_entropy
-    optimizer = adabound.AdaBound( model.parameters() )
+    optimizer = torch.optim.Adamax( model.parameters(), lr=0.1 )
     loss_criterion = LabelSmoothing( vocab_size )
     train_model( data_path, model, loss_criterion, optimizer, checkpoint_path, number_epochs, checkpoint_interval_sec )
 
