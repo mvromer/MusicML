@@ -1,0 +1,9 @@
+baseURL = "https://mvromer.github.io/MusicML/"
+languageCode = "en-us"
+title = "MusicML Blog"
+theme = "ananke"
+
+[params]
+    featured_image = "/images/musicml-hero.jpg"
+    recent_posts_number = 2
+    description = "Learn to create music"
