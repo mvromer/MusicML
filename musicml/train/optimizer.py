@@ -20,7 +20,7 @@ class StandardOptimizer:
 
     def __init__( self,
         model_parameters,
-        embedding_size=Defaults.EmbeddingSize,
+        embedding_size,
         warmup_steps=Defaults.OptimizerWarmupSteps ):
         self.current_step = 0
         self.current_learning_rate = 0.0

@@ -4,6 +4,7 @@ import pickle
 import random
 import time
 
+import adabound
 import torch
 import torch.nn.functional as F
 
@@ -28,7 +29,7 @@ def checkpoint_model( model, checkpoint_path ):
     torch.save( model.state_dict(), str( checkpoint_path ) )
 
 def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
-    number_epochs=1, checkpoint_interval_sec=600 ):
+    number_epochs=200, checkpoint_interval_sec=600 ):
     data_sets = load_compressed_pickle( data_path )
 
     # We'll randomize the order of the training data.
@@ -62,7 +63,7 @@ def train_model( data_path, model, loss_criterion, optimizer, checkpoint_path,
                 attention_mask = attention_mask.cuda()
 
             # Run one step of the model.
-            model_output = model( source_sequence=source_sequence, source_mask=attention_mask, encode_only=True )
+            model_output = model( source_sequence=source_sequence, source_mask=attention_mask )
             loss = loss_criterion( model_output, target_sequence )
             optimizer.zero_grad()
             loss.backward()
@@ -184,7 +185,7 @@ def test_model( data_path, model, loss_criterion ):
     return (total_loss, total_steps)
 
 def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=None,
-    number_epochs=1, checkpoint_interval_sec=600, hyper=None ):
+    number_epochs=200, checkpoint_interval_sec=600, hyper=None ):
     """Runs the standard Music Transformer trainer.
 
     Args:
@@ -208,8 +209,9 @@ def run_standard_trainer( data_path, checkpoint_path, vocab_size, weights_path=N
         print( "Using GPU for training" )
         model.cuda()
 
-    optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
+    #optimizer = StandardOptimizer( model.parameters(), hyper.embedding_size )
     #loss_criterion = F.cross_entropy
+    optimizer = adabound.AdaBound( model.parameters() )
     loss_criterion = LabelSmoothing( vocab_size )
     train_model( data_path, model, loss_criterion, optimizer, checkpoint_path, number_epochs, checkpoint_interval_sec )
 

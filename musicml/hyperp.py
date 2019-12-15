@@ -6,14 +6,23 @@ class Defaults:
     EmbeddingSize = 512
     FeedForwardHiddenSize = 2048
     NumberAttentionHeads = 8
-    AttentionKeySize = int(EmbeddingSize / NumberAttentionHeads)
-    AttentionValueSize = int(EmbeddingSize / NumberAttentionHeads)
+
+    # Based on query/key hidden size of 512 from Huang et al.
+    # AttentionKeySize is 512 / NumberAttenionHeads
+    AttentionKeySize = 64
+
+    # Based on value hidden size of 256 from Huang et al.
+    # AttentionValueSize is 256 / NumberAttenionHeads
+    AttentionValueSize = 32
+
     NumberDecoderLayers = 6
     NumberEncoderLayers = 6
+
     MaxRelativeAttentionDistance = 500
-    OptimizerWarmupSteps = 4000
-    EmbedRelativePositions = False
+    EmbedRelativePositions = True
     CacheAttentionWeights = False
+
+    OptimizerWarmupSteps = 4000
     LabelSmoothingValue = 0.1
 
 class Hyperparameters:
@@ -21,7 +30,6 @@ class Hyperparameters:
         vocab_size,
         encoder_only=Defaults.EncoderOnly,
         dropout=Defaults.Dropout,
-        embedding_size=Defaults.EmbeddingSize,
         feed_forward_hidden_size=Defaults.FeedForwardHiddenSize,
         number_attention_heads=Defaults.NumberAttentionHeads,
         attention_key_size=Defaults.AttentionKeySize,
@@ -34,9 +42,9 @@ class Hyperparameters:
         optimizer_warmup_steps=Defaults.OptimizerWarmupSteps ):
         """Creates a new package of hyperparameters for the Music Transformer model."""
         self.vocab_size = vocab_size
+        self.embedding_size = vocab_size
         self.encoder_only = encoder_only
         self.dropout = dropout
-        self.embedding_size = embedding_size
         self.feed_forward_hidden_size = feed_forward_hidden_size
         self.number_attention_heads = number_attention_heads
         self.attention_key_size = attention_key_size

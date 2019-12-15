@@ -213,9 +213,14 @@ class MultiheadAttention( nn.Module ):
         # al. for the skew_lower function. Also, skew_upper zeros out the lower triangular portion
         # AND the main diagonal of the final result. This final value is L_u.
         #
+
+        # XXX: Originally we tried to also encode relative positions with positive distance.
+        # To better match Huang et al., right now we're not computing L_u.
         L_l = self.compute_relative_logits_lower( queries )
-        L_u = self.compute_relative_logits_upper( queries )
-        return L_l + L_u
+        #L_u = self.compute_relative_logits_upper( queries )
+
+        #return L_l + L_u
+        return L_l
 
     def compute_relative_logits_lower( self, queries ):
         """Computes the lower triangular portion of the relative positional logits."""
