@@ -180,7 +180,7 @@ has demonstrated state-of-the-art capability of generating musical sequences exh
 structure. Their model allowed them create sequences with a maximal length of 3500 tokens in their
 symbolic music representation.
 
-# Models
+# Our Contribution
 Our project is based on the Music Transformer model introduced by Huang et al. We originally
 intended to train this model in such a way that we could generate music progressively in three
 different genres (of increasing difficulty):
@@ -189,11 +189,51 @@ different genres (of increasing difficulty):
 * Jazz
 * Electronic Dance Music (EDM)
 
-We figured for music
-generation, it is not necessary for the decoder to generate the sequences of the input vocabulary,
-this can be done by the encoder alone with the auto-regression, thus, we didn't utilize the decoder
-in our implementation. We also confirmed that in the sequence generation example of Pytorch that
-decoder was absent in the implementation as well.
+Similar to the Music Transformer, we figured for music generation we could utilize the Transformer's
+encoder alone with auto-regression. We also based this design decision after reviewing Pytorch's
+Transformer example on text generation. In their example, they also only utilize the encoder with
+auto-regression when generating sequences that use the same vocabulary as the input sequence.
+
+As will be further elaborated, our intents did not materialize as we had hoped. Instead, our project
+largely turned into a replication study of us merely trying to reproduce the results of those cited
+in the paper by Huang et al.
+
+## Choice of ML Framework
+Given our only real exposure to any machine learning frameworks has been that which we gained by
+using Pytorch over the course of the semester, we decided to use it for implementing our Music
+Transformer. Off-the-shelf, Pytorch provides an implementation of the Transformer as described by
+Vaswani et al. However, it provided no support for using relative position encodings within its
+self-attention mechanism, so we were prepared to implement that feature ourselves in our model.
+
+Pytorch's Transformer module consists of a number of layered components. The `Transformer` component
+encapsulates the `TransformerEncoder` and a `TransformerDecoder` components. These respectively
+represent the stack of `TransformerEncoderLayer` and `TransformerDecoderLayer` components, each
+implementing the encoding and decoding sublayers.
+
+Their design is such that you can tap in at different levels to provide custom implementations,
+which on face value sounded great. All we needed to do was tap in a provide a custom attention
+mechanism that incorporated the relative position information in its calculation, and we could
+leverage the rest of Pytorch's Transformer implementation for free.
+
+However, this is when we realized that the `TransformerEncoderLayer` and `TransformerDecoderLayer`
+were tightly coupled to Pytorch's `MultiheadAttention` component. Unlike the various other
+components and settings within their Transformer implementation, the multihead attention mechanism
+was **not** something for which we could provide an alternate implementation. This literally
+meant reimplementing the entire `TransformerEncoderLayer` component, including the feed-forward
+sublayer and residual connections.
+
+Since the `TransformerEncoder` component encapsulated just a list of `TransformerEncoderLayer`
+components, we saw little value in actually using any of the Pytorch abstraction at this point.
+Using Pytorch's Transformer implementation as guidance as well as resources like
+[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) and
+[How to Code the Transformer in Pytorch](https://towardsdatascience.com/how-to-code-the-transformer-in-pytorch-24db27c8f9ec),
+we proceeded to implement our own version of the Transformer suitable for replicating the Music
+Transformer architecture.
+
+## Implementation
+We first built out the custom multihead attention mechanism. We made it possible to toggle between
+the standard multihead attention used by Vaswani et al. and a variation that computes the relative
+logits using Huang et al.'s skewing procedure and uses them to compute the final attention value.
 
 # Training
 
