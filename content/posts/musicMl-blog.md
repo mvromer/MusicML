@@ -128,7 +128,7 @@ embedding vector space by a matrix \\(W_O\\), which also becomes a learnable par
 
 The self-attention sublayers in the Transformer use the incoming embedding vectors to compute
 \\(K\\), \\(Q\\), and \\(V\\). Additionally, the decoder's self-attention will mask out the upper
-triangular portion of \((QK^T\\). The decoder's encoder-decoder attention sublayer uses the
+triangular portion of \\((QK^T\\). The decoder's encoder-decoder attention sublayer uses the
 encoder's output to compute \\(K\\) and \\(Q\\) and uses the output of its self-attention to compute
 \\(V\\).
 
@@ -180,7 +180,7 @@ has demonstrated state-of-the-art capability of generating musical sequences exh
 structure. Their model allowed them create sequences with a maximal length of 3500 tokens in their
 symbolic music representation.
 
-# Models
+# Our Contribution
 Our project is based on the Music Transformer model introduced by Huang et al. We originally
 intended to train this model in such a way that we could generate music progressively in three
 different genres (of increasing difficulty):
@@ -189,11 +189,91 @@ different genres (of increasing difficulty):
 * Jazz
 * Electronic Dance Music (EDM)
 
-We figured for music
-generation, it is not necessary for the decoder to generate the sequences of the input vocabulary,
-this can be done by the encoder alone with the auto-regression, thus, we didn't utilize the decoder
-in our implementation. We also confirmed that in the sequence generation example of Pytorch that
-decoder was absent in the implementation as well.
+Similar to the Music Transformer, we figured for music generation we could utilize the Transformer's
+encoder alone with auto-regression. We also based this design decision after reviewing Pytorch's
+Transformer example on text generation. In their example, they also only utilize the encoder with
+auto-regression when generating sequences that use the same vocabulary as the input sequence.
+
+As will be further elaborated, our intents did not materialize as we had hoped. Instead, our project
+largely turned into a replication study of us merely trying to reproduce the results of those cited
+in the paper by Huang et al.
+
+## Choice of ML Framework
+Given our only real exposure to any machine learning frameworks has been that which we gained by
+using Pytorch over the course of the semester, we decided to use it for implementing our Music
+Transformer. Off-the-shelf, Pytorch provides an implementation of the Transformer as described by
+Vaswani et al. However, it provided no support for using relative position encodings within its
+self-attention mechanism, so we were prepared to implement that feature ourselves in our model.
+
+Pytorch's Transformer module consists of a number of layered components. The `Transformer` component
+encapsulates the `TransformerEncoder` and a `TransformerDecoder` components. These respectively
+represent the stack of `TransformerEncoderLayer` and `TransformerDecoderLayer` components, each
+implementing the encoding and decoding sublayers.
+
+Their design is such that you can tap in at different levels to provide custom implementations,
+which on face value sounded great. All we needed to do was tap in a provide a custom attention
+mechanism that incorporated the relative position information in its calculation, and we could
+leverage the rest of Pytorch's Transformer implementation for free.
+
+However, this is when we realized that the `TransformerEncoderLayer` and `TransformerDecoderLayer`
+were tightly coupled to Pytorch's `MultiheadAttention` component. Unlike the various other
+components and settings within their Transformer implementation, the multihead attention mechanism
+was **not** something for which we could provide an alternate implementation. This literally
+meant reimplementing the entire `TransformerEncoderLayer` component, including the feed-forward
+sublayer and residual connections.
+
+Since the `TransformerEncoder` component encapsulated just a list of `TransformerEncoderLayer`
+components, we saw little value in actually using any of the Pytorch abstraction at this point.
+Using Pytorch's Transformer implementation as guidance as well as resources like
+[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) and
+[How to Code the Transformer in Pytorch](https://towardsdatascience.com/how-to-code-the-transformer-in-pytorch-24db27c8f9ec),
+we proceeded to implement our own version of the Transformer suitable for replicating the Music
+Transformer architecture.
+
+## Implementation
+We first built out the custom multihead attention mechanism. We made it possible to toggle between
+the standard multihead attention used by Vaswani et al. and a variation that computes the relative
+logits using Huang et al.'s skewing procedure and uses them to compute the final attention value.
+
+We did testing against Pytorch's implementation of multihead attention to ensure that our version
+was producing the same results. We did not have available a third-party implementation of a
+multihead attention mechanism that incorporated relative position encodings, so we were not able to
+provide the same extra level of validation for this feature of our implementation.
+
+We actually extended Huang's implementation of the relative logit computation. Based on
+understanding of the original paper, the matrix \\(E_r\\) used in Huang et al. only encoded relative
+positions with negative distances, i.e., from \\(0\\) to \\(-L+1\\). For clarification, we will
+rename this matrix to \\(E_{r^-}\\). In the case of unmasked attention, we believed it would be
+potentially useful to also incorporate encodings for relative positions with positive distances,
+i.e., \\(1\\) to \\(L-1\\).
+
+Noting that the original skew procedure provides the lower triangular part of the relative logits
+matrix \\(QR^T\\), we seeked to form the upper triangular portion using a mirrored procedure. We
+first represented the positive relative positions in a complementary matrix \\(E_{r^+}\\). We then
+formed the matrix \\(QE_{r^+}^T\\) and applied the following custom skewing procedure that mirrored
+the one defined in Huang et al.:
+
+* Pad a column of zeros to the right of \\(QE_{r^+}^T\\).
+* Reshape to \\((L+1)\\)-by-\\(L\\).
+* Slice off the bottom row and return the upper triangular portion above the diagonal.
+
+If we rename the original skew procedure to \\(\mathrm{skew}_L\\) and our skew procedure
+\\(\mathrm{skew}_U\\), our updated attention calculation becomes the following:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\lparen \frac{QK^T + \mathrm{skew}\_L(QE_{r^-}^T) + \mathrm{skew}\_U(QE_{r^+}^T)}{\sqrt{d_K}} \rparen V
+$$
+
+We note that this still maintains the intermediate memory requirement of \\(O(LD)\\) established by
+Huang et al. Furthermore, we added support applying a mask to the intermediate calculation just
+prior to the application of the softmax. Thus, by setting an appropriate upper triangular mask, we
+were able to revert our attention mechanism back to the behavior defined by Huang et al.
+
+The remainder of our Transformer implementation is modeled heavily on the one defined in Pytorch.
+We initially utilized a learnable embedding layer; however, after issues with heavy training loss
+that we will describe later, we switched this to a fixed embedding layer that used a one-hot
+encoding for each input event token. Unfortunately, we did not see any difference in the quality of
+the music generated from our trained model.
 
 # Training
 
