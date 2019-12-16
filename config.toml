@@ -8,3 +8,4 @@ theme = "ananke"
     recent_posts_number = 2
     description = "Learn to create music"
     math = true
+    custom_css = ["/css/midiplayer.css"]

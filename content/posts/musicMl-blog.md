@@ -207,3 +207,34 @@ After training the baby batch for 10 epochs of 48350 steps each using the same s
 All three models gave average training loss at around 4.00, the relative positional attention didn't show any obvious improvements against the implementation with absolute positioning alone. Moreover, from the result of the Pytorch transformer-based implementation, we can probably make an early conclusion that our implementation is similar to the Pytorch one. 
 
 # Samples
+#### Input: Final Fantasy victory
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-final-fantasy-victory.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-final-fantasy-victory.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-final-fantasy-victory.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: Happy birthday
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-happy-birthday.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-happy-birthday.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-happy-birthday.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: He's a pirate
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-hes-a-pirate.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-hes-a-pirate.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-hes-a-pirate.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: Levels
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-levels.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-levels.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-levels.txt.mp3" caption="Pytorch implementation" >}}
