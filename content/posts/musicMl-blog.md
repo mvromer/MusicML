@@ -12,10 +12,10 @@ In this project, we are trying to reproduce the implementation of the music tran
 
 Our plan is to re-implement the model from scratch, and obtain similar results as the paper after training. Additionally, we want to compare how our implementation differs from implementations of other libraries, and make improvements on ours if possible. 
 
-# Dataset
-The dataset we use for training the testing is the [Maestro Dataset v2.0.0](https://magenta.tensorflow.org/datasets/maestro), it contains over 200 hours recordings of the International Piano-e-Competition for 10 years. Each recording was done by a Disklavier, which captures professional performers' actions and records them in a MIDI file. 
+# Data Set
+The data set we use for training the testing is the [Maestro Data Set v2.0.0](https://magenta.tensorflow.org/datasets/maestro), it contains over 200 hours recordings of the International Piano-e-Competition for 10 years. Each recording was done by a Disklavier, which captures professional performers' actions and records them in a MIDI file. 
 
-The dataset is suitable for training a machine learning model because of few reasons:
+The data set is suitable for training a machine learning model because of few reasons:
 - They are all in the same music genre, classical, which helps the coherence of the output.
 - They captures only piano performance. It's easier to train the model and preprocess the MIDI date with a solo instrument in the recording.
 - They were performed by professional performers. Instead of training with synthesized MIDI music, human performance bring more fidelity to the dynamic of the music, it helps the models to learn and generate more expressive music.
@@ -23,7 +23,7 @@ The dataset is suitable for training a machine learning model because of few rea
 ## Preprocessing
 
 ### MIDI events conversion
-Before we feed the training data to model, the dataset needs to be converted into a "digestible" format. 
+Before we feed the training data to model, the data set needs to be converted into a "digestible" format. 
 
 The MIDI data are read and converted into a series of events, they can are grouped into 4 categories:
 - NOTE_ON events: key-press event with a pitch value ranging from 0 to 127, it starts a new note.
@@ -273,17 +273,102 @@ The remainder of our Transformer implementation is modeled heavily on the one de
 We initially utilized a learnable embedding layer; however, after issues with heavy training loss
 that we will describe later, we switched this to a fixed embedding layer that used a one-hot
 encoding for each input event token. Unfortunately, we did not see any difference in the quality of
-the music generated from our trained model.
+the music generated from our trained model. We also incorporated absolute position encodings into
+our embedding vectors since Huang et al. reported that combining both absolute and relative
+position information into the model's data further improved results.
 
 # Training
+## Training Set Size
+The Maestro data set contained a manifest file that provided a suggested split of the original MIDI
+files into training, validation, and test data sets. We did not have enough time to do any sort of
+hyperparameter tuning, so we only worked with the training and test data sets. These represented
+roughly 80% and 10% of the entire data set, respectively.
+
+For training, we employed a procedure similar to that as Huang et al. We used the same strategy of
+training on a random crop of 2000 tokens from each file in the training set. In order to increase
+the size of training set, we implemented a rounding feature, which allowed us to crop multiple
+random sequences from each file in the training set. The number of rounds determined how many times
+we would crop from each file. For our training set, we set the number of rounds to five.
+
+## Training Procedure
+We used a training procedure similar to what we had seen in other Transformer-based models designed
+for sequence generation. Namely, we would feed in the first 1999 tokens into the model and check to
+see if its output correctly predicted the last 1999 tokens. Note that the first 1998 of these
+overlap with the input sequence, and the last one corresponds with the last token in our cropped
+data set.
+
+## Loss Metric
+For computing the loss we tried two different approaches. We originally used cross entropy loss as
+our loss metric. However, when we were trying to figure out why we could not seem to attain anywhere
+close to the performance cited by Huang et al., we decided to try to incorporate label smoothing as
+was done in the original Transformer model from Vaswani et al. Since Pytorch does provide label
+smoothing loss metrics out of the box, we implemented one using some guidance from
+[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html). Unfortunately,
+we did not see the change in loss metric impacting our ability to train any better or worse.
+
+## Optimization Strategy
+We originally employed the Adam optimizer using the learning schedule proposed by Vaswani et al.
+This essentially increased the learning rate up until a certain number of warm up steps, after which
+the learning rate would start to decrease.
+
+Again, we tried different optimizers in an attempt to improve our training loss and get closer to
+the results cited by Huang et al. We tried employing Adamax with a learning rate of 0.1, which was
+the rate cited in a different draft of the paper by Huang et al. we happened to find online. We also
+tried fixing our Adam optimizer to this learning rate. Finally, we tried a new optimizer recently
+published this year, [Adabound](https://github.com/Luolc/AdaBound), which "trains as fast as Adam
+and as good as SGD." In the end, our choice of optimizer had no discernible impact on our ability
+to further improve our training loss.
+
+## Model Variants
+A nontrivial amount of time was spent on our end debugging various portions of our model to try to
+determine what could potentially explain the higher-than-expected training loss compared to the
+results of Huang et al. Due to this, we lost out on valuable time that could have been spent
+performing an extended training session.
+
+Due to this, we trained two variants of our model. The first enabled our relative position encodings
+within our custom multihead attention mechanism. Our second disabled our relative position encodings
+and utilized only the absolute position encodings incorporated into input embedding vectors.
+
+We also trained a standard Transformer model using only the Transformer modules provided by Pytorch.
+Given that Huang et al. also tested and reported favorable results with a baseline Transformer
+model, we figured Pytorch's implementation would serve as a control to help us identify if something
+was apparently wrong with our model's implementation.
+
+For all models we used the hyperparameter settings for the baseline Transformer defined by Vaswani
+ et al. Namely, we utilized six encoding layers. When we used the learnable embedding layer, we
+ set the dimensionality of our embedding vectors to 512. We used eight attention heads, and the
+ dimensionalities of both our key and value vector spaces were set to 64. Our feed-forward layer
+ used a hidden size of 2048, and we utilized a dropout rate of 0.1 during training. For our label
+ smoothing loss metric, we used a smoothing value of 0.1.
 
 # Results
-After training the baby batch for 10 epochs of 48350 steps each using the same set of hyperparameters, the results are as follows:
+Due to aforementioned time constraints, we only did final training on a baby batch consisting of
+10 epochs. This amounted to 48,350 steps performed per training run. The training loss of each run
+is reported in the table below.
 
 |                             | Ours (Absolute Only) | Ours (Absolute + Relative) | Pytorch Transformer-based |
 | --------------------------- |:--------------------:| --------------------------:| ------------------------: |
 | Average training loss (NLL) | 4.006                | 4.0064                     | 4.0059                    |
 
-All three models gave average training loss at around 4.00, the relative positional attention didn't show any obvious improvements against the implementation with absolute positioning alone. Moreover, from the result of the Pytorch transformer-based implementation, we can probably make an early conclusion that our implementation is similar to the Pytorch one. 
+As can be seen, all three models yielded an average training loss of around 4.00. Furthermore, the
+result of our model variants is in line with the one based on Pytorch's Transformer implementation.
+We make an early conclusion that our implementation is similar to the Pytorch one.
+
+After we reported these results in class, we performed the same baby training batch on different
+variants of our model using the different embedding strategies, optimization strategies, and
+loss metrics mentioned in previous sections. None of these yielded any difference in performance.
+We even modified our hidden sizes to match those cited by the Music Transformer (as opposed to the
+baseline Transformer Huang et al. tested) and also noticed no difference in results.
+
+We have started a longer training run of 200 epochs based on the following configuration:
+
+* Using the hidden layer sizes cited by Huang et al.
+* Using Adamax optimizer with learning rate of 0.1.
+* Using one-hot encoded embedding for input tokens.
+* Using label smoothing loss metric.
+
+After 39 epochs (the number completed at the time of writing), the average loss is still reported
+around 4.01. However, we are noticing total loss is **slowly** decreasing. We intend to carry this
+training run to completion and update this post based on the results we obtain from it.
 
 # Samples
