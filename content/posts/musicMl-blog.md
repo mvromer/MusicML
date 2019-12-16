@@ -128,7 +128,7 @@ embedding vector space by a matrix \\(W_O\\), which also becomes a learnable par
 
 The self-attention sublayers in the Transformer use the incoming embedding vectors to compute
 \\(K\\), \\(Q\\), and \\(V\\). Additionally, the decoder's self-attention will mask out the upper
-triangular portion of \((QK^T\\). The decoder's encoder-decoder attention sublayer uses the
+triangular portion of \\((QK^T\\). The decoder's encoder-decoder attention sublayer uses the
 encoder's output to compute \\(K\\) and \\(Q\\) and uses the output of its self-attention to compute
 \\(V\\).
 
