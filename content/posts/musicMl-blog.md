@@ -50,6 +50,7 @@ The encoder-decoder structure is designed for working with two different sets of
 
 ## Encode
 
+
 ## Multi-head Attention
 
 ## Relative Position Embedding
@@ -57,5 +58,12 @@ The encoder-decoder structure is designed for working with two different sets of
 # Training
 
 # Results
+After training the baby batch for 10 epochs of 48350 steps each using the same set of hyperparameters, the results are as follows:
+
+|                             | Ours (Absolute Only) | Ours (Absolute + Relative) | Pytorch Transformer-based |
+| --------------------------- |:--------------------:| --------------------------:| ------------------------: |
+| Average training loss (NLL) | 4.006                | 4.0064                     | 4.0059                    |
+
+All three models gave average training loss at around 4.00, the relative positional attention didn't show any obvious improvements against the implementation with absolute positioning alone. Moreover, from the result of the Pytorch transformer-based implementation, we can probably make an early conclusion that our implementation is similar to the Pytorch one. 
 
 # Samples
