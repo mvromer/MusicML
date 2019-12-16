@@ -6,10 +6,39 @@ draft: true
 ---
 
 # Introduction
+Transformer ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)), the neural network architecture that have been proven to be effective in tasks that transforming sequences, like text translation. But the application of this attention-based mechanism has been extended to other fields, like gaming ([DeepMind AlphaStar](https://deepmind.com/blog/article/alphastar-mastering-real-time-strategy-game-starcraft-ii)) and music etc.
+
+In this project, we are trying to reproduce the implementation of the music transformer ([Huang et al. 2019](https://arxiv.org/abs/1809.04281)), it is a transformer designed and trained for generating coherent music pieces with the music snippet inputs. 
+
+Our plan is to re-implement the model from scratch, and obtain similar results as the paper after training. Additionally, we want to compare how our implementation differs from implementations of other libraries, and make improvements on ours if possible. 
 
 # Dataset
+The dataset we use for training the testing is the [Maestro Dataset v2.0.0](https://magenta.tensorflow.org/datasets/maestro), it contains over 200 hours recordings of the International Piano-e-Competition for 10 years. Each recording was done by a Disklavier, which captures professional performers' actions and records them in a MIDI file. 
 
-# Background
+The dataset is suitable for training a machine learning model because of few reasons:
+- They are all in the same music genre, classical, which helps the coherence of the output.
+- They captures only piano performance. It's easier to train the model and preprocess the MIDI date with a solo instrument in the recording.
+- They were performed by professional performers. Instead of training with synthesized MIDI music, human performance bring more fidelity to the dynamic of the music, it helps the models to learn and generate more expressive music.
+
+## Preprocessing
+
+### MIDI events conversion
+Before we feed the training data to model, the dataset needs to be converted into a "digestible" format. 
+
+The MIDI data are read and converted into a series of events, they can are grouped into 4 categories:
+- NOTE_ON events: key-press event with a pitch value ranging from 0 to 127, it starts a new note.
+- NOTE_OFF event: key-release event with a pitch value ranging from 0 to 127, it release a note.
+- Time_SHIFT event: time step event with a time value measured in ms, it moves the time steps forward by increments of 10 ms up to 1 second.
+- SET_VELOCITY event: velocity event with a velocity value ranging from 0 t0 31, it changes the velocity applied to all subsequent notes, until the next velocity event.
+
+{{< figure src="/MusicML/images/pianoroll-vs-midi-events.png" caption="Figure 1. Comparison between a piano roll and MIDI events. ([Huang et al. 2019](https://arxiv.org/abs/1809.04281)) " >}}
+
+### Vocabulary
+After converting the MIDI data into corresponding events, the events are then map to index of the predefined vocabulary. The vocabulary has a size of 390 tokens, which includes 128 NOTE_ON and NOTE_OFF tokens (there are 128 notes on the MIDI keyboard), 100 TIME_SHIFT tokens, 32 SET_VELOCITY tokens, and a start and stop token. 
+
+The final output of a MIDI files after preprocessing contains a list of number ranging from 0 to 389.
+
+# Previous Work
 Below we go over each of the key concepts on which our project was based. We begin looking closely
 at the Transformer architecture ([Vaswani et al. 2017](https://arxiv.org/abs/1706.03762)) followed
 by discussing some of the contributions made by others
@@ -22,17 +51,26 @@ The Transformer is a modern-day neural network architecture that has inspired ma
 the time of its publication, it was the highest performing model for sequence-to-sequence machine
 translation tasks, outperforming even contemporary recurring neural networks considered then as
 state of the art. Since then, the Transformer has been applied to many other non-language domains
-including music generation.
+including music generation. The complete Transformer architecture is depicted below.
+
+{{< figure src="/MusicML/images/transformer.png" caption="Figure 2. The Transformer architecture" >}}
 
 The Transformer is unique in that it comprises almost entirely of attention mechanism layers and
 utilizes no recurrence or convolution. At the heart of it is an encoder stack of six encoding layers
 followed by a decoder stack of six decoding layers. Each encoding layer is a combination of a
-self-attention sublayer and a position-wise feed forward sublayer. Similarly, each decoding layer
-also contains self-attention and feed forward sublayers; however, in between these two the decoding
-layer also contains an additional sublayer that performs attention between the output of the encoder
-and the output of the self-attention sublayer.
+self-attention sublayer and a position-wise feed forward sublayer.
 
-As per Vaswani et al.,, residual connections are utilized between each sublayer. The connections sum
+The use of self-attention plays an important role in the Transformer. It allows the model to relate
+tokens in different positions of the input sequence in order to compute a representation of the
+sequence and the relationships of the tokens within it with constant path length.
+
+Similarly, each decoding layer also contains self-attention and feed forward sublayers; however, in
+between these two the decoding layer also contains an encoder-decoder attention sublayer that
+performs attention between the output of the encoder and the output of the self-attention sublayer.
+In this arrangement, the encoder provides the decoder with contextual information it can use in the
+decoding process.
+
+As per Vaswani et al., residual connections are utilized between each sublayer. The connections sum
 a sublayer's output with its input. The result is then passed through a layer normalization step
 before proceeding to the next sublayer.
 
@@ -40,6 +78,16 @@ The output of the final decoding layer is passed through a fully connected layer
 result back into the dimensionality of the output vocabulary. Finally a softmax is applied to
 produce a probability distribution over the output vocabulary tokens that is then used to predict
 the next output token.
+
+In an encoder-decoder configuration of the Transformer, the decoder takes the context from the
+encoder and generates the output sequence one token at a time. The Transformer is auto-regressive,
+and after each decode step, the decoder feeds the previously generated token back as additional input
+to the decoder for generating the next output token.
+
+The encoder-decoder structure is designed especially for working with two different sets of
+vocabularies such as what is encountered in tasks like English-French translation. In this example,
+the encoder will encode the English input, and the decoder uses this context to generate the
+corresponding French output.
 
 ## Input Embedding
 In language tasks, the input is usually a sequence of words. In music, it can be a sequence of pitch
@@ -140,6 +188,12 @@ different genres (of increasing difficulty):
 * Classical
 * Jazz
 * Electronic Dance Music (EDM)
+
+We figured for music
+generation, it is not necessary for the decoder to generate the sequences of the input vocabulary,
+this can be done by the encoder alone with the auto-regression, thus, we didn't utilize the decoder
+in our implementation. We also confirmed that in the sequence generation example of Pytorch that
+decoder was absent in the implementation as well.
 
 # Training
 
