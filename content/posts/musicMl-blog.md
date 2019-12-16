@@ -38,22 +38,162 @@ After converting the MIDI data into corresponding events, the events are then ma
 
 The final output of a MIDI files after preprocessing contains a list of number ranging from 0 to 389.
 
+# Previous Work
+Below we go over each of the key concepts on which our project was based. We begin looking closely
+at the Transformer architecture ([Vaswani et al. 2017](https://arxiv.org/abs/1706.03762)) followed
+by discussing some of the contributions made by others
+([Shaw et al. 2018](https://arxiv.org/abs/1803.02155) and
+[Huang et al. 2018](https://arxiv.org/abs/1809.04281)) that are of benefit to the task of music
+generation.
 
-# Transformer
-The transformer architecture ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)) was introduced in 2017, aimed to improve performance and output quality from the existing sequence transduction models that based on complex recurrent neural network and convolutional neural networks. Self-attention plays an important role in the transformer to achieve such success, this attention mechanism relates different positions of a single sequence in order to compute a representation of the sequence. In fact, the transformer is the first transduction model relaying solely on self-attention to compute representations of the input and output. 
+## Transformer
+The Transformer is a modern-day neural network architecture that has inspired many other designs. At
+the time of its publication, it was the highest performing model for sequence-to-sequence machine
+translation tasks, outperforming even contemporary recurring neural networks considered then as
+state of the art. Since then, the Transformer has been applied to many other non-language domains
+including music generation. The complete Transformer architecture is depicted below.
 
-The transformer adopts the encoder-decoder structure similar to other competitive neural sequence transduction models. The encoder maps an input sequence to a sequence of continuous representation, it is the context output of the encoder and relates the input tokens of different position. The decoder takes the context from the encoder and generate the output sequence one at a time, auto-regression happens at each step, which feeds the previously generated sequence as additional input to the decoder for generating the next output sequence. 
+{{< figure src="/MusicML/images/transformer.png" caption="Figure 2. The Transformer architecture" >}}
 
-{{< figure src="/MusicML/images/transformer.png" caption="Figure 2. The transfofmer architecture" >}}
+The Transformer is unique in that it comprises almost entirely of attention mechanism layers and
+utilizes no recurrence or convolution. At the heart of it is an encoder stack of six encoding layers
+followed by a decoder stack of six decoding layers. Each encoding layer is a combination of a
+self-attention sublayer and a position-wise feed forward sublayer.
 
-The encoder-decoder structure is designed for working with two different sets of vocabularies, tasks like English-French translation, the encoder interpret the english input and the decoder reads the context and output the corresponding French output. We figured for music generation, it is not necessary for the decoder to generate the sequences of the input vocabulary, this can be done by the encoder alone with the auto-regression, thus, we didn't utilize the decoder in our implementation. We also confirmed that in the sequence generation example of Pytorch that decoder was absent in the implementation as well.
+The use of self-attention plays an important role in the Transformer. It allows the model to relate
+tokens in different positions of the input sequence in order to compute a representation of the
+sequence and the relationships of the tokens within it with constant path length.
 
-## Encode
+Similarly, each decoding layer also contains self-attention and feed forward sublayers; however, in
+between these two the decoding layer also contains an encoder-decoder attention sublayer that
+performs attention between the output of the encoder and the output of the self-attention sublayer.
+In this arrangement, the encoder provides the decoder with contextual information it can use in the
+decoding process.
 
+As per Vaswani et al., residual connections are utilized between each sublayer. The connections sum
+a sublayer's output with its input. The result is then passed through a layer normalization step
+before proceeding to the next sublayer.
 
-## Multi-head Attention
+The output of the final decoding layer is passed through a fully connected layer that projects the
+result back into the dimensionality of the output vocabulary. Finally a softmax is applied to
+produce a probability distribution over the output vocabulary tokens that is then used to predict
+the next output token.
 
-## Relative Position Embedding
+In an encoder-decoder configuration of the Transformer, the decoder takes the context from the
+encoder and generates the output sequence one token at a time. The Transformer is auto-regressive,
+and after each decode step, the decoder feeds the previously generated token back as additional input
+to the decoder for generating the next output token.
+
+The encoder-decoder structure is designed especially for working with two different sets of
+vocabularies such as what is encountered in tasks like English-French translation. In this example,
+the encoder will encode the English input, and the decoder uses this context to generate the
+corresponding French output.
+
+## Input Embedding
+In language tasks, the input is usually a sequence of words. In music, it can be a sequence of pitch
+and timing events. In order for a neural network to properly process these sequences, it's necessary
+to represent each word/event as a token from some predetermined vocabulary.
+
+Each token is represented by a multidimensional vector that the network can process. An embedding
+layers performs the job of converting input tokens into these *embedding vectors*. The embeddings
+can either be learned as a byproduct of the model's training process or predetermined, such as a
+one-hot encoding. Here we'll refer to the dimensionality of the embedding vector as \\(d_E\\).
+
+## Attention Mechanism
+Below we will briefly give an overview of the attention mechanism found in the Transformer. For a
+more in-depth description, we recommend reading the excellent article
+[The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/).
+
+An attention mechanism projects a \\(d_E\\)-dimensional embedding vector into a *key* vector
+subspace, a *query* vector subspace, and a *value* vector subspace. The dimensionality of the key
+and query subspaces is \\(d_K\\), and the dimensionality of the value subspace is \\(d_V\\).
+
+The weight matrices \\(W_K\\), \\(W_Q\\), and \\(W_V\\) used to transform each embedding vector into
+the corresponding key, query, and value subspace become learnable parameters of the model. In
+practice, \\(L\\) embedding vectors are stacked on top of each other to form an \\(L\\)-by-\\(d_E\\)
+matrix \\(X\\). From this the key, query, and value matrices are formed by three matrix
+multiplications: \\(K=XW_K\\), \\(Q=XW_Q\\), and \\(V=XW_V\\).
+
+Multiple attention values are computed in parallel through additional matrix level operations,
+including matrix multiplications. The final attention value is given by the following equation:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\lparen \frac{QK^T}{\sqrt{d_K}} \rparen V
+$$
+
+The Transformer's attention mechanism projects the matrix \\(X\\) to key, vector, and query
+subspaces \\(H\\) times, where \\(H\\) is the number of attention heads used by the Transformer.
+The attention values for each head are concatenated together and linearly projected back to the
+embedding vector space by a matrix \\(W_O\\), which also becomes a learnable parameter of the model.
+
+The self-attention sublayers in the Transformer use the incoming embedding vectors to compute
+\\(K\\), \\(Q\\), and \\(V\\). Additionally, the decoder's self-attention will mask out the upper
+triangular portion of \((QK^T\\). The decoder's encoder-decoder attention sublayer uses the
+encoder's output to compute \\(K\\) and \\(Q\\) and uses the output of its self-attention to compute
+\\(V\\).
+
+## Encoding Positional Information
+The Transformer itself is invariant to the position of tokens in the input sequence. This is in
+contrast to other model types like RNNs and LSTMs whose model representations directly support
+capturing the ordering of tokens within a sequence.
+
+As an example, in the sentence *Do you want chocolate pie or apple pie?* the word *pie* would be
+represented by the same embedding vector. Thus, both occurrences of the word *pie* would be treated
+equivalently by the Transformer. However, their positional information within the sentences makes
+clear that each occurrence refers to a different concept and thus should be handled distinctly.
+
+Vaswani et al. resolved this issue by encoding absolute positional information for each token in an
+input sequence. Their idea used sinusoids to build a \\(d_E\\)-dimensional absolute position
+representation for each input token. These positional vectors were then summed with their
+corresponding input embedding vectors. Thus, the same input token occurring at different locations
+within the input sequence would have different representations within the Transformer model.
+
+Instead of encoding absolute positions, Shaw et al. showed how to instead encode *relative*
+positional information within the self-attention mechanism of the Transformer. This required the
+formation of an intermediate tensor \\(R\\) with dimensions \\(L\\)-by-\\(L\\)-by-\\(d_E\\) that
+encoded the pairwise relative position information for each input token. The so-called
+*relative logits* were then formed by computing \\(QR^T\\) which were then used to modify the
+attention calculation in the following manner:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\lparen \frac{QK^T + QR^T}{\sqrt{d_K}} \rparen V
+$$
+
+## Music Transformer
+For the generation of long sequences, \\(R\\)'s \\(O(L^2D)\\) space complexity becomes the
+dominating factor in terms of memory consumption. Given the constraints of contemporary hardware,
+lengthy sequences became impossible to realize.
+
+Huang et al.'s proposed a "skewing" procedure that enabled the computation of \\(QR^T\\) without the
+explicit formation of \\(R\\). Instead, they used an alternate relative position encoding matrix
+\\(E_r\\) with size \\(L\\)-by-\\(D_E\\). They then compute \\(\mathrm{skew}(QE_r^T)\\) to form the
+relative logits. Thus, under Huang et al. the self-attention calculation with relative position
+encoding becomes the following:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\lparen \frac{QK^T + \mathrm{skew}(QE_r^T)}{\sqrt{d_K}} \rparen V
+$$
+
+Using Huang et al.'s formulation, the space complexity goes from being quadratic in the length of
+the generated sequence to being linear. This enabled them to develop the Music Transformer, which
+has demonstrated state-of-the-art capability of generating musical sequences exhibiting long-term
+structure. Their model allowed them create sequences with a maximal length of 3500 tokens in their
+symbolic music representation.
+
+# Models
+Our project is based on the Music Transformer model introduced by Huang et al. We originally
+intended to train this model in such a way that we could generate music progressively in three
+different genres (of increasing difficulty):
+
+* Classical
+* Jazz
+* Electronic Dance Music (EDM)
+
+We figured for music
+generation, it is not necessary for the decoder to generate the sequences of the input vocabulary,
+this can be done by the encoder alone with the auto-regression, thus, we didn't utilize the decoder
+in our implementation. We also confirmed that in the sequence generation example of Pytorch that
+decoder was absent in the implementation as well.
 
 # Training
 
