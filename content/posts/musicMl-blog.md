@@ -235,6 +235,46 @@ We first built out the custom multihead attention mechanism. We made it possible
 the standard multihead attention used by Vaswani et al. and a variation that computes the relative
 logits using Huang et al.'s skewing procedure and uses them to compute the final attention value.
 
+We did testing against Pytorch's implementation of multihead attention to ensure that our version
+was producing the same results. We did not have available a third-party implementation of a
+multihead attention mechanism that incorporated relative position encodings, so we were not able to
+provide the same extra level of validation for this feature of our implementation.
+
+We actually extended Huang's implementation of the relative logit computation. Based on
+understanding of the original paper, the matrix \\(E_r\\) used in Huang et al. only encoded relative
+positions with negative distances, i.e., from \\(0\\) to \\(-L+1\\). For clarification, we will
+rename this matrix to \\(E_{r^-}\\). In the case of unmasked attention, we believed it would be
+potentially useful to also incorporate encodings for relative positions with positive distances,
+i.e., \\(1\\) to \\(L-1\\).
+
+Noting that the original skew procedure provides the lower triangular part of the relative logits
+matrix \\(QR^T\\), we seeked to form the upper triangular portion using a mirrored procedure. We
+first represented the positive relative positions in a complementary matrix \\(E_{r^+}\\). We then
+formed the matrix \\(QE_{r^+}^T\\) and applied the following custom skewing procedure that mirrored
+the one defined in Huang et al.:
+
+* Pad a column of zeros to the right of \\(QE_{r^+}^T\\).
+* Reshape to \\((L+1)\\)-by-\\(L\\).
+* Slice off the bottom row and return the upper triangular portion above the diagonal.
+
+If we rename the original skew procedure to \\(\mathrm{skew}_L\\) and our skew procedure
+\\(\mathrm{skew}_U\\), our updated attention calculation becomes the following:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\lparen \frac{QK^T + \mathrm{skew}\_L(QE_{r^-}^T) + \mathrm{skew}\_U(QE_{r^+}^T)}{\sqrt{d_K}} \rparen V
+$$
+
+We note that this still maintains the intermediate memory requirement of \\(O(LD)\\) established by
+Huang et al. Furthermore, we added support applying a mask to the intermediate calculation just
+prior to the application of the softmax. Thus, by setting an appropriate upper triangular mask, we
+were able to revert our attention mechanism back to the behavior defined by Huang et al.
+
+The remainder of our Transformer implementation is modeled heavily on the one defined in Pytorch.
+We initially utilized a learnable embedding layer; however, after issues with heavy training loss
+that we will describe later, we switched this to a fixed embedding layer that used a one-hot
+encoding for each input event token. Unfortunately, we did not see any difference in the quality of
+the music generated from our trained model.
+
 # Training
 
 # Results
