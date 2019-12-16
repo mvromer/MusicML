@@ -1,0 +1,12 @@
+.midiplayer {
+    font-size: 12px;
+    text-align: center;
+}
+
+.midiplayer figcaption {
+    margin-bottom: 10px;
+}
+
+.midiplayer audio::-webkit-media-controls-panel {
+    background: white;
+}

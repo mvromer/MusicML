@@ -372,3 +372,34 @@ around 4.01. However, we are noticing total loss is **slowly** decreasing. We in
 training run to completion and update this post based on the results we obtain from it.
 
 # Samples
+#### Input: Final Fantasy victory
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-final-fantasy-victory.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-final-fantasy-victory.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-final-fantasy-victory.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: Happy birthday
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-happy-birthday.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-happy-birthday.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-happy-birthday.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: He's a pirate
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-hes-a-pirate.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-hes-a-pirate.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-hes-a-pirate.txt.mp3" caption="Pytorch implementation" >}}
+
+#### Input: Levels
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyNoRelative-levels.txt.mp3" caption="absolute positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyRelative-levels.txt.mp3" caption="relative positions" >}}
+
+{{< midiplayer class="midiplayer" src="/samples/EncoderOnlyPytorchImpl-levels.txt.mp3" caption="Pytorch implementation" >}}
